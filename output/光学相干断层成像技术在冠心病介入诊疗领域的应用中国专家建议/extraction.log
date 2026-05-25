@@ -1,0 +1,294 @@
+2026-05-21 23:50:25,972 [INFO] two_stage_extraction - ============================================================
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction - VLM 分阶段提取流水线 — 新任务
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction -   PDF 文件名: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议.pdf
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction -   输出目录前缀: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction -   图片数量: 8
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction -   输出目录: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction -   模型: qwen3-vl-plus
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction -   校验模式: 关闭
+2026-05-21 23:50:25,973 [INFO] two_stage_extraction - ============================================================
+2026-05-21 23:50:25,974 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:25,974 [INFO] two_stage_extraction - 开始处理第 1 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_1.png
+2026-05-21 23:50:25,974 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:26,003 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:26,003 [INFO] two_stage_extraction - 开始处理第 2 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_2.png
+2026-05-21 23:50:26,003 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:26,025 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:26,025 [INFO] two_stage_extraction - 开始处理第 3 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_3.png
+2026-05-21 23:50:26,025 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:26,060 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:26,060 [INFO] two_stage_extraction - 开始处理第 4 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_4.png
+2026-05-21 23:50:26,061 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:26,085 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:26,086 [INFO] two_stage_extraction - 开始处理第 5 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_5.png
+2026-05-21 23:50:26,086 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:26,110 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:26,110 [INFO] two_stage_extraction - 开始处理第 6 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_6.png
+2026-05-21 23:50:26,110 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:26,130 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:26,130 [INFO] two_stage_extraction - 开始处理第 7 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_7.png
+2026-05-21 23:50:26,130 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:26,143 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:50:26,143 [INFO] two_stage_extraction - 开始处理第 8 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_8.png
+2026-05-21 23:50:26,143 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-21 23:50:33,028 [INFO] two_stage_extraction - [Scout] 耗时 7.05s, 推荐: 标准提取, 布局: 双栏, 表格数: 1
+2026-05-21 23:50:33,028 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-21 23:50:35,013 [INFO] two_stage_extraction - [Scout] 耗时 8.87s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-21 23:50:35,013 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-21 23:50:36,858 [INFO] two_stage_extraction - [Scout] 耗时 10.86s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-21 23:50:36,859 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-21 23:50:37,115 [INFO] two_stage_extraction - [Scout] 耗时 11.03s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-21 23:50:37,115 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-21 23:50:37,650 [INFO] two_stage_extraction - [Scout] 耗时 11.52s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-21 23:50:37,650 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-21 23:50:38,568 [INFO] two_stage_extraction - [Scout] 耗时 12.51s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-21 23:50:38,569 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-21 23:50:40,086 [INFO] two_stage_extraction - [Scout] 耗时 13.98s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-21 23:50:40,087 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-21 23:50:40,788 [INFO] two_stage_extraction - [Scout] 耗时 14.76s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-21 23:50:40,788 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-21 23:50:45,806 [INFO] two_stage_extraction - [Extract] 耗时 10.79s
+2026-05-21 23:50:45,807 [INFO] two_stage_extraction - [第8页] 完成! 耗时 19.66s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_8.md
+2026-05-21 23:50:57,395 [INFO] two_stage_extraction - [Extract] 耗时 17.31s
+2026-05-21 23:50:57,397 [INFO] two_stage_extraction - [第6页] 完成! 耗时 31.29s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_6.md
+2026-05-21 23:51:03,540 [INFO] two_stage_extraction - [Extract] 耗时 25.89s
+2026-05-21 23:51:03,541 [INFO] two_stage_extraction - [第7页] 完成! 耗时 37.41s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_7.md
+2026-05-21 23:51:09,642 [INFO] two_stage_extraction - [Extract] 耗时 28.85s
+2026-05-21 23:51:09,644 [INFO] two_stage_extraction - [第3页] 完成! 耗时 43.62s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_3.md
+2026-05-21 23:51:17,364 [INFO] two_stage_extraction - [Extract] 耗时 44.34s
+2026-05-21 23:51:17,364 [INFO] two_stage_extraction - [第1页] 完成! 耗时 51.39s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_1.md
+2026-05-21 23:51:20,133 [INFO] two_stage_extraction - [Extract] 耗时 41.56s
+2026-05-21 23:51:20,135 [INFO] two_stage_extraction - [第4页] 完成! 耗时 54.07s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_4.md
+2026-05-21 23:51:20,437 [INFO] two_stage_extraction - [Extract] 耗时 43.58s
+2026-05-21 23:51:20,438 [INFO] two_stage_extraction - [第2页] 完成! 耗时 54.43s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_2.md
+2026-05-21 23:52:02,113 [INFO] two_stage_extraction - [Extract] 耗时 85.00s
+2026-05-21 23:52:02,117 [INFO] two_stage_extraction - [第5页] 完成! 耗时 96.03s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_5.md
+2026-05-21 23:52:02,117 [INFO] two_stage_extraction - 
+==================================================
+2026-05-21 23:52:02,117 [INFO] two_stage_extraction - [Merge] 开始汇总各页提取结果...
+2026-05-21 23:52:02,122 [INFO] two_stage_extraction - [Merge] 第 1 页 → 提取 2631 字符
+2026-05-21 23:52:02,124 [INFO] two_stage_extraction - [Merge] 第 2 页 → 提取 1901 字符
+2026-05-21 23:52:02,126 [INFO] two_stage_extraction - [Merge] 第 3 页 → 提取 1427 字符
+2026-05-21 23:52:02,128 [INFO] two_stage_extraction - [Merge] 第 4 页 → 提取 1421 字符
+2026-05-21 23:52:02,131 [INFO] two_stage_extraction - [Merge] 第 5 页 → 提取 3330 字符
+2026-05-21 23:52:02,132 [INFO] two_stage_extraction - [Merge] 第 6 页 → 提取 854 字符
+2026-05-21 23:52:02,134 [INFO] two_stage_extraction - [Merge] 第 7 页 → 提取 1348 字符
+2026-05-21 23:52:02,134 [INFO] two_stage_extraction - [Merge] 第 8 页 → 参考文献页，跳过
+2026-05-21 23:52:02,134 [INFO] two_stage_extraction - [Merge] 汇总完成!
+2026-05-21 23:52:02,134 [INFO] two_stage_extraction -   合并文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_merged_output.md
+2026-05-21 23:52:02,134 [INFO] two_stage_extraction -   有效页面: 7 / 8
+2026-05-21 23:52:02,134 [INFO] two_stage_extraction -   跳过页面（参考文献）: [8]
+2026-05-21 23:52:02,134 [INFO] two_stage_extraction -   总字符数: 12912
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction - 
+============================================================
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction - 全部处理完成!
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction -   总页数: 8, 成功: 8, 失败: 0
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction -   单页结果目录: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction -   汇总文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_merged_output.md
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction -   运行报告: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_report.json
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction -   日志文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/extraction.log
+2026-05-21 23:52:02,135 [INFO] two_stage_extraction - ============================================================
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction - ============================================================
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction - VLM 分阶段提取流水线 — 新任务
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction -   PDF 文件名: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议.pdf
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction -   输出目录前缀: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction -   图片数量: 8
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction -   输出目录: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction -   模型: qwen3-vl-plus
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction -   校验模式: 关闭
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction - ============================================================
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction - 开始处理第 1 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_1.png
+2026-05-22 00:18:33,095 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:33,547 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,550 [INFO] two_stage_extraction - 开始处理第 2 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_2.png
+2026-05-22 00:18:33,550 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:33,569 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,569 [INFO] two_stage_extraction - 开始处理第 3 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_3.png
+2026-05-22 00:18:33,569 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:33,589 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,589 [INFO] two_stage_extraction - 开始处理第 4 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_4.png
+2026-05-22 00:18:33,589 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:33,608 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,609 [INFO] two_stage_extraction - 开始处理第 5 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_5.png
+2026-05-22 00:18:33,609 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:33,647 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,647 [INFO] two_stage_extraction - 开始处理第 6 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_6.png
+2026-05-22 00:18:33,647 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:33,667 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,667 [INFO] two_stage_extraction - 开始处理第 7 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_7.png
+2026-05-22 00:18:33,667 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:33,680 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:18:33,680 [INFO] two_stage_extraction - 开始处理第 8 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_8.png
+2026-05-22 00:18:33,680 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 00:18:40,132 [INFO] two_stage_extraction - [Scout] 耗时 7.04s, 推荐: 标准提取, 布局: 双栏, 表格数: 1
+2026-05-22 00:18:40,132 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 00:18:41,150 [INFO] two_stage_extraction - [Scout] 耗时 7.47s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-22 00:18:41,150 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-22 00:18:44,442 [INFO] two_stage_extraction - [Scout] 耗时 10.77s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-22 00:18:44,442 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-22 00:18:45,634 [INFO] two_stage_extraction - [Scout] 耗时 12.02s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 00:18:45,634 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 00:18:45,672 [INFO] two_stage_extraction - [Scout] 耗时 12.08s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 00:18:45,673 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 00:18:45,741 [INFO] two_stage_extraction - [Scout] 耗时 12.09s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 00:18:45,741 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 00:18:46,354 [INFO] two_stage_extraction - [Scout] 耗时 12.80s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 00:18:46,355 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 00:18:48,462 [INFO] two_stage_extraction - [Scout] 耗时 14.89s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 00:18:48,462 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 00:18:50,358 [INFO] two_stage_extraction - [Extract] 耗时 9.21s
+2026-05-22 00:18:50,359 [INFO] two_stage_extraction - [第8页] 完成! 耗时 16.68s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_8.md
+2026-05-22 00:19:17,120 [INFO] two_stage_extraction - [Extract] 耗时 32.68s
+2026-05-22 00:19:17,121 [INFO] two_stage_extraction - [第7页] 完成! 耗时 43.45s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_7.md
+2026-05-22 00:19:27,335 [INFO] two_stage_extraction - [Extract] 耗时 38.87s
+2026-05-22 00:19:27,336 [INFO] two_stage_extraction - [第3页] 完成! 耗时 53.77s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_3.md
+2026-05-22 00:19:30,391 [INFO] two_stage_extraction - [Extract] 耗时 44.04s
+2026-05-22 00:19:30,393 [INFO] two_stage_extraction - [第2页] 完成! 耗时 56.84s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_2.md
+2026-05-22 00:19:42,307 [INFO] two_stage_extraction - [Extract] 耗时 56.57s
+2026-05-22 00:19:42,308 [INFO] two_stage_extraction - [第6页] 完成! 耗时 68.66s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_6.md
+2026-05-22 00:19:47,201 [INFO] two_stage_extraction - [Extract] 耗时 61.53s
+2026-05-22 00:19:47,202 [INFO] two_stage_extraction - [第4页] 完成! 耗时 73.61s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_4.md
+2026-05-22 00:20:10,037 [INFO] two_stage_extraction - [Extract] 耗时 89.90s
+2026-05-22 00:20:10,038 [INFO] two_stage_extraction - [第1页] 完成! 耗时 96.94s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_1.md
+2026-05-22 00:20:20,607 [INFO] two_stage_extraction - [Extract] 耗时 94.97s
+2026-05-22 00:20:20,611 [INFO] two_stage_extraction - [第5页] 完成! 耗时 107.00s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_5.md
+2026-05-22 00:20:20,612 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 00:20:20,613 [INFO] two_stage_extraction - [Merge] 开始汇总各页提取结果...
+2026-05-22 00:20:20,623 [INFO] two_stage_extraction - [Merge] 第 1 页 → 提取 2185 字符
+2026-05-22 00:20:20,626 [INFO] two_stage_extraction - [Merge] 第 2 页 → 提取 2041 字符
+2026-05-22 00:20:20,627 [INFO] two_stage_extraction - [Merge] 第 3 页 → 提取 1402 字符
+2026-05-22 00:20:20,628 [INFO] two_stage_extraction - [Merge] 第 4 页 → 提取 1881 字符
+2026-05-22 00:20:20,630 [INFO] two_stage_extraction - [Merge] 第 5 页 → 提取 4039 字符
+2026-05-22 00:20:20,631 [INFO] two_stage_extraction - [Merge] 第 6 页 → 提取 1681 字符
+2026-05-22 00:20:20,633 [INFO] two_stage_extraction - [Merge] 第 7 页 → 提取 1880 字符
+2026-05-22 00:20:20,633 [INFO] two_stage_extraction - [Merge] 第 8 页 → 参考文献页，跳过
+2026-05-22 00:20:20,633 [INFO] two_stage_extraction - [Merge] 汇总完成!
+2026-05-22 00:20:20,633 [INFO] two_stage_extraction -   合并文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_merged_output.md
+2026-05-22 00:20:20,633 [INFO] two_stage_extraction -   有效页面: 7 / 8
+2026-05-22 00:20:20,633 [INFO] two_stage_extraction -   跳过页面（参考文献）: [8]
+2026-05-22 00:20:20,633 [INFO] two_stage_extraction -   总字符数: 15109
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction - 
+============================================================
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction - 全部处理完成!
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction -   总页数: 8, 成功: 8, 失败: 0
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction -   单页结果目录: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction -   汇总文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_merged_output.md
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction -   运行报告: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_report.json
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction -   日志文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/extraction.log
+2026-05-22 00:20:20,634 [INFO] two_stage_extraction - ============================================================
+2026-05-22 14:00:18,823 [INFO] two_stage_extraction - ============================================================
+2026-05-22 14:00:18,823 [INFO] two_stage_extraction - VLM 分阶段提取流水线 — 新任务
+2026-05-22 14:00:18,823 [INFO] two_stage_extraction -   PDF 文件名: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议.pdf
+2026-05-22 14:00:18,823 [INFO] two_stage_extraction -   输出目录前缀: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-22 14:00:18,823 [INFO] two_stage_extraction -   图片数量: 8
+2026-05-22 14:00:18,823 [INFO] two_stage_extraction -   输出目录: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-22 14:00:18,823 [INFO] two_stage_extraction -   模型: qwen3-vl-plus
+2026-05-22 14:00:18,824 [INFO] two_stage_extraction -   校验模式: 关闭
+2026-05-22 14:00:18,824 [INFO] two_stage_extraction - ============================================================
+2026-05-22 14:00:18,824 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:18,824 [INFO] two_stage_extraction - 开始处理第 1 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_1.png
+2026-05-22 14:00:18,824 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:19,265 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:19,268 [INFO] two_stage_extraction - 开始处理第 2 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_2.png
+2026-05-22 14:00:19,269 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:19,290 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:19,290 [INFO] two_stage_extraction - 开始处理第 3 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_3.png
+2026-05-22 14:00:19,290 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:19,311 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:19,312 [INFO] two_stage_extraction - 开始处理第 4 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_4.png
+2026-05-22 14:00:19,312 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:19,328 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:19,328 [INFO] two_stage_extraction - 开始处理第 5 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_5.png
+2026-05-22 14:00:19,328 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:19,343 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:19,343 [INFO] two_stage_extraction - 开始处理第 6 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_6.png
+2026-05-22 14:00:19,343 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:19,359 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:19,360 [INFO] two_stage_extraction - 开始处理第 7 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_7.png
+2026-05-22 14:00:19,360 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:19,371 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:00:19,371 [INFO] two_stage_extraction - 开始处理第 8 页: 光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_8.png
+2026-05-22 14:00:19,371 [INFO] two_stage_extraction - [Scout] 开始结构侦察...
+2026-05-22 14:00:28,694 [INFO] two_stage_extraction - [Scout] 耗时 9.42s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 14:00:28,694 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 14:00:28,878 [INFO] two_stage_extraction - [Scout] 耗时 10.05s, 推荐: 标准提取, 布局: 双栏, 表格数: 1
+2026-05-22 14:00:28,878 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 14:00:29,376 [INFO] two_stage_extraction - [Scout] 耗时 10.05s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 14:00:29,376 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 14:00:30,826 [INFO] two_stage_extraction - [Scout] 耗时 11.45s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-22 14:00:30,826 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-22 14:00:31,162 [INFO] two_stage_extraction - [Scout] 耗时 11.87s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 14:00:31,162 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 14:00:31,763 [INFO] two_stage_extraction - [Scout] 耗时 12.40s, 推荐: 轻量提取, 布局: 双栏, 表格数: 0
+2026-05-22 14:00:31,764 [INFO] two_stage_extraction - [Extract] 使用策略: 轻量提取 ...
+2026-05-22 14:00:31,922 [INFO] two_stage_extraction - [Scout] 耗时 12.58s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 14:00:31,922 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 14:00:31,953 [INFO] two_stage_extraction - [Scout] 耗时 12.64s, 推荐: 标准提取, 布局: 双栏, 表格数: 0
+2026-05-22 14:00:31,953 [INFO] two_stage_extraction - [Extract] 使用策略: 标准提取 ...
+2026-05-22 14:00:43,229 [INFO] two_stage_extraction - [Extract] 耗时 12.40s
+2026-05-22 14:00:43,230 [INFO] two_stage_extraction - [第8页] 完成! 耗时 23.86s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_8.md
+2026-05-22 14:00:52,795 [INFO] two_stage_extraction - [Extract] 耗时 21.03s
+2026-05-22 14:00:52,795 [INFO] two_stage_extraction - [第7页] 完成! 耗时 33.44s, 策略=轻量提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_7.md
+2026-05-22 14:01:09,543 [INFO] two_stage_extraction - [Extract] 耗时 38.38s
+2026-05-22 14:01:09,544 [INFO] two_stage_extraction - [第3页] 完成! 耗时 50.25s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_3.md
+2026-05-22 14:01:14,931 [INFO] two_stage_extraction - [Extract] 耗时 46.05s
+2026-05-22 14:01:14,931 [INFO] two_stage_extraction - [第1页] 完成! 耗时 56.11s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_1.md
+2026-05-22 14:01:15,487 [INFO] two_stage_extraction - [Extract] 耗时 46.79s
+2026-05-22 14:01:15,489 [INFO] two_stage_extraction - [第2页] 完成! 耗时 56.22s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_2.md
+2026-05-22 14:01:15,549 [INFO] two_stage_extraction - [Extract] 耗时 43.60s
+2026-05-22 14:01:15,555 [INFO] two_stage_extraction - [第4页] 完成! 耗时 56.24s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_4.md
+2026-05-22 14:01:20,404 [INFO] two_stage_extraction - [Extract] 耗时 48.48s
+2026-05-22 14:01:20,406 [INFO] two_stage_extraction - [第6页] 完成! 耗时 61.06s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_6.md
+2026-05-22 14:01:42,820 [INFO] two_stage_extraction - [Extract] 耗时 73.44s
+2026-05-22 14:01:42,824 [INFO] two_stage_extraction - [第5页] 完成! 耗时 83.49s, 策略=标准提取, 结果=output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_5.md
+2026-05-22 14:01:42,824 [INFO] two_stage_extraction - 
+==================================================
+2026-05-22 14:01:42,825 [INFO] two_stage_extraction - [Merge] 开始汇总各页提取结果...
+2026-05-22 14:01:42,847 [INFO] two_stage_extraction - [Merge] 第 1 页 → 提取 2545 字符
+2026-05-22 14:01:42,850 [INFO] two_stage_extraction - [Merge] 第 2 页 → 提取 1903 字符
+2026-05-22 14:01:42,852 [INFO] two_stage_extraction - [Merge] 第 3 页 → 提取 1600 字符
+2026-05-22 14:01:42,854 [INFO] two_stage_extraction - [Merge] 第 4 页 → 提取 1657 字符
+2026-05-22 14:01:42,858 [INFO] two_stage_extraction - [Merge] 第 5 页 → 提取 1514 字符
+2026-05-22 14:01:42,861 [INFO] two_stage_extraction - [Merge] 第 6 页 → 提取 1981 字符
+2026-05-22 14:01:42,862 [INFO] two_stage_extraction - [Merge] 第 7 页 → 提取 1148 字符
+2026-05-22 14:01:42,862 [INFO] two_stage_extraction - [Merge] 第 8 页 → 参考文献页，跳过
+2026-05-22 14:01:42,863 [INFO] two_stage_extraction - [Merge] 汇总完成!
+2026-05-22 14:01:42,863 [INFO] two_stage_extraction -   合并文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_merged_output.md
+2026-05-22 14:01:42,863 [INFO] two_stage_extraction -   有效页面: 7 / 8
+2026-05-22 14:01:42,863 [INFO] two_stage_extraction -   跳过页面（参考文献）: [8]
+2026-05-22 14:01:42,863 [INFO] two_stage_extraction -   总字符数: 12348
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction - 
+============================================================
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction - 全部处理完成!
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction -   总页数: 8, 成功: 8, 失败: 0
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction -   单页结果目录: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction -   汇总文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_merged_output.md
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction -   运行报告: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议_report.json
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction -   日志文件: output/光学相干断层成像技术在冠心病介入诊疗领域的应用中国专家建议/extraction.log
+2026-05-22 14:01:42,864 [INFO] two_stage_extraction - ============================================================
