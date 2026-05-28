@@ -259,18 +259,16 @@ async def verify_phase(
 # ══════════════════════════════════════════════════════════════
 
 BODY_CONTENT_MARKERS = [
-    "正式提取输出",
-    "正式输出",
-    "提取结果",
-    "正文提取",
-    "最终输出",
-    "最终提取结果",
-    "📄 最终提取结果",
-    "📤 最终输出",
-    "**最终输出",
-    "**第四步",
-    "**第三步：最终输出",
-    "正文段落",
+    "## 正式提取输出",
+    "## 提取结果",
+    "## 正文提取",
+    "### **最终输出",
+    "### **第四步",
+    "### **第三步：最终输出",
+    "### 📄 最终提取结果",
+    "### 最终提取结果",
+    "### 最终输出",
+    "### 📤 最终输出",
 ]
 
 
@@ -284,9 +282,6 @@ def _skip_frontmatter(lines):
 
 def _is_reference_page(text):
     if re.search(r'（本页为参考文献，已跳过）', text):
-        return True
-    # 检测到参考文献标题即视为参考文献页
-    if re.search(r'^#{1,4}\s*参\s*考\s*文\s*献', text, re.MULTILINE):
         return True
     has_ref_declaration = bool(re.search(r'[该本]页为\*\*?参考文献[列表]*[页]?\*\*', text))
     has_delete_conclusion = bool(re.search(
@@ -314,9 +309,6 @@ def _find_body_content_marker(body):
         for marker in BODY_CONTENT_MARKERS:
             if stripped.startswith(marker):
                 return i
-            # 兼容带 markdown 标题前缀的情况，如 "### 正式输出..."
-            if re.search(r'^#{1,4}\s+' + re.escape(marker), stripped):
-                return i
     return -1
 
 
@@ -327,13 +319,11 @@ _BLOCK_HEADER_PATTERNS = [
     r'###\s*\*\*逐块处理与边界确认',
     r'####\s*\*\*第[一二三四五六七八九十\d]+块',
     r'该页包含以下内容块',
-    r'\*\*内容块定位[（(].*?[）)][：:]*\*\*$',
     r'\[\s*自我校验启动\s*\]',
-    r'\[自我校验复核\]',
     r'页面布局为[：:]',
-    r'#{1,4}\s*[*✅🔍]*\s*自我校验(?:清单)?(?:（[^)]*）)?[：:\s]*$',
+    r'###?\s*[*✅🔍]+\s*自我校验(?:清单)?(?:（[^)]*）)?$',
     r'##\s*[*✅🔍]*\s*自我校验',
-    r'###\s*[*✅🔍]+\s*自我校验完成(?:（[^)]*）)?[：:\s]*$',
+    r'###\s*[*✅🔍]+\s*自我校验完成(?:（[^)]*）)?$',
     r'###\s*\*\*自我校验完成\*\*',
     r'##\s*六、自我校验',
     r'#{1,4}\s*三、自我校验',
@@ -370,25 +360,6 @@ _BLOCK_HEADER_PATTERNS = [
     r'##\s+二、图注[（(]',
     r'###\s+参考文献\s*$',
     r'##\s+五、自我校验清单',
-    r'#{1,4}\s*修正版.*删除所有上标引用标记',
-    r'#{1,4}\s*内容完整性核验补充说明',
-    r'#{1,4}\s*页脚与水印处理说明',
-    r'页面为\*\*[^*]+\*\*',
-    r'该页包含以下内容块',
-    r'页面可见(?:内容块|内容)及位置如下[：:]*$',
-    r'^\s*-\s*\*\*(?:左栏|右栏)内容块',
-    r'^\s*-\s*\*\*页面角落检查\*\*',
-    r'\[自我校验启动\]',
-    r'\[校验通过，开始输出\]',
-    r'\[输出结束\]',
-    r'\[整页结构预扫描完成\]',
-    r'^\*\*页脚与水印处理说明\*\*',
-    r'^\*\*内容完整性核验补充说明\*\*',
-    r'^\*\*页眉/页脚处理说明[：:]*\*\*',
-    r'^-\s*\*\*(?:左|右)栏内容[：:]*\*\*',
-    r'开始按(?:规则|排版顺序)逐块提取',
-    r'^——开始按规则逐块提取——$',
-    r'^✅\s*所有内容块已定位，开始按规则逐块提取',
 ]
 
 _BLOCK_INNER_PATTERNS = [
@@ -403,7 +374,7 @@ _BLOCK_INNER_PATTERNS = [
     r'^-\s+(?:无额外文字|无文字|无遗漏文字|水印|参考文献列表|缩写)',
     r'^\s*-?\s*\[[ xX☑]\]\s+',
     r'^✅\s*(?:所有内容块已覆盖|确认无遗漏|整页结构已扫描|四角检查'
-             r'|自我校验完成|所有校验项通过|全部通过|输出完成|输出完毕|提取完成'
+             r'|自我校验完成|所有校验项通过|输出完成|输出完毕|提取完成'
              r'|页面四角检查|表格上方无|双栏结构识别正确'
              r'|表格行列核对|流程图\s*YAML|已删除|已覆盖|已完整'
              r'|数值阈值和单位完整|确认无遗漏内容块'
@@ -441,32 +412,20 @@ _BLOCK_INNER_PATTERNS = [
              r'|左栏主体|右栏主体|左栏正文|右栏正文)\*\*\s*[：:]',
     r'^>\s*\*\*说明\*\*[：:]',
     r'^[（(]全文结束[）)]',
-    r'^\s*-\s*\*\*(?:左|右)栏内容块',
-    r'^\s*-\s*\*\*页面角落检查\*\*',
-    r'^\s*-\s*\*\*修正版\*\*',
-    r'^\s*-\s*(?:段落|标题|表格|图)\d*.*[：:]',
-    r'^\s*-\s+无其他角落文字',
-    r'^\s*\d+\.\s+.*→.*',
-    r'^✅\s*所有内容块已定位，开始按规则逐块提取',
-    r'^——开始按规则逐块提取——$',
 ]
 
 _BODY_SIGNAL_PATTERNS = [
     r'^##\s+表\d', r'^###\s+表\d', r'^\*\*表\d', r'^####\s+表\d', r'^#####\s+表\d',
-    r'^##\s+Table\s+\d', r'^###\s+Table\s+\d', r'^\*\*Table\s+\d',
     r'^###\s+左栏内容', r'^###\s+右栏内容',
     r'^###\s*▶\s*(?:左栏|右栏)', r'^####\s*▶\s*左栏内容',
     r'^#####\s*【流程图标题】',
     r'^##\s+图\d', r'^###\s+图\d',
-    r'^##\s+Figure\s+\d', r'^###\s+Figure\s+\d',
     r'^##\s+(?:第[一二三四五六七八九十]+部分|前言|摘要|关键词|总[结论]|执笔|核心专家|专家组|利益冲突|参考文献)\b',
     r'^\*\*(?:第一|第二|第三|第四|第五|第六)部分',
     r'^###\s+(?:一、|二、|三、|四、|五、|六、|七、|八、|九、|十、)',
     r'^##\s+(?:一、|二、|三、|四、|五、|六、|七、|八、|九、|十、)',
     r'^####\s+(?:一、|二、|三、|四、|五、)',
     r'^#####?\s*【',
-    r'^\*\*Footnotes:\*\*',
-    r'^\*\*Notes:\*\*',
 ]
 
 _GLOBAL_SWEEP_PATTERNS = [
@@ -508,7 +467,8 @@ _GLOBAL_SWEEP_PATTERNS = [
     r'^####\s+右栏$',
     r'^##\s+左栏正文',
     r'^##\s+一、左栏内容',
-    r'^>?\s*输出完毕[，。]*.*$',
+    r'^>?\s*输出完毕[。。]*$',
+    r'^>?\s*输出完毕[。].*$',
     r'.*数字化副本.*$.*(?:未增删|未解释|未推断|未改写)',
     r'^\*\*输出结束[^\n]*$',
     r'^如需对后续页面继续提取.*$',
@@ -588,84 +548,6 @@ _GLOBAL_SWEEP_PATTERNS = [
        r'|专家组|利益冲突|通信作者|基金项目|收稿日期|引用本文|DOI'
        r'|第[一二三四五六七八九十]+部分)'
        r'.+\s*[（(][^）)]+[）)]\s*$',
-    r'^\s*-\s*\*\*(?:左|右)栏内容块',
-    r'^\s*-\s*\*\*页面角落检查\*\*',
-    r'^\s*-\s*\*\*修正版\*\*',
-    r'页面为\*\*[^*]+\*\*.*内容块分布',
-    r'^页面为.*内容块分布如下[：:]*$',
-    r'该页包含以下内容块',
-    r'页面可见(?:内容块|内容)及位置如下[：:]*$',
-    r'^\s*-\s*\*\*(?:顶部|左上|右上|左下|右下|中部|页眉|页脚|期刊信息).*?\*\*\s*[：:]',
-    r'^\s*-\s*(?:段落|标题|表格|图)\d*.*[：:]',
-    r'^\s*-\s*\[\s*[xX☑]\s*\]\s+.*(?:内容块|扫描|四角|表格|跨栏|双栏|流程图|数值|HTML|注释|YAML|阈值|单位)',
-    r'^\s*-\s*\[\s*[xX☑]\s*\]\s+.*(?:校验|检查|核对|确认|覆盖|删除|过滤)',
-    r'\[自我校验启动\]',
-    r'\[校验通过，开始输出\]',
-    r'\[输出结束\]',
-    r'^#{1,4}\s*修正版.*删除所有上标引用标记',
-    r'^#{1,4}\s*内容完整性核验补充说明',
-    r'^#{1,4}\s*页脚与水印处理说明',
-    r'^#{1,4}\s*页眉/页脚处理说明',
-    r'^\*\*页脚与水印处理说明\*\*',
-    r'^\*\*内容完整性核验补充说明\*\*',
-    r'^\*\*页眉/页脚处理说明[：:]*\*\*',
-    r'^-\s+无(?:表格|公式|流程图|决策树|图片|水印|参考文献)',
-    r'^-\s+无参考文献标题出现',
-    r'^-\s+左下角.*?水印.*?已删除',
-    r'^-\s+页码.*?已删除',
-    r'^-\s+全文完整提取',
-    r'^-\s+右下角.*?网址.*?删除',
-    r'^\[\s*自我校验完成\s*\]',
-    r'^页面内容块分布如下[：:]*$',
-    r'^内容块分布如下[：:]*$',
-    r'^-\s+(?:\*\*)?(?:主体内容|右侧边栏|左侧边栏|页脚|页面顶部|页面底部|左上角|右上角|左下角|右下角|顶部标题|页码|表格下方|上标参考文献编号).*?(?:删除|覆盖|已删除|需删除|按规则)',
-    r'^-\s+(?:\*\*)?(?:主体内容|页面底部|页面顶部|左栏|右栏)[:：].*',
-    r'^-\s+(?:左栏|右栏|顶部|底部)[:：].*?段落',
-    r'^\d+\.\s+(?:顶部段落|段落|首段|续接前页|主体内容|子标题|标题|表\d*\s*(?:标题|注释|：)?|表格|图\d+|图注).*?（',
-    r'^-\s+无页眉页脚需保留内容',
-    r'^-\s+页面顶部有.*',
-    r'^（页脚水印已过滤.*）$',
-    r'^✅\s*全部通过.*$',
-    r'^>\s*提取完成.*$',
-    r'^>\s*本输出为.*数字化副本.*$',
-    r'^>\s*提取完毕.*$',
-    r'\[整页结构预扫描完成\]',
-    r'^页面为[^。]*(?:双栏|单栏|多栏)[^。]*(?:无表格|无公式|无流程图|无决策树|无图片)[^。]*。?$',
-    r'^-\s*\*\*(?:左|右)栏内容[：:]*\*\*',
-    r'开始按(?:规则|排版顺序)逐块提取',
-    r'^——开始按规则逐块提取——$',
-    r'^✅\s*所有内容块已定位，开始按规则逐块提取',
-    r'^\s*\d+\.\s+.*→.*',
-    r'^\s*-\s+无其他角落文字',
-    r'^（已确认：无其他角落文字遗漏）',
-    r'^-\s+主体为[^。]*(?:双栏|单栏|多栏)[^。]*。?$',
-    r'^[-\s]*\*\*(?:左|右)栏内容块[（(].*?[）)]\*\*\s*[：:]$',
-    r'^-\s+(?:左|右)栏内容块[（(].*?[）)]\s*[：:]$',
-    r'^-\s+页面底部[：:].*',
-    r'^-\s+无页脚页码.*',
-    r'^[—-]+\s*(?:删除页眉|删除左下角|删除右下角|删除正文中的上标引用标记).*',
-    r'^✅\s*(?:内容块边界确认|排版顺序|数值与术语保真核查|自我校验全部勾选通过|排版判断|所有校验项通过).*',
-    r'^——\s*开始输出干净数字化副本\s*——$',
-    r'^——\s*校验通过，开始输出\s*——$',
-    r'^-\s+(?:所有剂量|缩写|推荐等级未出现)[（(].*',
-    r'^\s*\d+\.\s*(?:标题)?["\u201c"].*?["\u201d"]段落[（(].*?[）)]',
-    r'^\s*\d+\.\s*末段[：：].*',
-    r'^-\s+.*(?:删除页眉|删除页脚|删除左下角|删除右下角|删除正文中的上标引用标记|推荐等级未出现|已过滤|已删除|已忽略|逐字提取|未生成|未补全|被截断).*',
-    r'^\*\*（删除页眉.*',
-    r'^\*\*内容块定位[（(].*?[）)][：:]*\*\*$',
-    r'^\d+\.\s+(?:页眉|主标题|副标题|编写单位|通信作者|【关键词】|英文标题|底部左侧|底部右侧|左栏正文|右栏正文|二维码|图像元素|期刊信息).*',
-    r'^-\s+保留\s+DOI.*',
-    r'^\*\*(?:页眉|页脚)信息[（(]已过滤[）)]\*\*',
-    r'^-\s+左上角页码[：:].*',
-    r'^-\s+顶部期刊信息.*',
-    r'^-\s+右上角标题.*',
-    r'^-\s+右下角二维码.*',
-    r'^✅\s*以下为严格遵循.*',
-    r'\[自我校验复核\]',
-    r'^\s*⚠.*',
-    r'^\s*→\s*修正后.*',
-    r'^重新输出修正版.*',
-    r'^\s*"[^"]*"\s*$',
 ]
 
 
@@ -696,12 +578,6 @@ def _looks_like_body_text(line: str) -> bool:
     if s.startswith('```'):
         return True
     if re.match(r'^(?:>\s*)?\*{0,2}注[：:]', s):
-        return True
-    # 英文脚注/注释标记
-    if re.match(r'^\*\*[A-Z][a-zA-Z]+:\*\*', s):
-        return True
-    # Markdown 标题（中英文）
-    if re.match(r'^#{1,4}\s+(?:Table|Figure|表|图)\s*\d', s):
         return True
     if len(s) > 15 and ord(s[0]) > 0x2E80:
         _prefixes = [
@@ -734,272 +610,103 @@ def _looks_like_body_text(line: str) -> bool:
     return False
 
 
-# ── 基于特征分类的 VLM 过程内容清洗器 ──────────────────────────
-
-_PROCESS_HEADING_KEYWORDS = {
-    '预扫描', '自我校验', '内容过滤', '四角检查', '四角专项', '最终输出说明',
-    '提取结果', '按规则逐块提取', '页眉与元信息', '页面顶部信息',
-    '正文内容提取', '格式处理说明', '其他说明', '页面四角', '自我校验',
-    '整页结构预扫描', '最终输出说明', '提取结果', '按规则逐块提取', '主内容区',
-    '表格提取', '页脚与水印处理', '内容完整性核验', '修正版', '重新输出',
-    '正文段落', '最终修正版', '最终输出', '提取内容', '按排版顺序逐块提取',
-    '内容块定位', '页眉/页脚信息', '四角检查', '页面布局', '整页结构',
-}
-
-_PROCESS_PREFIXES = [
-    r'以下为', r'我将严格按照', r'此为该页', r'此为原始文献', r'此输出为',
-    r'本提取结果为', r'本页提取内容', r'页面为', r'该页包含',
-    r'页面可见', r'内容块分布如下', r'经四角检查', r'现按', r'已执行',
-    r'输出完毕', r'提取完成', r'提取完毕', r'数字化副本', r'最终输出说明',
-    r'如需继续处理', r'如需对后续页面', r'删除了原文中可能存在',
-    r'所有节点', r'推荐等级原文未标注', r'颜色提示依据原图色块',
-    r'同一level内nodes', r'无跨层嵌套', r'绝对忠实图像', r'图像截断',
-    r'未做任何补全', r'及支\[无法识别\]', r'页面内容块分布如下',
-]
-
-_PROCESS_LINE_PREFIXES_EXACT = [
-    r'——\s*开始按规则逐块提取——',
-    r'——\s*开始输出干净数字化副本\s*——',
-    r'——\s*校验通过，开始输出\s*——',
-    r'\[整页结构预扫描完成\]',
-    r'\[自我校验启动\]',
-    r'\[自我校验复核\]',
-    r'\[校验通过，开始输出\]',
-    r'\[输出结束\]',
-    r'\[\s*自我校验完成\s*\]',
-]
-
-
-def _classify_line(line: str) -> str:
-    """将单行分类为 EMPTY / PROCESS / BODY。"""
-    s = line.strip()
-    if not s:
-        return 'EMPTY'
-
-    for pat in _PROCESS_LINE_PREFIXES_EXACT:
-        if re.match(pat, s):
-            return 'PROCESS'
-
-    # 引述块（>）在 VLM 输出中几乎都是过程描述
-    if s.startswith('> '):
-        if re.match(r'> \*\*(?:说明|注意|表格周边文字提取|页眉|页脚|页码|期刊信息|内容完整性核验|页脚与水印处理)', s):
-            return 'PROCESS'
-        if re.match(r'> [✅⚠️→🔍📄📌💡🔎]', s):
-            return 'PROCESS'
-        if re.search(r'(?:左上|右上|左下|右下|上部|下部|左侧|右侧|中部|表格上方|表格下方|流程图|页眉|页脚|四角|预扫描|内容块|定位|检查|核对|提取完毕|数字化副本|本结果为|本页提取|表格周边文字提取|页面左下角|页面右下角|页面左上角|页面右上角)', s):
-            return 'PROCESS'
-        return 'BODY'
-
-    # 校验清单
-    if re.match(r'^\s*-\s*\[\s*[xX☑ ]\s*\]', s):
-        return 'PROCESS'
-
-    # 过程性 Emoji / 箭头
-    if re.match(r'^[✅⚠️→🔍📄📌💡🔎]', s):
-        return 'PROCESS'
-
-    # 方括号过程阶段
-    if re.match(r'^\[(?:自我校验|整页结构预扫描|校验通过|输出结束|自我校验复核|自我校验完成)\]', s):
-        return 'PROCESS'
-
-    # Markdown 标题含过程关键词
-    if re.match(r'^#{1,4}\s', s):
-        heading_text = re.sub(r'^#{1,4}\s*', '', s)
-        if any(kw in heading_text for kw in _PROCESS_HEADING_KEYWORDS):
-            return 'PROCESS'
-
-    # 显式过程前缀
-    for prefix in _PROCESS_PREFIXES:
-        if re.match(prefix, s):
-            return 'PROCESS'
-
-    # 删除指令
-    if re.match(r'^-\s+.*(?:删除页眉|删除页脚|删除左下角|删除右下角|删除右上角|删除正文中的上标引用标记|已过滤|已删除|已忽略|逐字提取|未生成|未补全|被截断)', s):
-        return 'PROCESS'
-
-    # 编号的过程项（内容块清单）
-    if re.match(r'^\s*\d+\.\s+(?:页眉|主标题|副标题|编写单位|通信作者|【关键词】|英文标题|底部左侧|底部右侧|左栏正文|右栏正文|二维码|图像元素|期刊信息|左上角|右上角|左下角|右下角|顶部页眉|顶部居中|页码)', s):
-        return 'PROCESS'
-
-    # 星号包裹的过程标签
-    if re.match(r'^\s*-\s*\*\*(?:顶部|左上区域|右上区域|中部偏下|左下角|右下角|左栏主体|右栏主体|左栏正文|右栏正文|页码|期刊信息|页眉|页脚|四角检查|页面四角检查|段落\d*|表\d*标题|表格主体|表格下方段落|右侧正文段落|表\d*下方(?:注释)?|主体上部|底部图注|流程图下方|左侧路径|右侧路径|图\d+左侧|图\d+右侧)\d*[\)）]?\*\*\s*[：:]', s):
-        return 'PROCESS'
-
-    # 带位置/过程词的列表项
-    if re.match(r'^-\s+.*?(?:左上角|右上角|左下角|右下角|顶部|页眉|页脚|页码|期刊信息|二维码|DOI|水印|参考文献|内容块|定位|正文|删除|保留|忽略|无文字|已删除|已过滤|按规则|无水印|无参考文献|无上标引用|无页眉页脚|正文起始内容)', s):
-        return 'PROCESS'
-
-    # 无 markdown 标题号的星号包裹过程标签
-    if re.match(r'^\*\*(?:内容块定位|页眉/页脚信息|四角检查|页面布局|整页结构|预扫描结果|页脚与水印处理说明|内容完整性核验补充说明|页眉/页脚处理说明).*?\*\*', s):
-        return 'PROCESS'
-    if re.match(r'^\*\*(?:顶部|顶部居中|页码|页眉|期刊信息|左上角|右上角|左上区域|右上区域|中部偏上|中部偏下|左下角|右下角|左栏主体|右栏主体|左栏正文|右栏正文|流程图上方|流程图下方|表格上方|表格下方|表\d*标题|表格主体|表格下方段落\d*|右侧正文段落|表\d*下方注释|主体上部|底部图注|左侧路径|右侧路径)\*\*\s*[：:]', s):
-        return 'PROCESS'
-
-    # 页面布局纯文本描述
-    if re.match(r'^页面为[^。]*(?:双栏|单栏|多栏)[^。]*(?:无表格|无公式|无流程图|无决策树|无图片)[^。]*。?$', s):
-        return 'PROCESS'
-    if re.match(r'^页面为\*\*[^*]+\*\*排版.*内容块分布如下[：:]*$', s):
-        return 'PROCESS'
-    if re.match(r'^该页包含以下内容块[：:]*$', s):
-        return 'PROCESS'
-    if re.match(r'^内容块分布如下[：:]*$', s):
-        return 'PROCESS'
-    if re.match(r'^页面可见(?:内容块|内容)及位置如下[：:]*$', s):
-        return 'PROCESS'
-
-    # 常见尾部残留：输出声明、四角检查列表项
-    if re.match(r'^输出为.*数字化副本.*$', s):
-        return 'PROCESS'
-    if re.match(r'^-\s+.*四角检查[：:]', s):
-        return 'PROCESS'
-    if re.match(r'^-\s+页面四角检查[：:]', s):
-        return 'PROCESS'
-    if re.match(r'^\d+\.\s+\*\*四角检查\*\*[：:]', s):
-        return 'PROCESS'
-
-    return 'BODY'
-
-
 def strip_all_process_content(text: str) -> str:
-    """从 VLM 输出文本中剥离所有过程分析/元数据内容（基于特征分类器）。"""
+    """从 VLM 输出文本中剥离所有过程分析/元数据内容。"""
+    # Pass 0：全局暴力逐行清除
     lines = text.splitlines(True)
-    classes = [_classify_line(line) for line in lines]
+    swept = []
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            swept.append(line); continue
+        if any(re.match(p, stripped) for p in _GLOBAL_SWEEP_PATTERNS):
+            continue
+        swept.append(line)
+    text = "".join(swept)
 
-    # Pass 1：状态机扫描 —— 跳过过程块
+    # Pass 1：状态机逐行扫描
+    lines = text.splitlines(True)
     kept = []
+    i = 0
     in_block = False
-    for i, line in enumerate(lines):
-        s = line.strip()
-        cls = classes[i]
+    while i < len(lines):
+        s = lines[i].strip()
         if not s:
             if in_block:
-                continue
-            kept.append(line)
-            continue
+                i += 1; continue
+            else:
+                kept.append(lines[i]); i += 1; continue
+        if _is_block_header(s) or (in_block and _is_block_inner_line(s)):
+            in_block = True; i += 1; continue
+        if in_block:
+            if _is_body_signal(s) or _looks_like_body_text(s) or s == '---':
+                in_block = False; kept.append(lines[i]); i += 1; continue
+            i += 1; continue
+        kept.append(lines[i]); i += 1
+    result = "".join(kept)
 
-        if cls == 'PROCESS':
-            in_block = True
-            continue
+    # Pass 2：多行块正则删除
+    multi_line_blocks = [
+        (
+            r'\n*#{1,4}\s*[*✅🔍]*\s*自我校验(?:清单|完成)?(?:（[^)]*）)?\s*\n*'
+            r'(?:[^\n]*\n*)*?'
+            r'(?=\n#{1,4}\s+(?:表\d|图\d|第[一二三四五六七八九十]+部分|参考文献'
+              r'|左栏内容|右栏内容|左栏正文|右栏正文'
+              r'|一、|二、|三、|四、|五、|六、|七、|八、|九、|十、)'
+              r'|\n---\n|\n\Z)'
+        ),
+        (
+            r'\n*#{1,4}\s*[*✅🔍📄]*\s*整页(?:结构)?预扫描[^\n]*\n*'
+            r'(?:[^\n]*\n*)*?'
+            r'(?=\n#{1,4}\s+(?:表\d|图\d|左栏|右栏|正文)|\n---\n|\n\Z)'
+        ),
+        (
+            r'\n*#{1,4}\s*[*✅]*\s*(?:页面四角|四角检查|四角专项)[^\n]*\n*'
+            r'(?:[^\n]*\n*)*?'
+            r'(?=\n#{1,4}\s+(?:表\d|图\d|左栏|右栏|正文)|\n---\n|\n\Z)'
+        ),
+        (
+            r'\n*#{1,4}\s*[*✅]*\s*(?:内容过滤|格式处理说明|其他说明)[^\n]*\n*'
+            r'(?:[^\n]*\n*)*?'
+            r'(?=\n#{1,4}\s+(?:表\d|图\d|左栏|右栏|正文)|\n---\n|\n\Z)'
+        ),
+        (
+            r'\n*#{1,4}\s*[*📄📌]+\s*(?:最终(?:输出|修正版)|提取结果|提取内容)[^\n]*\n*'
+            r'(?:[^\n]*\n*)*?'
+            r'(?=\n#{1,4}\s+(?:表\d|图\d|左栏|右栏|正文|一、|二、)|\n---\n|\n\Z)'
+        ),
+    ]
+    for pattern in multi_line_blocks:
+        result = re.sub(pattern, '', result)
 
-        if in_block and cls != 'BODY':
-            continue
-
-        if in_block and cls == 'BODY':
-            in_block = False
-            kept.append(line)
-            continue
-
-        kept.append(line)
-
-    # Pass 2：反向尾部扫描
-    trailing_cleaned = []
-    in_trailing = False
-    for line in reversed(kept):
-        s = line.strip()
+    # Pass 3：反向尾部扫描
+    lines = result.splitlines(True)
+    last_body_line = len(lines)
+    i = len(lines) - 1
+    trailing_process = False
+    while i >= 0:
+        s = lines[i].strip()
         if not s:
-            if in_trailing:
-                continue
-            trailing_cleaned.append(line)
-            continue
-        cls = _classify_line(line)
-        if cls == 'PROCESS':
-            in_trailing = True
-            continue
-        in_trailing = False
-        trailing_cleaned.append(line)
-
-    result = ''.join(reversed(trailing_cleaned))
-
-    # Pass 3：去除引用上标 HTML 标签
-    result = re.sub(r'<sup>.*?</sup>', '', result)
+            if trailing_process:
+                i -= 1; continue
+            else:
+                break
+        is_process = (
+            _is_block_header(s)
+            or _is_block_inner_line(s)
+            or any(re.match(p, s) for p in _GLOBAL_SWEEP_PATTERNS)
+        )
+        if is_process:
+            trailing_process = True
+            i -= 1; continue
+        last_body_line = i + 1
+        break
+    if trailing_process and last_body_line < len(lines):
+        result = "".join(lines[:last_body_line])
 
     # Pass 4：空行归一化
     result = re.sub(r'\n{3,}', '\n\n', result)
-
-    # Pass 5：去除首尾残留的 --- 分隔线与空行
-    result = re.sub(r'^(?:\s*---\s*\n|\s*\n)+', '', result)
-    result = re.sub(r'(?:\n\s*---\s*|\n\s*)+$', '', result)
-
     return result.strip()
-
-
-def _strip_frontmatter_checklist(body: list[str]) -> list[str]:
-    """硬删除frontmatter后的校验清单块（- [x] / - [ ] 开头的连续块）。"""
-    result = []
-    in_checklist = False
-    for line in body:
-        s = line.strip()
-        if not s:
-            if in_checklist:
-                continue
-            result.append(line)
-            continue
-        # 检测到校验清单项
-        if re.match(r'^\s*-\s*\[\s*[xX☑ ]\s*\]\s+', s):
-            in_checklist = True
-            continue
-        # 校验清单结束后的 ✅ 汇总行
-        if in_checklist and re.match(r'^✅\s*所有校验项通过|^✅\s*以下为严格遵循', s):
-            continue
-        if in_checklist and re.match(r'^✅\s*.+', s):
-            continue
-        # 遇到正文信号则退出清单模式
-        in_checklist = False
-        result.append(line)
-    return result
-
-
-def _truncate_at_references(text: str) -> str:
-    """在'#### 参考文献'或'## 参考文献'处截断文本。"""
-    match = re.search(r'\n#{1,4}\s*参\s*考\s*文\s*献\s*\n', text)
-    if match:
-        return text[:match.start()]
-    return text
-
-
-def _remove_duplicate_revisions(text: str) -> str:
-    """检测并去除'修正版'或'重新输出修正版'导致的重复内容。
-
-    对于'重新输出修正版'，采用保守策略：仅删除该声明及其之后的所有内容，
-    保留之前的原始正文（避免像 BODY_CONTENT_MARKERS 那样误删前置内容）。
-    """
-    # 保守处理"重新输出修正版"：截断到声明处
-    re_output_match = re.search(r'^重新输出修正版.*[：:]?\s*$', text, re.MULTILINE)
-    if re_output_match:
-        text = text[:re_output_match.start()].strip()
-
-    # 传统的"修正版（删除所有上标引用标记）"通常出现在重复块的开头，
-    # 其后为净化后的内容，因此保留之后的内容
-    marker = re.search(r'#{1,4}\s*修正版.*删除所有上标引用标记[：:]?\s*\n', text)
-    if marker:
-        return text[marker.end():].strip()
-    return text
-
-
-def _find_content_start_after_separator(body: list[str]) -> int:
-    """
-    查找 frontmatter 后 '---' 分隔线之后正文开始的行号。
-    VLM 输出常在过程描述和正文之间用 '---' 分隔。
-    """
-    for i, line in enumerate(body):
-        if line.strip() == '---':
-            # 跳过空行，检查后面是否有正文
-            for j in range(i + 1, len(body)):
-                s = body[j].strip()
-                if not s:
-                    continue
-                # 如果下一条是全局清洗列表中的过程内容，跳过这个分隔线
-                if any(re.match(p, s) for p in _GLOBAL_SWEEP_PATTERNS):
-                    break
-                # 如果是正文信号，从这个分隔线之后开始
-                if _looks_like_body_text(s) or _is_body_signal(s):
-                    return i + 1
-                # 如果是正文标记（如 ### 正式输出），也从这里开始
-                if _find_body_content_marker(body[j:j+1]) >= 0:
-                    return i + 1
-                # 其他情况，跳过这个分隔线继续找下一个
-                break
-    return -1
 
 
 def extract_final_content(filepath: Path) -> Optional[str]:
@@ -1009,28 +716,16 @@ def extract_final_content(filepath: Path) -> Optional[str]:
 
     body_start = _skip_frontmatter(lines)
     body = lines[body_start:]
-
-    # 硬删除frontmatter后的校验清单
-    body = _strip_frontmatter_checklist(body)
-
     full_text = "".join(body).strip()
 
     if _is_reference_page(full_text):
         return None
 
-    # 优先查找显式的正文标记（安全标记，不含 revision 相关）
     marker_idx = _find_body_content_marker(body)
     if marker_idx >= 0:
         text_to_clean = "".join(body[marker_idx:]).strip()
     else:
-        # 不再使用 --- 分隔线截断，直接处理完整文本，避免误删正文
         text_to_clean = full_text
-
-    # 去除修正版重复内容
-    text_to_clean = _remove_duplicate_revisions(text_to_clean)
-
-    # 在参考文献标题处截断
-    text_to_clean = _truncate_at_references(text_to_clean)
 
     return strip_all_process_content(text_to_clean) or None
 

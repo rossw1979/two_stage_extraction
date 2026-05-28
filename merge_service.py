@@ -300,7 +300,30 @@ async def run_merge(
         _app_logger.info(f"{'='*50}")
 
         cleanup_merge_logger()
+        
+        # ── 阶段3：回调接口，上传合并结果 ──
+        # TODO: 配置dify工作流回调地址
+        #url = "http://192.168.43.15/triggers/webhook/BcnOp11BcryiJ4Aa1sJpNiA6"
+        #url = "http://localhost/triggers/webhook/BcnOp11BcryiJ4Aa1sJpNiA6"
+        url = "http://localhost/triggers/webhook-debug/BcnOp11BcryiJ4Aa1sJpNiA6"
+        
+        data = {
+            "merge_id": merge_task.merge_id,
+            "status": merge_task.status,
+            "error": merge_task.error or "",
+            "merged_file": merge_task.merged_file or "",
+            "total_chars": str(merge_task.total_chars or 0),
+            "effective_pages": str(merge_task.effective_pages or 0),
+            "skipped_pages": merge_task.skipped_pages or [],
+        }
 
+        async with httpx.AsyncClient(timeout=HTTP_TIMEOUT) as client:
+            resp = await client.post(url, json=data)
+            if resp.status_code != 200:
+                _app_logger.error(f"[{merge_id}] 回调接口返回错误: {resp.status_code} {resp.text}")
+            else:
+                _app_logger.info(f"[{merge_id}] 回调接口调用成功: {resp.status_code}")
+                
     except Exception as e:
         _app_logger.error(f"[{merge_id}] 合并过程异常: {type(e).__name__}: {e}", exc_info=True)
         merge_task.status = TaskStatus.FAILED
