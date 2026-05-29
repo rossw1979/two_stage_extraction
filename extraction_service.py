@@ -34,6 +34,8 @@ from _shared import (
     extract_phase,
     verify_phase,
     call_vlm,
+    build_image_message,
+    load_prompt,
     DEFAULT_CONCURRENCY,
 )
 
@@ -69,7 +71,7 @@ class ExtractRequest(BaseModel):
     model: str = Field(default="qwen3-vl-plus", description="VLM模型名称")
     api_key: Optional[str] = Field(default=None, description="API Key（不传则读环境变量 QWEN_API_KEY）")
     base_url: Optional[str] = Field(default=None, description="API Base URL（不传则读环境变量 QWEN_BASE_URL）")
-    verify: bool = Field(default=False, description="是否启用阶段3定向校验")
+    verify: bool = Field(default=True, description="是否启用阶段3定向校验")
     force_strategy: Optional[str] = Field(
         default=None,
         description="强制使用指定策略，跳过Scout阶段。可选值: 轻量提取, 标准提取, 完整提取",
@@ -172,12 +174,81 @@ async def run_single_extraction(
 
         # 阶段3: Verify (可选)
         verify_result = None
+        re_extracted = False
+        re_extract_focus = ""
+
         if enable_verify:
             verify_result = await verify_phase(
                 str(img), scout_result, extract_result, model, api_key, base_url
             )
 
+            # 校验失败定向重提逻辑
+            if verify_result and verify_result.get("needs_re_extract"):
+                re_extract_focus = verify_result.get("re_extract_focus", "未指定")
+                _app_logger.warning(
+                    f"[{task_id}] 校验发现问题，启动定向重提: {re_extract_focus}"
+                )
+
+                # 加载原策略提示词作为 system prompt，确保格式规则一致
+                strategy_files = {
+                    "轻量提取": "extract_light.md",
+                    "标准提取": "extract_standard.md",
+                    "完整提取": "prompt_v3_with_fewshot.md",
+                }
+                prompt_file = strategy_files.get(strategy, "extract_standard.md")
+                system_prompt = load_prompt(prompt_dir / prompt_file)
+
+                refine_prompt = f"""这是该页面的初步提取结果，经校验发现以下问题需要修正：
+
+【需要重点修正的问题】
+{re_extract_focus}
+
+【初步提取结果】
+{extract_result}
+
+请对照原图重新提取该页面的完整内容。
+
+要求：
+- 重点修正上述校验发现的问题，其他已正确的文字、表格、格式保持原有准确输出不变
+- 严格遵循排版顺序规则：先处理跨页延续段落（如有），再按单栏/双栏/三栏顺序输出
+- 直接输出修正后的完整正文内容，直接以正文段落、标题或表格开始
+- 严禁输出以下任何内容：修正说明、对比分析、"修正如下"等前缀、过程性描述、校验备注、内容块清单、数字化副本声明
+- **严禁补全页面底部被截断的不完整句子**。若页面末尾句子在原文中已被截断，必须保留截断状态，不得使用医学知识添加原文未出现的文字
+- **严禁提取水印、版权信息、页脚元数据**："医脉通""指南""中华医学会杂志社"等半透明水印，以及DOI、收稿日期、编辑姓名、版权声明、出版商信息等页脚/页眉元数据，必须删除，不得保留
+- **参考文献处理**：若页面为纯参考文献页，仅输出 `（本页为参考文献，已跳过）`；若页面为正文与参考文献混合页，保留正文内容（表格、流程图、段落等），严禁输出 `# 参考文献` 或任何级别的参考文献标题
+- 输出必须是可以直接用于合并的干净正文，不含任何元信息或解释"""
+
+                messages = [
+                    {"role": "system", "content": system_prompt},
+                    {
+                        "role": "user",
+                        "content": [
+                            build_image_message(str(img)),
+                            {"type": "text", "text": refine_prompt},
+                        ],
+                    },
+                ]
+                extract_result = await call_vlm(
+                    messages, model, api_key, base_url, max_tokens=16384
+                )
+                re_extracted = True
+                _app_logger.info(f"[{task_id}] 定向重提完成")
+
+                # 对重提结果再做一次轻量校验
+                verify_result = await verify_phase(
+                    str(img), scout_result, extract_result, model, api_key, base_url
+                )
+                if verify_result and verify_result.get("needs_re_extract"):
+                    review_reason = verify_result.get("re_extract_focus", "")
+                    _app_logger.warning(
+                        f"[{task_id}] 重提后仍有问题: {review_reason}"
+                    )
+
         total_elapsed = time.time() - total_start
+
+        # 判断是否需人工复核：重提后仍有问题
+        review_needed = bool(re_extracted and verify_result and verify_result.get("needs_re_extract"))
+        review_reason = verify_result.get("re_extract_focus", "") if review_needed else ""
 
         frontmatter = f"""---
 extraction_strategy: {strategy}
@@ -185,10 +256,33 @@ scout_result: {json.dumps(scout_result, ensure_ascii=False)}
 total_time_seconds: {total_elapsed:.2f}
 page_num: {page_num}
 task_id: {task_id}
+re_extracted: {re_extracted}
+re_extract_focus: {json.dumps(re_extract_focus, ensure_ascii=False)}
+review_needed: {review_needed}
+review_reason: {json.dumps(review_reason, ensure_ascii=False)}
 ---
 
 """
         output_file.write_text(frontmatter + extract_result, encoding="utf-8")
+
+        # 生成人工复核指引文件
+        if review_needed:
+            review_file = page_output_dir / f"{pdf_name}_{page_num}_review.md"
+            review_content = f"""# 复核指引 —— 第 {page_num} 页 ({image_filename})
+
+**问题描述**：{review_reason}
+
+**原始图片**：{image_path}
+
+**提取结果文件**：{output_file}
+
+**建议人工复核重点**：
+- 对照原始图片，确认上述问题是否确实存在
+- 如确认存在，请直接修改提取结果文件中的正文内容
+- 修正完成后可删除本复核指引文件
+"""
+            review_file.write_text(review_content, encoding="utf-8")
+            _app_logger.warning(f"[{task_id}] 已生成复核指引: {review_file}")
 
         # 更新任务完成状态
         task.status = TaskStatus.COMPLETED

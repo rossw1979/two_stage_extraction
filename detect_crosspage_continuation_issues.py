@@ -99,6 +99,39 @@ def get_page_layout(page_file: Path) -> Optional[str]:
     return None
 
 
+def detect_review_needed_for_guideline(guideline_dir: Path) -> list[dict]:
+    """检测单个指南中重提后仍需人工复核的页面"""
+    guideline_name = guideline_dir.name
+    review_files = list(guideline_dir.glob(f"{guideline_name}_*_review.md"))
+    issues = []
+
+    for review_file in review_files:
+        try:
+            # 从文件名提取页码，如 "指南名_5_review.md" -> 5
+            stem = review_file.stem  # 去掉 .md
+            page_num_str = stem.rsplit("_", 1)[0].rsplit("_", 1)[-1]
+            page_num = int(page_num_str)
+
+            content = review_file.read_text(encoding="utf-8")
+            # 提取问题描述（第一行**之间的内容）
+            match = re.search(r'\*\*问题描述\*\*：(.+)', content)
+            reason = match.group(1).strip() if match else "未明确"
+
+            issues.append({
+                "guideline": guideline_name,
+                "page": page_num,
+                "issue_type": "review_needed",
+                "severity": "高",
+                "layout": "未知",
+                "reason": reason,
+                "review_file": str(review_file.name),
+            })
+        except Exception:
+            continue
+
+    return issues
+
+
 def detect_issues_for_guideline(guideline_dir: Path) -> list[dict]:
     """检测单个指南中的可疑页面"""
     guideline_name = guideline_dir.name
@@ -167,16 +200,18 @@ def detect_issues_for_guideline(guideline_dir: Path) -> list[dict]:
 
 
 def main():
-    all_issues = []
+    all_crosspage_issues = []
+    all_review_needed = []
     guideline_dirs = [d for d in OUTPUT_DIR.iterdir() if d.is_dir() and d.name != "test"]
 
-    print(f"开始扫描 {len(guideline_dirs)} 本指南的合并结果...\n")
+    print(f"开始扫描 {len(guideline_dirs)} 本指南...\n")
 
     for guideline_dir in sorted(guideline_dirs):
+        # 检测跨页延续问题
         issues = detect_issues_for_guideline(guideline_dir)
-        all_issues.extend(issues)
+        all_crosspage_issues.extend(issues)
         if issues:
-            print(f"[{guideline_dir.name}]")
+            print(f"[{guideline_dir.name}] 跨页延续问题:")
             for issue in issues:
                 sev = "🔴" if issue["severity"] == "高" else "🟡"
                 print(f"  {sev} 第{issue['page']}页 [{issue['issue_type']}] 严重程度:{issue['severity']}")
@@ -187,25 +222,45 @@ def main():
                     print(f"     ⚠️ 疑似延续段落: {issue['possible_continuation_found']}")
                 print()
 
+        # 检测重提后仍需复核的页面
+        reviews = detect_review_needed_for_guideline(guideline_dir)
+        all_review_needed.extend(reviews)
+        if reviews:
+            print(f"[{guideline_dir.name}] 需人工复核页面:")
+            for review in reviews:
+                print(f"  🔴 第{review['page']}页 [review_needed] 严重程度:高")
+                print(f"     问题: {review['reason']}")
+                print()
+
     # 输出汇总报告
-    high_severity = [i for i in all_issues if i["severity"] == "高"]
-    medium_severity = [i for i in all_issues if i["severity"] == "中"]
+    high_crosspage = [i for i in all_crosspage_issues if i["severity"] == "高"]
+    medium_crosspage = [i for i in all_crosspage_issues if i["severity"] == "中"]
 
     print("=" * 60)
-    print(f"扫描完成。总计发现 {len(all_issues)} 个可疑页面：")
-    print(f"  🔴 高危（需优先复核）: {len(high_severity)} 页")
-    print(f"  🟡 中危（建议抽查）: {len(medium_severity)} 页")
+    print(f"扫描完成。")
+    print(f"\n跨页延续问题: {len(all_crosspage_issues)} 个可疑页面")
+    print(f"  🔴 高危（需优先复核）: {len(high_crosspage)} 页")
+    print(f"  🟡 中危（建议抽查）: {len(medium_crosspage)} 页")
+
+    if all_review_needed:
+        print(f"\n重提后仍需复核: {len(all_review_needed)} 个页面")
+        for review in all_review_needed:
+            print(f"  - {review['guideline']} / 第{review['page']}页: {review['reason']}")
     print()
 
-    if high_severity:
-        print("高危页面清单（双栏布局 + 跨页延续断裂）：")
-        for issue in high_severity:
+    if high_crosspage:
+        print("高危跨页延续页面清单：")
+        for issue in high_crosspage:
             print(f"  - {issue['guideline']} / 第{issue['page']}页")
         print()
 
     # 写入详细报告文件
+    report = {
+        "crosspage_issues": all_crosspage_issues,
+        "review_needed_pages": all_review_needed,
+    }
     report_file = OUTPUT_DIR / "_crosspage_continuation_report.json"
-    report_file.write_text(json.dumps(all_issues, ensure_ascii=False, indent=2), encoding="utf-8")
+    report_file.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"详细报告已保存至: {report_file}")
 
 
