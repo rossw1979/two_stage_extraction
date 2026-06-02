@@ -1,0 +1,54 @@
+2026-05-31 21:34:14,954 [INFO] extraction_service - ============================================================
+2026-05-31 21:34:14,954 [INFO] extraction_service - VLM 文本提取服务 — 新任务
+2026-05-31 21:34:14,954 [INFO] extraction_service -   PDF 文件名: GRACE.pdf
+2026-05-31 21:34:14,954 [INFO] extraction_service -   输出目录前缀: GRACE
+2026-05-31 21:34:14,954 [INFO] extraction_service -   图片数量: 6
+2026-05-31 21:34:14,954 [INFO] extraction_service -   模型: qwen3-vl-plus
+2026-05-31 21:34:14,954 [INFO] extraction_service -   校验模式: 开启
+2026-05-31 21:34:14,954 [INFO] extraction_service - ============================================================
+2026-05-31 21:34:14,954 [INFO] extraction_service -   任务创建: b5e1eace-3dc5-4ffb-8cf0-9a58c91c26d8 → GRACE_1.png (第1页)
+2026-05-31 21:34:14,954 [INFO] extraction_service -   任务创建: fde201e8-3b6f-4055-8f93-5a175adb461b → GRACE_2.png (第2页)
+2026-05-31 21:34:14,954 [INFO] extraction_service -   任务创建: bc123ad6-8a35-475b-b5a4-ab85661b6c37 → GRACE_3.png (第3页)
+2026-05-31 21:34:14,954 [INFO] extraction_service -   任务创建: 93c2e037-b09e-41fe-b1ac-2baa755cb03f → GRACE_4.png (第4页)
+2026-05-31 21:34:14,954 [INFO] extraction_service -   任务创建: 4228b575-c23c-4b56-83ba-1026246dd8eb → GRACE_5.png (第5页)
+2026-05-31 21:34:14,954 [INFO] extraction_service -   任务创建: f60c48a2-1b7c-4cfd-a55e-469bae895be1 → GRACE_6.png (第6页)
+2026-05-31 21:34:14,955 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:34:14,955 [INFO] extraction_service - [b5e1eace-3dc5-4ffb-8cf0-9a58c91c26d8] 开始处理第 1 页: GRACE_1.png
+2026-05-31 21:34:14,979 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:34:14,979 [INFO] extraction_service - [fde201e8-3b6f-4055-8f93-5a175adb461b] 开始处理第 2 页: GRACE_2.png
+2026-05-31 21:34:15,000 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:34:15,001 [INFO] extraction_service - [bc123ad6-8a35-475b-b5a4-ab85661b6c37] 开始处理第 3 页: GRACE_3.png
+2026-05-31 21:34:15,019 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:34:15,020 [INFO] extraction_service - [93c2e037-b09e-41fe-b1ac-2baa755cb03f] 开始处理第 4 页: GRACE_4.png
+2026-05-31 21:34:15,032 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:34:15,032 [INFO] extraction_service - [4228b575-c23c-4b56-83ba-1026246dd8eb] 开始处理第 5 页: GRACE_5.png
+2026-05-31 21:34:15,052 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:34:15,052 [INFO] extraction_service - [f60c48a2-1b7c-4cfd-a55e-469bae895be1] 开始处理第 6 页: GRACE_6.png
+2026-05-31 21:34:39,182 [WARNING] extraction_service - [f60c48a2-1b7c-4cfd-a55e-469bae895be1] 校验发现问题，启动定向重提: 需保留左栏4段正文（Contributors/Funding/Competing interests/Ethical approval）及右栏顶部可能存在的延续段落，仅跳过右侧参考文献条目列表
+2026-05-31 21:34:53,497 [INFO] extraction_service - [f60c48a2-1b7c-4cfd-a55e-469bae895be1] 定向重提完成
+2026-05-31 21:35:03,684 [WARNING] extraction_service - [f60c48a2-1b7c-4cfd-a55e-469bae895be1] 重提后仍有问题: 遗漏右栏全部内容，包括参考文献前的作者单位列表与通讯作者信息，需按双栏顺序补全右栏段落
+2026-05-31 21:35:03,684 [WARNING] extraction_service - [f60c48a2-1b7c-4cfd-a55e-469bae895be1] 已生成复核指引: output/GRACE/GRACE_6_review.md
+2026-05-31 21:35:03,684 [INFO] extraction_service - [f60c48a2-1b7c-4cfd-a55e-469bae895be1] 完成! 耗时 48.63s, 策略=轻量提取, 结果=output/GRACE/GRACE_6.md
+2026-05-31 21:35:05,420 [INFO] extraction_service - [b5e1eace-3dc5-4ffb-8cf0-9a58c91c26d8] 完成! 耗时 50.46s, 策略=轻量提取, 结果=output/GRACE/GRACE_1.md
+2026-05-31 21:35:31,396 [WARNING] extraction_service - [4228b575-c23c-4b56-83ba-1026246dd8eb] 校验发现问题，启动定向重提: 遗漏了跨页延续段落的前置处理（应作为首个内容块），且左下角水印'BMJ Online First bmj.com'未删除，右下蓝色信息图格式未体现其为独立图形模块
+2026-05-31 21:35:32,057 [WARNING] extraction_service - [bc123ad6-8a35-475b-b5a4-ab85661b6c37] 校验发现问题，启动定向重提: 需严格按双栏顺序输出：左上流程图 → 左下段落 → 右上图片及图注（保留原文'Fig 2'编号，删除VLM添加的'Three line charts...'解释性文字）→ 右下段落；确保图注仅转录原文文字，不增补说明
+2026-05-31 21:35:58,737 [WARNING] extraction_service - [93c2e037-b09e-41fe-b1ac-2baa755cb03f] 校验发现问题，启动定向重提: 左下段落起始处存在截断句被错误处理为独立短语'tion.'，需严格按原文截断状态保留（不补全），并确保图注、表格脚注与主体内容位置绑定正确
+2026-05-31 21:36:16,536 [INFO] extraction_service - [bc123ad6-8a35-475b-b5a4-ab85661b6c37] 定向重提完成
+2026-05-31 21:36:18,440 [INFO] extraction_service - [4228b575-c23c-4b56-83ba-1026246dd8eb] 定向重提完成
+2026-05-31 21:36:26,588 [INFO] extraction_service - [fde201e8-3b6f-4055-8f93-5a175adb461b] 完成! 耗时 131.61s, 策略=标准提取, 结果=output/GRACE/GRACE_2.md
+2026-05-31 21:36:28,140 [WARNING] extraction_service - [bc123ad6-8a35-475b-b5a4-ab85661b6c37] 重提后仍有问题: 遗漏右上角三联曲线图（图2）的结构化表示或占位说明，需补充图表存在性标识及图题完整关联
+2026-05-31 21:36:28,141 [WARNING] extraction_service - [bc123ad6-8a35-475b-b5a4-ab85661b6c37] 已生成复核指引: output/GRACE/GRACE_3_review.md
+2026-05-31 21:36:28,141 [INFO] extraction_service - [bc123ad6-8a35-475b-b5a4-ab85661b6c37] 完成! 耗时 133.14s, 策略=标准提取, 结果=output/GRACE/GRACE_3.md
+2026-05-31 21:36:37,708 [WARNING] extraction_service - [4228b575-c23c-4b56-83ba-1026246dd8eb] 重提后仍有问题: 严格按双栏顺序输出：先完整左栏（表格+左下段落），再完整右栏（右上→右中→右下段落+蓝色信息图+致谢），确保右栏顶部延续段落不被插入左栏后续章节中，并明确标识表格脚注与信息图模块结构。
+2026-05-31 21:36:37,709 [WARNING] extraction_service - [4228b575-c23c-4b56-83ba-1026246dd8eb] 已生成复核指引: output/GRACE/GRACE_5_review.md
+2026-05-31 21:36:37,709 [INFO] extraction_service - [4228b575-c23c-4b56-83ba-1026246dd8eb] 完成! 耗时 142.68s, 策略=标准提取, 结果=output/GRACE/GRACE_5.md
+2026-05-31 21:37:09,814 [INFO] extraction_service - [93c2e037-b09e-41fe-b1ac-2baa755cb03f] 定向重提完成
+2026-05-31 21:37:30,492 [WARNING] extraction_service - [93c2e037-b09e-41fe-b1ac-2baa755cb03f] 重提后仍有问题: 修正跨页延续段落截断问题（左下段落以'tion.'开头需还原为完整延续句），并确保图注、脚注与原文标点/上标严格对应，避免混淆参考文献标号与脚注符号
+2026-05-31 21:37:30,494 [WARNING] extraction_service - [93c2e037-b09e-41fe-b1ac-2baa755cb03f] 已生成复核指引: output/GRACE/GRACE_4_review.md
+2026-05-31 21:37:30,494 [INFO] extraction_service - [93c2e037-b09e-41fe-b1ac-2baa755cb03f] 完成! 耗时 195.47s, 策略=标准提取, 结果=output/GRACE/GRACE_4.md

@@ -1,0 +1,18 @@
+---
+extraction_strategy: 标准提取
+scout_result: {"page_layout": "双栏", "content_blocks": [{"type": "段落", "position": "左上", "complexity": "低"}, {"type": "段落", "position": "右上", "complexity": "中"}, {"type": "段落", "position": "左下", "complexity": "低"}, {"type": "段落", "position": "右下", "complexity": "中"}], "tables": {"count": 0, "max_rows_estimate": 0, "has_merged_cells": false, "has_multiline_cells": false, "has_footnote_below": false}, "recommendation": "标准提取"}
+total_time_seconds: 29.03
+page_num: 3
+task_id: 3ad1986d-969a-445f-aa69-850455685db2
+re_extracted: False
+re_extract_focus: ""
+review_needed: False
+review_reason: ""
+---
+
+TOP TAKE-HOME MESSAGES  
+1. Dual antiplatelet therapy is recommended for patients with acute coronary syndromes (ACS). Ticagrelor or prasugrel is recommended in preference to clopidogrel in patients with ACS who are undergoing percutaneous coronary intervention (PCI). In patients with non–ST-segment elevation ACS who are scheduled for an invasive strategy with timing of angiography to be >24 hours, upstream treatment with clopidogrel or ticagrelor may be considered to reduce major adverse cardiovascular events.  
+2. Dual antiplatelet therapy with aspirin and an oral P2Y12 inhibitor is indicated for at least 12 months as the default strategy in patients with ACS who are not at high bleeding risk. Several strategies are available to reduce bleeding risk in patients with ACS who have undergone PCI and require antiplatelet therapy: (a) in patients at risk for gastrointestinal bleeding, a proton pump inhibitor is recommended; (b) in patients who have tolerated dual antiplatelet therapy with ticagrelor, transition to ticagrelor monotherapy is recommended ≥1 month after PCI; or (c) in patients who require long-term anticoagulation, aspirin discontinuation is recommended 1 to 4 weeks after PCI with continued use of a P2Y12 inhibitor (preferably clopidogrel).  
+3. High-intensity statin therapy is recommended for all patients with ACS, and with the option to initiate concurrent ezetimibe. A nonstatin lipid-lowering agent (eg, ezetimibe, evolocumab, alirocumab, inclisiran, bempedoic acid) is recommended for patients already on maximally tolerated statin who have a low-density lipoprotein cholesterol level of ≥70 mg/dL (1.8 mmol/L). It is reasonable in this high-risk population to further intensify lipid-lowering therapy if the low-density lipoprotein cholesterol level is 55 to <70 mg/dL (1.4 to <1.8 mmol/L) and patient is already on a maximally tolerated statin.  
+4. In patients with non–ST-segment elevation ACS who are at intermediate or high risk of ischemic events, an invasive approach with the intent to proceed with revascularization is recommended during hospitalization to reduce major adverse cardiovascular events. In patients with non–ST-segment elevation ACS who are at low risk of ischemic events, a routine invasive or selective invasive approach with further risk stratification is recommended to help identify those who may require revascularization and to reduce major adverse cardiovascular events.  
+5. Two procedural strategies are recommended in patients with ACS who are undergoing PCI: (a) radial approach is preferred over femoral approach in patients with ACS undergoing PCI to reduce bleeding, vascular complications, and death; and (b) intracoronary imaging is recommended to guide PCI in patients with ACS with complex coronary lesions.

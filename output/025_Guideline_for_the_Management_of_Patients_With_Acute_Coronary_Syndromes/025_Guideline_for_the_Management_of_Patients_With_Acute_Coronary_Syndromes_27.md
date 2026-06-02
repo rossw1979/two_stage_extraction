@@ -1,0 +1,33 @@
+---
+extraction_strategy: 标准提取
+scout_result: {"page_layout": "双栏", "content_blocks": [{"type": "表格", "position": "左上", "complexity": "中"}, {"type": "段落", "position": "左下", "complexity": "中"}, {"type": "段落", "position": "右上", "complexity": "中"}, {"type": "段落", "position": "右下", "complexity": "中"}], "tables": {"count": 1, "max_rows_estimate": 5, "has_merged_cells": false, "has_multiline_cells": true, "has_footnote_below": true}, "recommendation": "标准提取"}
+total_time_seconds: 130.23
+page_num: 27
+task_id: b22403a5-e411-4ad4-ae8c-c137bec53431
+re_extracted: True
+re_extract_focus: "需严格按双栏顺序输出：左栏（表格+Synopsis），右栏（右上正文段落+右下Supportive Text）；补全表格下方脚注位置并确认Figure 5图题是否遗漏"
+review_needed: True
+review_reason: "严格按双栏顺序输出：左栏（表格+Synopsis）→右栏（右上段落+Recommendation-Specific Supportive Text），修复右栏内容被错误拼接到左栏Synopsis后的问题，并确保表格下方脚注完整提取、末尾截断句保留原始不完整形态。"
+---
+
+4.5. Lipid Management
+
+Recommendations for Lipid Management  
+Referenced studies that support recommendations are summarized in the Evidence Table.
+
+| COR | LOE | Recommendations |
+|-----|-----|----------------|
+| 1 | A | 1. In patients with ACS, high-intensity statin therapy is recommended to reduce the risk of MACE.<sup>1–4</sup> |
+| 1 | A | 2. In patients with ACS who are already on maximally tolerated statin therapy with low-density lipoprotein cholesterol (LDL-C) ≥70 mg/dL (≥1.8 mmol/L), adding a nonstatin lipid-lowering agent is recommended to further reduce the risk of MACE.<sup>5–7</sup> |
+| 1 | B-R | 3. In patients with ACS who are statin intolerant, nonstatin lipid-lowering therapy is recommended to lower LDL-C and reduce the risk of MACE.<sup>8–10</sup> |
+| 2a | B-R | 4. In patients with ACS who are already on maximally tolerated statin therapy with LDL-C 55 to 69 mg/dL (≥1.4 to <1.8 mmol/L), adding a nonstatin lipid-lowering agent is reasonable to reduce the risk of MACE.<sup>5–7,11–13</sup> |
+| 2b | B-R | 5. In patients with ACS, the concurrent initiation of ezetimibe in combination with maximally tolerated statin may be considered to reduce the risk of MACE.<sup>5</sup> |
+
+*Modified or adapted from the “2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease.”<sup>14</sup>
+
+Synopsis  
+The current recommendations focus on patients with recent (ie, within 12 months) ACS. The 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA CCD guideline provides more detailed recommendations on long-term management of lipids in patients with prior ACS.<sup>14</sup> ASCVD event rates are substantially higher in patients with recent ACS than those with CCD, with 1-year rates of cardiovascular death, MI, and ischemic stroke estimated at 10% to 15% after an ACS hospitalization.<sup>15,16</sup> Higher risk among patients with ACS supports more aggressive LDL-cholesterol (LDL-C) targets in patients with recent ACS compared with those with CCD (Figure 5).<sup>14–16</sup> RCTs have demonstrated ASCVD event reduction with multiple different pharmacological approaches to LDL-C level lowering, with the magnitude of benefit proportional to the degree of LDL-C level lowering.<sup>17</sup> In patients with ACS, RCTs have demonstrated incremental benefit with high- compared with moderate-intensity statin therapy in regard to reduction in MACE.<sup>1–4</sup> For patients who do not reach LDL-C treatment goals on maximally tolerated statin therapy, or who are intolerant to statins, several nonstatin therapies, including ezetimibe, monoclonal antibodies to proprotein convertase subtilisin/kexin type 9 (PCSK9), and bempedoic acid, can both lower LDL-C levels and improve ASCVD outcomes across diverse populations.<sup>5–10</sup> Inclisiran also lowers LDL-C levels by preventing translation of PCSK9 mRNA, but clinical outcomes studies are not yet available (Table 12). Nonetheless, the relative benefit of LDL-C–lowering therapies is expected to be proportional to the observed reduction in LDL-C levels (Tables 11 and 12).<sup>5–11</sup> A lipid profile is recommended as soon as feasible after presentation with ACS (Figure 5), because LDL-C levels decrease modestly beginning 24 hours from symptom onset.<sup>18</sup> Lipid management after hospital discharge is discussed in Section 11.2, “Reassessment of Lipid Levels Postdischarge.”
+
+Recommendation-Specific Supportive Text  
+1. High-intensity statin regimens lower LDL-C concentration by an average of ≥50% (Table 11). The CTT (Cholesterol Treatment Trialists) meta-analysis of 5 RCTs showed that LDL-C concentration lowering with high-intensity statins compared with moderate-intensity statins reduces major vascular events by approximately 15% in patients with coronary artery disease (CAD).<sup>4</sup> An individual participant meta-analysis of the A to Z (Aggrastat to Zocor) and PROVE IT (Pravastatin or Atorvastatin Evaluation and Infection Therapy)–TIMI 22 trials, both of which were performed in patients stabilized early after ACS, demonstrated significant reductions in cardiovascular and all-cause death with more intensive versus less intensive statin regimens.<sup>19</sup> The benefit of a high-intensity statin regimen appears early after ACS and persists over time.<sup>3</sup> The benefit of high-intensity statins after ACS appears to be independent of baseline LDL-C concentration. No indication was observed of any safety concerns from achieving very low LDL-C concentrations on statins or other lipid-lowering therapies; therefore, high-intensity statin therapy should not be de-escalated during follow-up in patients who are tolerating treatment.<sup>13</sup>  
+2. Multiple therapeutic options are now available to add to maximally tolerated statin therapy to achieve desired LDL-C goals in patients with ACS (Table 12). In IMPROVE IT (Improved Reduction of Outcomes; Vytorin Efficacy International Trial), addition of ezetimibe to simvastatin 40 mg daily in patients <10 days after ACS led to a modest but significant reduction in MACE, over a median follow-up of 6 years.<sup>5</sup> Clinical trials of PCSK9 inhibitors have demonstrated a 15% relative risk reduction in MACE over a median of 2 to 3 years including patients >1 month after ACS.<sup>6,7,20</sup> Greater absolute benefit with PCSK9 inhibitors has been

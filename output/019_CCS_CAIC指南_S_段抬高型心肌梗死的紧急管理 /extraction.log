@@ -1,0 +1,210 @@
+2026-05-31 21:39:02,404 [INFO] extraction_service - ============================================================
+2026-05-31 21:39:02,404 [INFO] extraction_service - VLM 文本提取服务 — 新任务
+2026-05-31 21:39:02,404 [INFO] extraction_service -   PDF 文件名: 019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 .pdf
+2026-05-31 21:39:02,404 [INFO] extraction_service -   输出目录前缀: 019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 
+2026-05-31 21:39:02,404 [INFO] extraction_service -   图片数量: 26
+2026-05-31 21:39:02,404 [INFO] extraction_service -   模型: qwen3-vl-plus
+2026-05-31 21:39:02,404 [INFO] extraction_service -   校验模式: 开启
+2026-05-31 21:39:02,404 [INFO] extraction_service - ============================================================
+2026-05-31 21:39:02,404 [INFO] extraction_service -   任务创建: fb0cf655-51a9-43f9-93fb-f252d1531386 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _1.png (第1页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: a3135188-fa60-4561-b6c1-ac18ca3f5c0a → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _2.png (第2页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: dff5f0a8-3713-48b3-94a6-b4f5d937cb5e → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _3.png (第3页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: 622a4dde-06b3-4378-bdd5-54867cbfdd67 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _4.png (第4页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: 9d3c6f12-8f51-4492-a462-d6f0927282b9 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _5.png (第5页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: 81059bdf-478a-4019-a5cd-dd3657f36baf → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _6.png (第6页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: 59d79217-7725-4e0f-8458-e676ef86565d → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _7.png (第7页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: 09d28d90-98bb-4fd5-b16b-cb0024b2246e → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _8.png (第8页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: 89706984-3ab4-45e1-8091-5ac7219cd209 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _9.png (第9页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: 5bab814c-b8ef-4763-8e67-e6ca405a1ba6 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _10.png (第10页)
+2026-05-31 21:39:02,405 [INFO] extraction_service -   任务创建: d32689b8-3b6a-41f2-b15d-6edef40effc7 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _11.png (第11页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 6e0ab946-8d18-4644-8260-6432a874db96 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _12.png (第12页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 775310bf-0882-4c57-ae64-778352158a03 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _13.png (第13页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 195e23b7-5236-4138-a311-47a101c7fdeb → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _14.png (第14页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 3986fe3a-324e-4780-b7d9-1fe75417e486 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _15.png (第15页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 3dac9998-549e-4de5-b2f9-274655cb38d7 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _16.png (第16页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: bc4f1c49-b2cb-41ca-b0f4-031821a59c0a → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _17.png (第17页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 4ceaf494-0cd4-4479-befc-d750200c7fed → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _18.png (第18页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 1615f8b2-cae7-47a7-9874-da8c4c1bbb74 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _19.png (第19页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 468754b5-2b75-4a46-9388-1b9fca41df99 → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _20.png (第20页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: fed6b48c-90ec-4a16-b12a-0a6fda23c91f → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _21.png (第21页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 2282fa37-a871-47c9-b119-c8454c133dcf → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _22.png (第22页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 4ad227d4-7c42-4563-9f7e-74f3058db78a → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _23.png (第23页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 61cbb36c-a571-4166-8c3f-522b1b49118c → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _24.png (第24页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: fa7dd6cb-251b-4756-91d1-a81b5606eebf → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _25.png (第25页)
+2026-05-31 21:39:02,406 [INFO] extraction_service -   任务创建: 9c05e007-d528-4341-a490-cf0c3d2f75ea → 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _26.png (第26页)
+2026-05-31 21:39:02,407 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,407 [INFO] extraction_service - [fb0cf655-51a9-43f9-93fb-f252d1531386] 开始处理第 1 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _1.png
+2026-05-31 21:39:02,423 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,423 [INFO] extraction_service - [a3135188-fa60-4561-b6c1-ac18ca3f5c0a] 开始处理第 2 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _2.png
+2026-05-31 21:39:02,442 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,442 [INFO] extraction_service - [dff5f0a8-3713-48b3-94a6-b4f5d937cb5e] 开始处理第 3 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _3.png
+2026-05-31 21:39:02,461 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,461 [INFO] extraction_service - [622a4dde-06b3-4378-bdd5-54867cbfdd67] 开始处理第 4 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _4.png
+2026-05-31 21:39:02,475 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,475 [INFO] extraction_service - [9d3c6f12-8f51-4492-a462-d6f0927282b9] 开始处理第 5 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _5.png
+2026-05-31 21:39:02,491 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,491 [INFO] extraction_service - [81059bdf-478a-4019-a5cd-dd3657f36baf] 开始处理第 6 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _6.png
+2026-05-31 21:39:02,504 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,504 [INFO] extraction_service - [59d79217-7725-4e0f-8458-e676ef86565d] 开始处理第 7 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _7.png
+2026-05-31 21:39:02,517 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:39:02,517 [INFO] extraction_service - [09d28d90-98bb-4fd5-b16b-cb0024b2246e] 开始处理第 8 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _8.png
+2026-05-31 21:39:52,063 [WARNING] extraction_service - [a3135188-fa60-4561-b6c1-ac18ca3f5c0a] 校验发现问题，启动定向重提: 遗漏右上栏法语段落，且双栏顺序错误：应严格按左栏（含左上+左下段落）→右栏（含右上法语段落+右下Methods段落）输出；同时需清除页脚网址与水印、删除参考文献上标
+2026-05-31 21:39:54,495 [WARNING] extraction_service - [fb0cf655-51a9-43f9-93fb-f252d1531386] 校验发现问题，启动定向重提: 遗漏左下角作者附属信息（Secondary Panel说明、通讯作者详情、披露声明）及右下角版权元数据，且未清除页脚网址水印
+2026-05-31 21:39:58,478 [WARNING] extraction_service - [09d28d90-98bb-4fd5-b16b-cb0024b2246e] 校验发现问题，启动定向重提: 遗漏左下段落‘Prehospital use of P2Y12 inhibitors’，右上与左中两个表格未以表格格式提取而误作正文，且双栏顺序错乱（右栏内容插入左栏流程中），需严格按左栏全内容→右栏全内容顺序重建结构并恢复表格格式。
+2026-05-31 21:40:03,680 [INFO] extraction_service - [81059bdf-478a-4019-a5cd-dd3657f36baf] 完成! 耗时 61.19s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _6.md
+2026-05-31 21:40:03,681 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:40:03,681 [INFO] extraction_service - [89706984-3ab4-45e1-8091-5ac7219cd209] 开始处理第 9 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _9.png
+2026-05-31 21:40:07,262 [WARNING] extraction_service - [9d3c6f12-8f51-4492-a462-d6f0927282b9] 校验发现问题，启动定向重提: 遗漏表格下方的临床终点与缩写注释段落，且右栏内容顺序错乱：应严格按左栏全内容→右栏（表格→其下方注释→后续段落）输出，当前将右栏段落插入表格前并跳过注释。
+2026-05-31 21:40:07,278 [WARNING] extraction_service - [622a4dde-06b3-4378-bdd5-54867cbfdd67] 校验发现问题，启动定向重提: 右上框内编号推荐项（4-5条）应作为结构化列表提取而非段落；左中区域的推荐列表与右上框应统一处理为推荐模块；必须删除页脚网址'http://guide.medlive.cn/'
+2026-05-31 21:40:07,657 [WARNING] extraction_service - [59d79217-7725-4e0f-8458-e676ef86565d] 校验发现问题，启动定向重提: 需将两个带框的RECOMMENDATION模块（编号10和11）正确识别为表格/结构化块而非普通段落，并删除页脚水印与网址
+2026-05-31 21:40:20,477 [INFO] extraction_service - [fb0cf655-51a9-43f9-93fb-f252d1531386] 定向重提完成
+2026-05-31 21:40:23,855 [WARNING] extraction_service - [dff5f0a8-3713-48b3-94a6-b4f5d937cb5e] 校验发现问题，启动定向重提: 双栏排版顺序错误：右上和右下段落被错误归入左栏输出，需严格按‘左栏全部→右栏全部’重新组织；同时修正Table 1结构标识及流程图YAML边定义不规范问题。
+2026-05-31 21:40:30,223 [INFO] extraction_service - [a3135188-fa60-4561-b6c1-ac18ca3f5c0a] 定向重提完成
+2026-05-31 21:40:31,744 [INFO] extraction_service - [09d28d90-98bb-4fd5-b16b-cb0024b2246e] 定向重提完成
+2026-05-31 21:40:38,292 [WARNING] extraction_service - [fb0cf655-51a9-43f9-93fb-f252d1531386] 重提后仍有问题: 需补全左下角的Secondary Panel说明、通讯作者信息及披露声明，以及右下角DOI与版权声明；同时修正作者单位上标编号重复问题
+2026-05-31 21:40:38,293 [WARNING] extraction_service - [fb0cf655-51a9-43f9-93fb-f252d1531386] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _1_review.md
+2026-05-31 21:40:38,294 [INFO] extraction_service - [fb0cf655-51a9-43f9-93fb-f252d1531386] 完成! 耗时 95.89s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _1.md
+2026-05-31 21:40:38,294 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:40:38,294 [INFO] extraction_service - [5bab814c-b8ef-4763-8e67-e6ca405a1ba6] 开始处理第 10 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _10.png
+2026-05-31 21:40:42,591 [INFO] extraction_service - [9d3c6f12-8f51-4492-a462-d6f0927282b9] 定向重提完成
+2026-05-31 21:40:44,142 [INFO] extraction_service - [622a4dde-06b3-4378-bdd5-54867cbfdd67] 定向重提完成
+2026-05-31 21:40:44,831 [WARNING] extraction_service - [a3135188-fa60-4561-b6c1-ac18ca3f5c0a] 重提后仍有问题: 严格按双栏顺序输出：先完整左栏（左上+左下段落），再完整右栏（右上法语段落+右下英文段落）；删除左下角'医脉通'水印与右下角URL页脚
+2026-05-31 21:40:44,832 [WARNING] extraction_service - [a3135188-fa60-4561-b6c1-ac18ca3f5c0a] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _2_review.md
+2026-05-31 21:40:44,832 [INFO] extraction_service - [a3135188-fa60-4561-b6c1-ac18ca3f5c0a] 完成! 耗时 102.41s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _2.md
+2026-05-31 21:40:44,832 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:40:44,832 [INFO] extraction_service - [d32689b8-3b6a-41f2-b15d-6edef40effc7] 开始处理第 11 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _11.png
+2026-05-31 21:40:45,723 [INFO] extraction_service - [59d79217-7725-4e0f-8458-e676ef86565d] 定向重提完成
+2026-05-31 21:40:52,718 [WARNING] extraction_service - [09d28d90-98bb-4fd5-b16b-cb0024b2246e] 重提后仍有问题: 遗漏左中与右上的两个推荐表格结构，且双栏顺序错乱：需严格按左栏（含左上段落、左中表格、左下段落）→右栏（含右上表格、右中段落、右下段落）输出，并删除左下水印与右下URL
+2026-05-31 21:40:52,719 [WARNING] extraction_service - [09d28d90-98bb-4fd5-b16b-cb0024b2246e] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _8_review.md
+2026-05-31 21:40:52,719 [INFO] extraction_service - [09d28d90-98bb-4fd5-b16b-cb0024b2246e] 完成! 耗时 110.20s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _8.md
+2026-05-31 21:40:52,719 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:40:52,719 [INFO] extraction_service - [6e0ab946-8d18-4644-8260-6432a874db96] 开始处理第 12 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _12.png
+2026-05-31 21:40:59,889 [WARNING] extraction_service - [9d3c6f12-8f51-4492-a462-d6f0927282b9] 重提后仍有问题: 遗漏表格下方的临床终点定义注释段落，且右栏内容（标题、表格、注释）未按‘先左栏全完、再右栏全完’顺序输出，导致排版错位
+2026-05-31 21:40:59,890 [WARNING] extraction_service - [9d3c6f12-8f51-4492-a462-d6f0927282b9] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _5_review.md
+2026-05-31 21:40:59,890 [INFO] extraction_service - [9d3c6f12-8f51-4492-a462-d6f0927282b9] 完成! 耗时 117.41s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _5.md
+2026-05-31 21:40:59,890 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:40:59,891 [INFO] extraction_service - [775310bf-0882-4c57-ae64-778352158a03] 开始处理第 13 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _13.png
+2026-05-31 21:41:00,559 [WARNING] extraction_service - [622a4dde-06b3-4378-bdd5-54867cbfdd67] 重提后仍有问题: 遗漏了右上框内的推荐条目表格结构及左中位置的Table 2/3对应表格内容，且未删除水印与页脚网址
+2026-05-31 21:41:00,560 [WARNING] extraction_service - [622a4dde-06b3-4378-bdd5-54867cbfdd67] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _4_review.md
+2026-05-31 21:41:00,560 [INFO] extraction_service - [622a4dde-06b3-4378-bdd5-54867cbfdd67] 完成! 耗时 118.10s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _4.md
+2026-05-31 21:41:00,560 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:41:00,560 [INFO] extraction_service - [195e23b7-5236-4138-a311-47a101c7fdeb] 开始处理第 14 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _14.png
+2026-05-31 21:41:02,604 [WARNING] extraction_service - [59d79217-7725-4e0f-8458-e676ef86565d] 重提后仍有问题: 需重新识别并结构化两个RECOMMENDATION框（左中下与右上中），将其作为独立内容块（如> 引用块或带## RECOMMENDATION标题的区块），避免与正文段落混淆；确保双栏中结构化元素不被降级为普通段落
+2026-05-31 21:41:02,605 [WARNING] extraction_service - [59d79217-7725-4e0f-8458-e676ef86565d] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _7_review.md
+2026-05-31 21:41:02,605 [INFO] extraction_service - [59d79217-7725-4e0f-8458-e676ef86565d] 完成! 耗时 120.10s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _7.md
+2026-05-31 21:41:02,605 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:41:02,605 [INFO] extraction_service - [3986fe3a-324e-4780-b7d9-1fe75417e486] 开始处理第 15 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _15.png
+2026-05-31 21:41:09,419 [INFO] extraction_service - [dff5f0a8-3713-48b3-94a6-b4f5d937cb5e] 定向重提完成
+2026-05-31 21:41:31,237 [WARNING] extraction_service - [89706984-3ab4-45e1-8091-5ac7219cd209] 校验发现问题，启动定向重提: 遗漏了左下角带边框的RECOMMENDATION编号列表（应作为表格提取），且流程图YAML中node_3的结构错误（将并列要点错误嵌套为子项），需按原图重新解析流程图层级与表格结构。
+2026-05-31 21:41:37,378 [INFO] extraction_service - [dff5f0a8-3713-48b3-94a6-b4f5d937cb5e] 完成! 耗时 154.94s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _3.md
+2026-05-31 21:41:37,378 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:41:37,378 [INFO] extraction_service - [3dac9998-549e-4de5-b2f9-274655cb38d7] 开始处理第 16 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _16.png
+2026-05-31 21:41:45,506 [WARNING] extraction_service - [5bab814c-b8ef-4763-8e67-e6ca405a1ba6] 校验发现问题，启动定向重提: 需删除左下角‘医脉通’水印与右下角URL页脚；将左右两个带边框的RECOMMENDATION框按表格/结构化块正确提取（非普通段落）；明确标示页面末尾原文截断状态
+2026-05-31 21:42:00,513 [WARNING] extraction_service - [6e0ab946-8d18-4644-8260-6432a874db96] 校验发现问题，启动定向重提: 遗漏了右中位置的表格；流程图下方两个独立注释框未准确分离提取; 页面末尾原文截断处被不当截断而未保留不完整词形式
+2026-05-31 21:42:01,854 [WARNING] extraction_service - [d32689b8-3b6a-41f2-b15d-6edef40effc7] 校验发现问题，启动定向重提: 遗漏中央表格；右下角段落未按双栏结构正确分隔；左下栏'Facilitated PCI'小标题未作结构化处理
+2026-05-31 21:42:10,865 [WARNING] extraction_service - [775310bf-0882-4c57-ae64-778352158a03] 校验发现问题，启动定向重提: 遗漏表格下方缩写注释及跨栏段落顺序错误：需补全表格脚注，并严格按左栏全部（表格+左下段落）、再右栏全部（右下段落+右上RECOMMENDATION）顺序输出
+2026-05-31 21:42:14,439 [WARNING] extraction_service - [195e23b7-5236-4138-a311-47a101c7fdeb] 校验发现问题，启动定向重提: 严格按双栏顺序：先完整输出左栏3个内容块（含Thrombectomy节），再输出右栏3个内容块（含右上推荐框作为独立结构、右中及右下段落）；删除页脚网址；补充表格结构（Scout报告确认有2个表格）；对截断段落添加[截断]标识
+2026-05-31 21:42:21,243 [WARNING] extraction_service - [3986fe3a-324e-4780-b7d9-1fe75417e486] 校验发现问题，启动定向重提: 遗漏了RECOMMENDATION框内嵌入的表格结构，需按原图还原其层级格式；同时需过滤右下角页脚网址
+2026-05-31 21:42:28,171 [INFO] extraction_service - [89706984-3ab4-45e1-8091-5ac7219cd209] 定向重提完成
+2026-05-31 21:42:37,698 [INFO] extraction_service - [5bab814c-b8ef-4763-8e67-e6ca405a1ba6] 定向重提完成
+2026-05-31 21:42:44,863 [WARNING] extraction_service - [3dac9998-549e-4de5-b2f9-274655cb38d7] 校验发现问题，启动定向重提: 需将左中、左下、右上、右中的4个带边框推荐框识别为结构化表格或引用块（非普通段落），确保表格数量与位置匹配Scout报告；特别注意Recommendation 26–30应保持独立框式结构语义。
+2026-05-31 21:42:50,439 [INFO] extraction_service - [6e0ab946-8d18-4644-8260-6432a874db96] 定向重提完成
+2026-05-31 21:42:55,854 [INFO] extraction_service - [775310bf-0882-4c57-ae64-778352158a03] 定向重提完成
+2026-05-31 21:42:56,045 [WARNING] extraction_service - [89706984-3ab4-45e1-8091-5ac7219cd209] 重提后仍有问题: 流程图 YAML 结构错误：需修正 levels 划分与 edges 连接逻辑，确保补充性建议（如时间目标、条件选项）作为同 level 并列节点而非独立流程节点；同时校正推荐强度标注，仅对原图明确标有 * / # / † 的条目赋值。
+2026-05-31 21:42:56,046 [WARNING] extraction_service - [89706984-3ab4-45e1-8091-5ac7219cd209] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _9_review.md
+2026-05-31 21:42:56,046 [INFO] extraction_service - [89706984-3ab4-45e1-8091-5ac7219cd209] 完成! 耗时 172.36s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _9.md
+2026-05-31 21:42:56,047 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:42:56,047 [INFO] extraction_service - [bc4f1c49-b2cb-41ca-b0f4-031821a59c0a] 开始处理第 17 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _17.png
+2026-05-31 21:42:59,957 [WARNING] extraction_service - [5bab814c-b8ef-4763-8e67-e6ca405a1ba6] 重提后仍有问题: 需严格按双栏顺序（先左栏全部内容后右栏全部内容）重排段落；将左右两侧的RECOMMENDATION框识别为独立结构化块而非普通列表；删除页脚URL；确认两处‘表格’实为带边框推荐框，应保留其结构隔离性
+2026-05-31 21:42:59,957 [WARNING] extraction_service - [5bab814c-b8ef-4763-8e67-e6ca405a1ba6] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _10_review.md
+2026-05-31 21:42:59,957 [INFO] extraction_service - [5bab814c-b8ef-4763-8e67-e6ca405a1ba6] 完成! 耗时 141.66s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _10.md
+2026-05-31 21:42:59,957 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:42:59,957 [INFO] extraction_service - [4ceaf494-0cd4-4479-befc-d750200c7fed] 开始处理第 18 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _18.png
+2026-05-31 21:43:03,559 [INFO] extraction_service - [d32689b8-3b6a-41f2-b15d-6edef40effc7] 定向重提完成
+2026-05-31 21:43:04,009 [INFO] extraction_service - [195e23b7-5236-4138-a311-47a101c7fdeb] 定向重提完成
+2026-05-31 21:43:12,191 [WARNING] extraction_service - [775310bf-0882-4c57-ae64-778352158a03] 重提后仍有问题: 遗漏表格下方的缩写注释与星号脚注，且右栏RECOMMENDATION段落被错误后置，破坏双栏排版顺序
+2026-05-31 21:43:12,193 [WARNING] extraction_service - [775310bf-0882-4c57-ae64-778352158a03] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _13_review.md
+2026-05-31 21:43:12,193 [INFO] extraction_service - [775310bf-0882-4c57-ae64-778352158a03] 完成! 耗时 132.30s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _13.md
+2026-05-31 21:43:12,193 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:12,193 [INFO] extraction_service - [1615f8b2-cae7-47a7-9874-da8c4c1bbb74] 开始处理第 19 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _19.png
+2026-05-31 21:43:13,683 [INFO] extraction_service - [3986fe3a-324e-4780-b7d9-1fe75417e486] 定向重提完成
+2026-05-31 21:43:14,497 [WARNING] extraction_service - [6e0ab946-8d18-4644-8260-6432a874db96] 重提后仍有问题: 需严格按双栏顺序重组正文（左栏：Management与Performance段落；右栏：RECOMMENDATION、Practical tip及Multivessel段落），并修正Scout误报的‘表格’为纯文本块，同时保留原文末尾截断状态不补全。
+2026-05-31 21:43:14,497 [WARNING] extraction_service - [6e0ab946-8d18-4644-8260-6432a874db96] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _12_review.md
+2026-05-31 21:43:14,497 [INFO] extraction_service - [6e0ab946-8d18-4644-8260-6432a874db96] 完成! 耗时 141.78s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _12.md
+2026-05-31 21:43:14,497 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:14,497 [INFO] extraction_service - [468754b5-2b75-4a46-9388-1b9fca41df99] 开始处理第 20 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _20.png
+2026-05-31 21:43:22,243 [INFO] extraction_service - [3dac9998-549e-4de5-b2f9-274655cb38d7] 定向重提完成
+2026-05-31 21:43:24,826 [WARNING] extraction_service - [d32689b8-3b6a-41f2-b15d-6edef40effc7] 重提后仍有问题: 右栏顶部段落被错误插入左栏末尾，导致双栏排版顺序错乱；需严格按左栏全内容→右栏全内容顺序重构，确保跨栏章节不被拆分。
+2026-05-31 21:43:24,827 [WARNING] extraction_service - [d32689b8-3b6a-41f2-b15d-6edef40effc7] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _11_review.md
+2026-05-31 21:43:24,827 [INFO] extraction_service - [d32689b8-3b6a-41f2-b15d-6edef40effc7] 完成! 耗时 159.99s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _11.md
+2026-05-31 21:43:24,827 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:24,827 [INFO] extraction_service - [fed6b48c-90ec-4a16-b12a-0a6fda23c91f] 开始处理第 21 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _21.png
+2026-05-31 21:43:24,996 [WARNING] extraction_service - [195e23b7-5236-4138-a311-47a101c7fdeb] 重提后仍有问题: 遗漏右上角独立RECOMMENDATION框结构，且未按双栏顺序处理：应先完整输出左栏（至Thrombectomy节末），再输出右栏（含RECOMMENDATION框及Radial vs femoral access节），同时删除页脚URL
+2026-05-31 21:43:24,997 [WARNING] extraction_service - [195e23b7-5236-4138-a311-47a101c7fdeb] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _14_review.md
+2026-05-31 21:43:24,997 [INFO] extraction_service - [195e23b7-5236-4138-a311-47a101c7fdeb] 完成! 耗时 144.44s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _14.md
+2026-05-31 21:43:24,997 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:24,997 [INFO] extraction_service - [2282fa37-a871-47c9-b119-c8454c133dcf] 开始处理第 22 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _22.png
+2026-05-31 21:43:31,539 [WARNING] extraction_service - [3986fe3a-324e-4780-b7d9-1fe75417e486] 重提后仍有问题: 遗漏了RECOMMENDATION框内嵌入的表格，需重新识别并结构化提取该表格内容；同时应删除所有参考文献上标编号
+2026-05-31 21:43:31,539 [WARNING] extraction_service - [3986fe3a-324e-4780-b7d9-1fe75417e486] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _15_review.md
+2026-05-31 21:43:31,539 [INFO] extraction_service - [3986fe3a-324e-4780-b7d9-1fe75417e486] 完成! 耗时 148.93s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _15.md
+2026-05-31 21:43:31,539 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:31,540 [INFO] extraction_service - [4ad227d4-7c42-4563-9f7e-74f3058db78a] 开始处理第 23 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _23.png
+2026-05-31 21:43:32,039 [INFO] extraction_service - [1615f8b2-cae7-47a7-9874-da8c4c1bbb74] 完成! 耗时 19.85s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _19.md
+2026-05-31 21:43:32,039 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:32,039 [INFO] extraction_service - [61cbb36c-a571-4166-8c3f-522b1b49118c] 开始处理第 24 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _24.png
+2026-05-31 21:43:32,399 [WARNING] extraction_service - [468754b5-2b75-4a46-9388-1b9fca41df99] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留左上、右上、左下、右下四个正文段落（编号47–77的参考文献条目前的正文内容），仅跳过参考文献条目本身；禁止将整页标记为‘参考文献页’而全部跳过。
+2026-05-31 21:43:41,513 [INFO] extraction_service - [4ceaf494-0cd4-4479-befc-d750200c7fed] 完成! 耗时 41.55s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _18.md
+2026-05-31 21:43:41,513 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:41,514 [INFO] extraction_service - [fa7dd6cb-251b-4756-91d1-a81b5606eebf] 开始处理第 25 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _25.png
+2026-05-31 21:43:41,730 [INFO] extraction_service - [3dac9998-549e-4de5-b2f9-274655cb38d7] 完成! 耗时 124.35s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _16.md
+2026-05-31 21:43:41,730 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:43:41,730 [INFO] extraction_service - [9c05e007-d528-4341-a490-cf0c3d2f75ea] 开始处理第 26 页: 2019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _26.png
+2026-05-31 21:43:42,724 [INFO] extraction_service - [fed6b48c-90ec-4a16-b12a-0a6fda23c91f] 完成! 耗时 17.90s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _21.md
+2026-05-31 21:43:45,661 [WARNING] extraction_service - [2282fa37-a871-47c9-b119-c8454c133dcf] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留页面顶部期刊信息及可能的章节标题/段落内容，仅跳过编号109–136的参考文献条目；禁止全页跳过。
+2026-05-31 21:43:46,401 [INFO] extraction_service - [61cbb36c-a571-4166-8c3f-522b1b49118c] 完成! 耗时 14.36s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _24.md
+2026-05-31 21:43:48,385 [INFO] extraction_service - [4ad227d4-7c42-4563-9f7e-74f3058db78a] 完成! 耗时 16.84s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _23.md
+2026-05-31 21:43:56,522 [WARNING] extraction_service - [fa7dd6cb-251b-4756-91d1-a81b5606eebf] 校验发现问题，启动定向重提: 需保留页面顶部的指南标题'Wong et al. CCS/CAIC STEMI Guidelines'，仅跳过编号198–227的参考文献条目，不可整页跳过
+2026-05-31 21:43:58,267 [INFO] extraction_service - [fa7dd6cb-251b-4756-91d1-a81b5606eebf] 定向重提完成
+2026-05-31 21:44:02,309 [INFO] extraction_service - [bc4f1c49-b2cb-41ca-b0f4-031821a59c0a] 完成! 耗时 66.26s, 策略=标准提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _17.md
+2026-05-31 21:44:05,821 [WARNING] extraction_service - [fa7dd6cb-251b-4756-91d1-a81b5606eebf] 重提后仍有问题: 该页为纯参考文献页，应输出'（本页为参考文献，已跳过）'，不得保留标题或任何参考文献条目
+2026-05-31 21:44:05,823 [WARNING] extraction_service - [fa7dd6cb-251b-4756-91d1-a81b5606eebf] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _25_review.md
+2026-05-31 21:44:05,824 [INFO] extraction_service - [fa7dd6cb-251b-4756-91d1-a81b5606eebf] 完成! 耗时 24.31s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _25.md
+2026-05-31 21:44:14,164 [WARNING] extraction_service - [9c05e007-d528-4341-a490-cf0c3d2f75ea] 校验发现问题，启动定向重提: 遗漏左栏编号228–236的参考文献条目（实为正文引文列表），且未清除左下角水印与右下角网址页脚
+2026-05-31 21:44:17,123 [INFO] extraction_service - [2282fa37-a871-47c9-b119-c8454c133dcf] 定向重提完成
+2026-05-31 21:44:24,043 [WARNING] extraction_service - [2282fa37-a871-47c9-b119-c8454c133dcf] 重提后仍有问题: 遗漏左栏编号109–123的参考文献条目，且未删除页脚水印与网址
+2026-05-31 21:44:24,045 [WARNING] extraction_service - [2282fa37-a871-47c9-b119-c8454c133dcf] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _22_review.md
+2026-05-31 21:44:24,045 [INFO] extraction_service - [2282fa37-a871-47c9-b119-c8454c133dcf] 完成! 耗时 59.05s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _22.md
+2026-05-31 21:44:32,893 [INFO] extraction_service - [468754b5-2b75-4a46-9388-1b9fca41df99] 定向重提完成
+2026-05-31 21:44:39,145 [WARNING] extraction_service - [468754b5-2b75-4a46-9388-1b9fca41df99] 重提后仍有问题: 该页为纯参考文献页，需跳过全部参考文献条目，仅保留提示语‘（本页为参考文献，已跳过）’
+2026-05-31 21:44:39,146 [WARNING] extraction_service - [468754b5-2b75-4a46-9388-1b9fca41df99] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _20_review.md
+2026-05-31 21:44:39,146 [INFO] extraction_service - [468754b5-2b75-4a46-9388-1b9fca41df99] 完成! 耗时 84.65s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _20.md
+2026-05-31 21:44:46,906 [INFO] extraction_service - [9c05e007-d528-4341-a490-cf0c3d2f75ea] 定向重提完成
+2026-05-31 21:45:05,443 [WARNING] extraction_service - [9c05e007-d528-4341-a490-cf0c3d2f75ea] 重提后仍有问题: 需严格按双栏顺序：先完整输出左栏参考文献条目（228–236），再完整输出右栏内容（Supplementary Material段落 + Appendix 1成员列表），并删除页脚网址
+2026-05-31 21:45:05,445 [WARNING] extraction_service - [9c05e007-d528-4341-a490-cf0c3d2f75ea] 已生成复核指引: output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _26_review.md
+2026-05-31 21:45:05,445 [INFO] extraction_service - [9c05e007-d528-4341-a490-cf0c3d2f75ea] 完成! 耗时 83.71s, 策略=轻量提取, 结果=output/019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 /019_CCS_CAIC指南_S_段抬高型心肌梗死的紧急管理 _26.md

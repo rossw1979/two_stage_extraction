@@ -17,13 +17,14 @@ API:
     提取服务 (extraction_service) 需正在运行，默认地址 http://localhost:8001
 """
 
+import ast
 import asyncio
 import json
 import logging
 import time
 import uuid
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union
 import os
 
 import httpx
@@ -98,7 +99,7 @@ _merges: dict[str, MergeTaskInfo] = {}
 # ──────────────────── 请求 / 响应模型 ────────────────────
 
 class MergeRequest(BaseModel):
-    task_ids: list[str] = Field(..., description="提取服务返回的任务ID列表")
+    task_ids: Union[str, list[str]] = Field(..., description="提取服务返回的任务ID列表或列表字符串（兼容 Dify 数组/字符串两种形式）")
     pdf_name: str = Field(..., description="PDF名称(无后缀)，需与提取时一致")
     output_dir: str = Field(default="./output", description="输出根目录")
     extraction_service_url: Optional[str] = Field(
@@ -350,7 +351,18 @@ async def create_merge(req: MergeRequest):
       4. 执行多轮过程内容清洗（Pass 0~4）
       5. 输出合并后的最终 Markdown 文件
     """
-    if not req.task_ids or len(req.task_ids) == 0:
+    # task_ids 字段兼容字符串和列表两种形式
+    if isinstance(req.task_ids, str):
+        try:
+            task_ids = ast.literal_eval(req.task_ids)
+        except (ValueError, SyntaxError) as e:
+            raise HTTPException(status_code=400, detail=f"task_ids 解析失败，需为合法 Python 列表字符串: {e}")
+        if not isinstance(task_ids, list):
+            raise HTTPException(status_code=400, detail="task_ids 解析后应为列表")
+    else:
+        task_ids = req.task_ids
+
+    if not task_ids or len(task_ids) == 0:
         raise HTTPException(status_code=400, detail="task_ids 不能为空")
 
     extraction_url = req.extraction_service_url or EXTRACTION_SERVICE_BASE_URL
@@ -380,7 +392,7 @@ async def create_merge(req: MergeRequest):
 
     merge_task = MergeTaskInfo(
         merge_id=merge_id,
-        task_ids=req.task_ids,
+        task_ids=task_ids,
         pdf_name=pdf_stem,
         output_dir=req.output_dir,
         status=TaskStatus.PENDING,
@@ -391,7 +403,7 @@ async def create_merge(req: MergeRequest):
     _app_logger.info(f"合并+清洗服务 — 新任务")
     _app_logger.info(f"  合并ID: {merge_id}")
     _app_logger.info(f"  PDF名称: {pdf_stem} (原始: {req.pdf_name})")
-    _app_logger.info(f"  关联提取任务数: {len(req.task_ids)}")
+    _app_logger.info(f"  关联提取任务数: {len(task_ids)}")
     _app_logger.info(f"  输出目录: {req.output_dir}")
     _app_logger.info(f"  提取服务: {extraction_url}")
     _app_logger.info(f"{'='*60}")
@@ -400,7 +412,7 @@ async def create_merge(req: MergeRequest):
     asyncio.create_task(
         run_merge(
             merge_id=merge_id,
-            task_ids=req.task_ids,
+            task_ids=task_ids,
             pdf_name=pdf_stem,
             output_dir=req.output_dir,
             extraction_base_url=extraction_url,
@@ -409,9 +421,9 @@ async def create_merge(req: MergeRequest):
 
     return MergeResponse(
         success=True,
-        message=f"已提交合并任务，正在后台轮询 {len(req.task_ids)} 个提取任务",
+        message=f"已提交合并任务，正在后台轮询 {len(task_ids)} 个提取任务",
         merge_id=merge_id,
-        task_ids=req.task_ids,
+        task_ids=task_ids,
         status=TaskStatus.PENDING,
     )
 

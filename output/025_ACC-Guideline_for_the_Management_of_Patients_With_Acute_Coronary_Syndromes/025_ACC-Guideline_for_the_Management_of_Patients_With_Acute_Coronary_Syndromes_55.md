@@ -1,0 +1,32 @@
+---
+extraction_strategy: 标准提取
+scout_result: {"page_layout": "双栏", "content_blocks": [{"type": "表格", "position": "左上", "complexity": "中"}, {"type": "段落", "position": "左下", "complexity": "中"}, {"type": "段落", "position": "右下", "complexity": "中"}, {"type": "段落", "position": "中央", "complexity": "低"}], "tables": {"count": 1, "max_rows_estimate": 6, "has_merged_cells": false, "has_multiline_cells": true, "has_footnote_below": true}, "recommendation": "标准提取"}
+total_time_seconds: 120.84
+page_num: 55
+task_id: c0fc5a44-b3ab-46af-ba97-f803e5b22bac
+re_extracted: True
+re_extract_focus: "遗漏表格下方注释标识、右栏顶部跨页延续段落位置错位、双栏顺序混乱导致内容块归属错误，以及末尾段落可能遗漏"
+review_needed: True
+review_reason: "右栏顶部的跨页延续段落被错误插入左栏内容之后，且表格下方注释未按附属关系处理；同时需删除所有参考文献上标"
+---
+
+Table 21. Guidance for ACS Discharge: Best Practices
+
+| Communication | Patient centered, verbally and in writing in patient/caregiver preferred language<br>Shared decision-making regarding assessment of goals and preferences should be discussed with patient/caregiver |
+|---|---|
+| Clinical assessment | Address comorbidities and risk factors for recurrent events<br>Assess for presence of ongoing ischemic symptoms, using standardized instrument ideally embedded into EHR<br>Assess risk for bleeding related to medications or procedural site<br>Assess need for additional testing (eg, repeat echocardiogram, staged PCI)<br>Assess whether vaccinations are current (eg, influenza)<br>Perform medication reconciliation, including a prescription for sublingual nitroglycerin, unless contraindicated |
+| Patient/caregiver assessment | Assess capacity for patient/caregiver for self-care (eg, secondary prevention, symptom monitoring, following plan of care, lifestyle changes, contact information for continuing care team)<br>Provide verbal and written educational information related to self-care<br>Use teach-back method to confirm understanding of self-care<br>Use teach-back method for patient/caregiver understanding of medication adherence and treatment regimen |
+| Referrals | Confirm referral to CR<br>Provide educational materials related to CR including contact information |
+| Social determinants of health | Assess and address barriers to obtaining and taking prescribed medications, to include referral to pharmacy assistance programs or social worker as appropriate<br>Assess and address barriers to attending CR, including viability of home-based or hybrid CR |
+
+ACS indicates acute coronary syndromes; CR, cardiac rehabilitation; EHR, electronic health record; and PCI, percutaneous coronary intervention.
+
+en and members of traditionally underrepresented groups.<sup>8</sup> Factors that contribute to this overall low enrollment rate include a poor utilization of a centralized method for referral via the electronic health record, inadequate communication between treatment teams, and perceived inconvenience as well as associated costs for the patient.<sup>8</sup> To increase the utilization of CR, patients should be referred to CR during hospitalization for ACS and prior to discharge.<sup>12</sup> To improve access for patients who live in rural locations and in areas with no center-based CR, home-based CR options should be considered. These home-based CR programs have similar shorter-term safety and clinical outcomes (eg, improvements in exercise capacity, QOL, blood pressure, cholesterol) as center-based CR.<sup>13–15</sup> More intensive CR programs have been developed with a goal of expanding the benefits of traditional CR programs through additional exercise and education sessions, as well as placing a greater focus on diet and lifestyle factors.<sup>16–18</sup> Although improved outcomes have been described with an intensive program,<sup>16,19</sup> the studies are observational in nature. Both traditional and intensive CR programs remain underutilized, so the primary emphasis should be on enrollment and adherence to any CR program.<sup>20</sup>
+
+health-related QOL outcomes over 12 months of follow-up.<sup>1</sup> Longer follow-up suggested reductions in cardiovascular mortality.<sup>1,4</sup> CR is particularly beneficial in older patients with CAD, a group that is at a higher risk of losing independence and functioning.<sup>23–26</sup>
+
+2. To overcome challenges that have prevented greater patient participation, new strategies and innovative models that utilize digital health tools are emerging to meet the evolving needs of CR patients. CR programs have traditionally been delivered via center-based CR. These programs require patients to be physically present at a facility located in a hospital or outpatient center, which limits access for many patients, especially women and some racial and ethnic groups.<sup>9,27,28</sup> A review of 23 RCTs of home- and center-based CR found that these programs tend to implement the same core components.<sup>13</sup> These include patient assessment of current medical history, exercise training, dietary counseling, risk factor management (eg, smoking, lipids, blood pressure, weight, diabetes), and psychological intervention. Comparison of studies in home- and center-based CR indicate a similar improvement in QOL and no statistically significant difference in the all-cause mortality rate up to 12 months after the intervention.<sup>5,6</sup> However, more RCTs are needed with home-based CR in patients with ACS because of an evidence gap (especially in high-risk patients) in assessing the safety of home-based CR in patients at high risk for recurrent ischemic events, as well as the impact of a home-based rehabilitation strategy on clinical outcomes such as cardiovascular death, recurrent MI, and rehospitalization.<sup>29</sup> Advances in technology and remote monitoring may help to improve the efficacy and safety of this approach. Hybrid models that combine elements of both center- and home-based programs may also offer benefits.
+
+**Recommendation-Specific Supportive Text**
+
+1. Exercise-based CR programs are associated with improved survival and reduced risk of reinfarction in patients after AMI.<sup>1–4</sup> CR can be enhanced as a component of a multifactorial rehabilitation program with risk factor education and counseling. Patients with ACS who participate in CR have significantly better outcomes compared with those who do not.<sup>1,21,22</sup> In a meta-analysis of 85 RCTs of exercise-based CR in patients with coronary heart disease, the intervention reduced risk of MI, reduced all-cause hospitalization, reduced health care costs, and improved

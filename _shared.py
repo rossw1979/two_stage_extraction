@@ -108,19 +108,43 @@ def build_image_message(image_path: str) -> dict:
 
 
 async def call_vlm(messages: list, model: str, api_key: str, base_url: str, max_tokens: int = 4096) -> str:
+    import asyncio
+
     try:
-        from openai import AsyncOpenAI
+        from openai import AsyncOpenAI, APIConnectionError
     except ImportError:
         raise RuntimeError("缺少 openai 依赖。请运行: pip install openai")
 
-    client = AsyncOpenAI(api_key=api_key, base_url=base_url)
-    response = await client.chat.completions.create(
-        model=model,
-        messages=messages,
-        max_tokens=max_tokens,
-        temperature=0.0,
-    )
-    return response.choices[0].message.content
+    # 兼容不同版本的 openai SDK
+    try:
+        from openai import APIStatusError as _APIStatusError
+        RETRYABLE = (APIConnectionError, _APIStatusError)
+    except ImportError:
+        RETRYABLE = (APIConnectionError,)
+    MAX_RETRIES = 3
+    BASE_DELAY = 2  # 秒
+
+    client = AsyncOpenAI(api_key=api_key, base_url=base_url, timeout=120.0)
+
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            response = await client.chat.completions.create(
+                model=model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=0.0,
+            )
+            return response.choices[0].message.content
+        except RETRYABLE as e:
+            if attempt < MAX_RETRIES:
+                delay = BASE_DELAY * (2 ** attempt)
+                logger.warning(
+                    f"[VLM] 第 {attempt + 1}/{MAX_RETRIES + 1} 次尝试失败: {e}. "
+                    f"{delay}s 后重试..."
+                )
+                await asyncio.sleep(delay)
+            else:
+                raise
 
 
 def load_prompt(prompt_path: Path) -> str:
@@ -129,6 +153,35 @@ def load_prompt(prompt_path: Path) -> str:
     return prompt_path.read_text(encoding="utf-8")
 
 # ────────────────────  Scout ────────────────────
+def _clean_json_control_chars(raw: str) -> str:
+    """修复 LLM 生成 JSON 字符串值中未转义的控制字符（换行/回车/制表符）。"""
+    result = []
+    in_string = False
+    escaped = False
+    for ch in raw:
+        if escaped:
+            result.append(ch)
+            escaped = False
+        elif ch == '\\' and in_string:
+            result.append(ch)
+            escaped = True
+        elif ch == '"':
+            result.append(ch)
+            in_string = not in_string
+        elif in_string and ch == '\n':
+            result.append('\\n')
+        elif in_string and ch == '\r':
+            result.append('\\r')
+        elif in_string and ch == '\t':
+            result.append('\\t')
+        elif in_string and ord(ch) < 0x20:
+            # 其他控制字符，直接移除
+            pass
+        else:
+            result.append(ch)
+    return ''.join(result)
+
+
 def parse_scout_result(raw: str) -> dict:
     raw = raw.strip()
     if raw.startswith("```"):
@@ -140,9 +193,20 @@ def parse_scout_result(raw: str) -> dict:
         raw = "\n".join(lines)
     try:
         return json.loads(raw.strip())
-    except json.JSONDecodeError as e:
-        logger.warning(f"Scout JSON 解析失败: {e}, 原始输出前500字符:\n{raw[:500]}")
-        return {"recommendation": "标准提取", "tables": {"count": 1}}
+    except json.JSONDecodeError:
+        # 尝试修复 LLM 生成的 JSON 中未转义控制字符
+        try:
+            fixed = _clean_json_control_chars(raw)
+            return json.loads(fixed)
+        except json.JSONDecodeError as e:
+            tail = raw[-200:] if len(raw) > 200 else raw
+            truncated = not raw.rstrip().endswith(('}', ']'))
+            logger.warning(
+                f"Scout JSON 解析失败: {e}"
+                f"{' [疑似输出被截断]' if truncated else ''}"
+                f"\n原始输出末尾200字符:\n{tail}"
+            )
+            return {"recommendation": "标准提取", "tables": {"count": 1}}
 
 
 # ──────────────────── 三阶段流水线 ────────────────────
@@ -205,37 +269,24 @@ async def verify_phase(
     logger.info("[Verify] 开始定向校验...")
     start = time.time()
 
-    verify_prompt = f"""你是一位医学文献校验专家。请对照原图检查下方的提取结果是否存在问题。
+    # 加载完整的校验提示词
+    prompt_path = Path(__file__).parent / "verify_prompt.md"
+    if prompt_path.exists():
+        system_prompt = load_prompt(prompt_path)
+    else:
+        system_prompt = "你是一位严谨的医学文献校验专家。"
 
-【页面结构信息】
+    user_prompt = f"""【页面结构信息】
 {json.dumps(scout_result, ensure_ascii=False, indent=2)}
 
 【提取结果】
-{extract_result}
-
-请仅输出以下 JSON 格式（不要 markdown 代码块）：
-{{
-  "issues": [
-    {{"location": "问题位置", "problem": "具体问题描述", "severity": "高|中|低"}}
-  ],
-  "needs_re_extract": false,
-  "re_extract_focus": ""
-}}
-
-检查重点：
-1. Scout 报告表格下方有注释，但提取结果中是否遗漏？
-2. Scout 报告有 N 个表格，提取结果中表格数量是否一致？
-3. 提取结果中是否出现了 <div>、<span> 等被禁止的 HTML 标签？
-4. 表格行数/列数是否与 Scout 报告的估算值严重不符？
-5. 页面左下角/右下角是否有明显遗漏的段落？
-
-如果没有发现问题，issues 留空，needs_re_extract 设为 false。"""
+{extract_result}"""
 
     messages = [
-        {"role": "system", "content": "你是一位严谨的医学文献校验专家。"},
-        {"role": "user", "content": [build_image_message(image_path), {"type": "text", "text": verify_prompt}]},
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": [build_image_message(image_path), {"type": "text", "text": user_prompt}]},
     ]
-    raw = await call_vlm(messages, model, api_key, base_url, max_tokens=1024)
+    raw = await call_vlm(messages, model, api_key, base_url, max_tokens=8192)
     elapsed = time.time() - start
     logger.info(f"[Verify] 耗时 {elapsed:.2f}s")
 
@@ -322,24 +373,7 @@ def _find_body_content_marker(body):
 
 _BLOCK_HEADER_PATTERNS = [
     r'###\s*[*✅🔍📄📌📨💡🔎]*\s*整页(?:结构)?预扫描(?:结果|确认|（必须执行）|（内部完成[^）]*）|（确认无遗漏）)?',
-    r'###\s*[*✅🔍]*\s*整页内容块定位',
-    r'###\s*\*\*整页内容块定位',
-    r'###\s*\*\*逐块处理与边界确认',
-    r'####\s*\*\*第[一二三四五六七八九十\d]+块',
-    r'该页包含以下内容块',
-    r'\*\*内容块定位[（(].*?[）)][：:]*\*\*$',
-    r'\[\s*自我校验启动\s*\]',
-    r'\[自我校验复核\]',
-    r'页面布局为[：:]',
-    r'#{1,4}\s*[*✅🔍]*\s*自我校验(?:清单)?(?:（[^)]*）)?[：:\s]*$',
-    r'##\s*[*✅🔍]*\s*自我校验',
-    r'###\s*[*✅🔍]+\s*自我校验完成(?:（[^)]*）)?[：:\s]*$',
-    r'###\s*\*\*自我校验完成\*\*',
-    r'##\s*六、自我校验',
-    r'#{1,4}\s*三、自我校验',
-    r'###\s*[*📄]*\s*按排版顺序逐块提取',
     r'###\s*[*📨]*\s*最终输出\s*[（(]',
-    r'###\s*[*📌]+\s*最终修正版',
     r'##\s*提取结果\s*[（(]',
     r'##\s*正文提取\s*[（(]',
     r'###\s*[*📄]*\s*提取结果\s*[（(]',
@@ -351,44 +385,20 @@ _BLOCK_HEADER_PATTERNS = [
     r'###\s*一、页面顶部信息',
     r'\*\*页眉信息\s*[（(]',
     r'##\s*四、其他说明',
-    r'##\s*四、页面四角专项核查结果',
-    r'##\s*五、内容过滤执行情况',
-    r'###\s*三、页面四角专项检查结果',
     r'###\s*二、主内容区',
-    r'###\s*四、自我校验',
-    r'##\s*三、自我校验',
-    r'###\s*四、内容过滤与格式处理说明',
-    r'###\s*一、页面结构预扫描',
-    r'###\s*页面结构预扫描结果',
     r'###\s*📤\s*最终输出',
-    r'^✅\s*所有内容块已覆盖[：:]',
-    r'^✅\s*自我校验终检',
     r'^###\s*提取结果\s*\(干净',
     r'###\s*正文段落\s*\(.*?\)',
     r'###\s*段落\s*\(.*?\)',
     r'#{1,3}\s*最终输出说明\s*$',
     r'##\s+二、图注[（(]',
     r'###\s+参考文献\s*$',
-    r'##\s+五、自我校验清单',
-    r'#{1,4}\s*修正版.*删除所有上标引用标记',
-    r'#{1,4}\s*内容完整性核验补充说明',
-    r'#{1,4}\s*页脚与水印处理说明',
     r'页面为\*\*[^*]+\*\*',
-    r'该页包含以下内容块',
     r'页面可见(?:内容块|内容)及位置如下[：:]*$',
     r'^\s*-\s*\*\*(?:左栏|右栏)内容块',
     r'^\s*-\s*\*\*页面角落检查\*\*',
-    r'\[自我校验启动\]',
-    r'\[校验通过，开始输出\]',
     r'\[输出结束\]',
-    r'\[整页结构预扫描完成\]',
-    r'^\*\*页脚与水印处理说明\*\*',
-    r'^\*\*内容完整性核验补充说明\*\*',
-    r'^\*\*页眉/页脚处理说明[：:]*\*\*',
     r'^-\s*\*\*(?:左|右)栏内容[：:]*\*\*',
-    r'开始按(?:规则|排版顺序)逐块提取',
-    r'^——开始按规则逐块提取——$',
-    r'^✅\s*所有内容块已定位，开始按规则逐块提取',
 ]
 
 _BLOCK_INNER_PATTERNS = [
@@ -398,17 +408,11 @@ _BLOCK_INNER_PATTERNS = [
     r'^-\s+表\s*\d+',
     r'^-\s+(?:页眉页脚|删除页眉|删除页脚|保留章节标题)',
     r'^-\s+无流程图(?:，无需\s*YAML)?',
-    r'^-\s+表格中数值、单位、缩写',
     r'^-\s+上标引用标记',
     r'^-\s+(?:无额外文字|无文字|无遗漏文字|水印|参考文献列表|缩写)',
     r'^\s*-?\s*\[[ xX☑]\]\s+',
-    r'^✅\s*(?:所有内容块已覆盖|确认无遗漏|整页结构已扫描|四角检查'
-             r'|自我校验完成|所有校验项通过|全部通过|输出完成|输出完毕|提取完成'
-             r'|页面四角检查|表格上方无|双栏结构识别正确'
              r'|表格行列核对|流程图\s*YAML|已删除|已覆盖|已完整'
              r'|数值阈值和单位完整|确认无遗漏内容块'
-             r'|所有内容块均已定位并处理'
-             r'|四角检查通过|表格上方段落已提取|双栏处理顺序正确)',
     r'^>\s*✅\s*(?:表格行数核对|单元格内多行内容|无HTML标签'
              r'|表格下方注释已提取|流程图已输出'
              r'|保留所有缩写原样|保留星号注释符号'
@@ -419,13 +423,10 @@ _BLOCK_INNER_PATTERNS = [
     r'^>\s*⚠?\s*注意[：:]',
     r'^-?\s*\*\*页码\*\*[：:]',
     r'^-?\s*\*\*期刊信息\*\*[：:]',
-    r'^-\s+\*\*四角检查\*\*[：:]',
     r'^-\s+\*\*(?:已删除|已覆盖|页眉|页脚|无流程图|表格中数值|上标引用|无额外文字|无遗漏)\*\*\s*[：:]',
     r'^-\s+(?:页眉页脚|删除页眉|删除页脚|保留章节标题|无流程图(?:，无需\s*YAML)?'
-           r'|表格中数值、单位、缩写|上标引用标记'
            r'|(?:无额外文字|无文字|无遗漏文字|水印|参考文献列表|缩写))',
     r'^-?\s*→\s*\*\*(?:删除|已过滤|已按规则删除)\*\*',
-    r'经四角检查与块边界确认',
     r'现按\*\*',
     r'已执行\*\*',
     r'^\*\*(?:顶部|顶部居中|页码|页眉|期刊信息'
@@ -445,10 +446,7 @@ _BLOCK_INNER_PATTERNS = [
     r'^\s*-\s*\*\*页面角落检查\*\*',
     r'^\s*-\s*\*\*修正版\*\*',
     r'^\s*-\s*(?:段落|标题|表格|图)\d*.*[：:]',
-    r'^\s*-\s+无其他角落文字',
     r'^\s*\d+\.\s+.*→.*',
-    r'^✅\s*所有内容块已定位，开始按规则逐块提取',
-    r'^——开始按规则逐块提取——$',
 ]
 
 _BODY_SIGNAL_PATTERNS = [
@@ -489,11 +487,9 @@ _GLOBAL_SWEEP_PATTERNS = [
            r'|左上角|右上角|左上区域|右上区域|中部偏上|中部偏下'
            r'|左下角|右下角|左栏主体|右栏主体|左栏正文|右栏正文'
            r'|右栏上部|右栏中部|右栏下部'
-           r'|段落\d*|四角检查|表\d*标题|表格主体|表格下方段落\d*'
            r'|右侧正文段落|表\d*下方(?:注释)?'
            r'|主体上部|底部图注|流程图下方'
            r'|左侧路径|右侧路径|图\d+左侧|图\d+右侧'
-           r'|页面四角检查)\d*[\)）]?\*\*\s*[：:]',
     r'^-\s+(?:段落\d*[：:]|图\d+[^\n]*[：:]'
            r'|左上角[：:]|右上角[：:]|左下角[：:]|右下角[：:]'
            r'|顶部页眉[：:])',
@@ -516,8 +512,6 @@ _GLOBAL_SWEEP_PATTERNS = [
     r'^>?\s*（以下为最终合规输出.*$',
     r'^[（(]?注[）：:][^)]*[）]?\s*(?:右栏末句|原文中|此处为|前文延续|图像中被截断)',
     r'^以下为严格按原文排版顺序.*$',
-    r'^以下为[^\n]*(?:文本提取|整页结构预扫描|严格遵循|已执行)[^\n]*$',
-    r'^我将严格按照[^\n]*整页结构预扫描[^\n]*$',
     r'^本页提取内容为[^\n]*数字化副本[^\n]*$',
     r'^→\s*.+$',
     r'^-\s*→\s*.+$',
@@ -528,9 +522,7 @@ _GLOBAL_SWEEP_PATTERNS = [
     r'^此为该页图像的纯净数字化副本[^\n]*$',
     r'^此为[^\n]*(?:纯净|干净)?数字化副本[^\n]*$',
     r'^页面可见(?:内容块|内容)及位置如下[：:]*$',
-    r'^该页包含以下内容块\s*[：:]?$',
     r'^\d+\.\s+\*\*(?:顶部页眉|表\d*[\s]*标题|表格主体|表格下方段落\d*'
-       r'|右栏正文|右侧正文段落|页面四角检查'
        r'|表\d*下方注释|表\d+)\*\*[：:]',
     r'.*\[无法识别\].*$',
     r'.*绝对忠实图像.*不得推断.*$',
@@ -553,7 +545,6 @@ _GLOBAL_SWEEP_PATTERNS = [
     r'^>\s*删除了原文中可能存在的上标引用标记.*$',
     r'^##\s+二、图注[（(]',
     r'^###\s+参考文献\s*$',
-    r'^##\s+五、自我校验清单',
     r'^#{3,4}\s+修正后[：:]',
     r'^#{3,4}\s+正文[（(]',
     r'^#{3,4}\s+标题[（(]',
@@ -593,29 +584,18 @@ _GLOBAL_SWEEP_PATTERNS = [
     r'^\s*-\s*\*\*修正版\*\*',
     r'页面为\*\*[^*]+\*\*.*内容块分布',
     r'^页面为.*内容块分布如下[：:]*$',
-    r'该页包含以下内容块',
     r'页面可见(?:内容块|内容)及位置如下[：:]*$',
     r'^\s*-\s*\*\*(?:顶部|左上|右上|左下|右下|中部|页眉|页脚|期刊信息).*?\*\*\s*[：:]',
     r'^\s*-\s*(?:段落|标题|表格|图)\d*.*[：:]',
     r'^\s*-\s*\[\s*[xX☑]\s*\]\s+.*(?:内容块|扫描|四角|表格|跨栏|双栏|流程图|数值|HTML|注释|YAML|阈值|单位)',
     r'^\s*-\s*\[\s*[xX☑]\s*\]\s+.*(?:校验|检查|核对|确认|覆盖|删除|过滤)',
-    r'\[自我校验启动\]',
-    r'\[校验通过，开始输出\]',
     r'\[输出结束\]',
-    r'^#{1,4}\s*修正版.*删除所有上标引用标记',
-    r'^#{1,4}\s*内容完整性核验补充说明',
-    r'^#{1,4}\s*页脚与水印处理说明',
-    r'^#{1,4}\s*页眉/页脚处理说明',
-    r'^\*\*页脚与水印处理说明\*\*',
-    r'^\*\*内容完整性核验补充说明\*\*',
-    r'^\*\*页眉/页脚处理说明[：:]*\*\*',
     r'^-\s+无(?:表格|公式|流程图|决策树|图片|水印|参考文献)',
     r'^-\s+无参考文献标题出现',
     r'^-\s+左下角.*?水印.*?已删除',
     r'^-\s+页码.*?已删除',
     r'^-\s+全文完整提取',
     r'^-\s+右下角.*?网址.*?删除',
-    r'^\[\s*自我校验完成\s*\]',
     r'^页面内容块分布如下[：:]*$',
     r'^内容块分布如下[：:]*$',
     r'^-\s+(?:\*\*)?(?:主体内容|右侧边栏|左侧边栏|页脚|页面顶部|页面底部|左上角|右上角|左下角|右下角|顶部标题|页码|表格下方|上标参考文献编号).*?(?:删除|覆盖|已删除|需删除|按规则)',
@@ -629,30 +609,21 @@ _GLOBAL_SWEEP_PATTERNS = [
     r'^>\s*提取完成.*$',
     r'^>\s*本输出为.*数字化副本.*$',
     r'^>\s*提取完毕.*$',
-    r'\[整页结构预扫描完成\]',
     r'^页面为[^。]*(?:双栏|单栏|多栏)[^。]*(?:无表格|无公式|无流程图|无决策树|无图片)[^。]*。?$',
     r'^-\s*\*\*(?:左|右)栏内容[：:]*\*\*',
-    r'开始按(?:规则|排版顺序)逐块提取',
-    r'^——开始按规则逐块提取——$',
-    r'^✅\s*所有内容块已定位，开始按规则逐块提取',
     r'^\s*\d+\.\s+.*→.*',
-    r'^\s*-\s+无其他角落文字',
-    r'^（已确认：无其他角落文字遗漏）',
     r'^-\s+主体为[^。]*(?:双栏|单栏|多栏)[^。]*。?$',
     r'^[-\s]*\*\*(?:左|右)栏内容块[（(].*?[）)]\*\*\s*[：:]$',
     r'^-\s+(?:左|右)栏内容块[（(].*?[）)]\s*[：:]$',
     r'^-\s+页面底部[：:].*',
     r'^-\s+无页脚页码.*',
     r'^[—-]+\s*(?:删除页眉|删除左下角|删除右下角|删除正文中的上标引用标记).*',
-    r'^✅\s*(?:内容块边界确认|排版顺序|数值与术语保真核查|自我校验全部勾选通过|排版判断|所有校验项通过).*',
     r'^——\s*开始输出干净数字化副本\s*——$',
-    r'^——\s*校验通过，开始输出\s*——$',
     r'^-\s+(?:所有剂量|缩写|推荐等级未出现)[（(].*',
     r'^\s*\d+\.\s*(?:标题)?["\u201c"].*?["\u201d"]段落[（(].*?[）)]',
     r'^\s*\d+\.\s*末段[：：].*',
     r'^-\s+.*(?:删除页眉|删除页脚|删除左下角|删除右下角|删除正文中的上标引用标记|推荐等级未出现|已过滤|已删除|已忽略|逐字提取|未生成|未补全|被截断).*',
     r'^\*\*（删除页眉.*',
-    r'^\*\*内容块定位[（(].*?[）)][：:]*\*\*$',
     r'^\d+\.\s+(?:页眉|主标题|副标题|编写单位|通信作者|【关键词】|英文标题|底部左侧|底部右侧|左栏正文|右栏正文|二维码|图像元素|期刊信息).*',
     r'^-\s+保留\s+DOI.*',
     r'^\*\*(?:页眉|页脚)信息[（(]已过滤[）)]\*\*',
@@ -661,7 +632,6 @@ _GLOBAL_SWEEP_PATTERNS = [
     r'^-\s+右上角标题.*',
     r'^-\s+右下角二维码.*',
     r'^✅\s*以下为严格遵循.*',
-    r'\[自我校验复核\]',
     r'^\s*⚠.*',
     r'^\s*→\s*修正后.*',
     r'^重新输出修正版.*',
@@ -957,6 +927,123 @@ def _truncate_at_references(text: str) -> str:
     return text
 
 
+# ──────────────────── 参考文献残余清理 ────────────────────
+
+_REF_NUMBER_PATTERN = re.compile(r'^\[\d+(?:[-,]\d+)?\]')
+_REF_YEAR_PATTERN = re.compile(r'\b(19|20)\d{2}\b')
+_REF_JOURNAL_TYPE_ZH = re.compile(r'\[[JMCNDRSjmcndrs]\]\.?')
+_REF_JOURNAL_NAME_EN = re.compile(
+    r'[Jj]ournal|Medicine|Cardiol|Heart|Surgery|Lancet|NEJM|N Engl J Med|'
+    r'Circulation|JACC|Eur Heart|Am J|Catheter|Interv|Radiol|Ther|Clin|Res'
+)
+_REF_DOI_PATTERN = re.compile(r'DOI[\s:]*10\.\d+', re.IGNORECASE)
+_REF_PURE_REF_MARKER = re.compile(r'（本页为参考文献，已跳过）')
+
+
+def _is_reference_entry(text: str) -> bool:
+    """判断文本是否为参考文献条目（支持多行拼接后的完整文本）。"""
+    stripped = text.strip()
+    if not stripped or not _REF_NUMBER_PATTERN.match(stripped):
+        return False
+    has_journal_type = bool(_REF_JOURNAL_TYPE_ZH.search(stripped))
+    has_journal_name = bool(_REF_JOURNAL_NAME_EN.search(stripped))
+    has_doi = bool(_REF_DOI_PATTERN.search(stripped))
+    has_year = bool(_REF_YEAR_PATTERN.search(stripped))
+    if has_journal_type or has_journal_name or has_doi:
+        return True
+    has_author_mark = bool(re.search(r'et al\.|等\.', stripped))
+    if has_year and has_author_mark:
+        return True
+    if has_author_mark:
+        return True
+    return False
+
+
+def _is_orphaned_reference_continuation(line: str) -> bool:
+    """判断是否为孤立的参考文献续行（不以 [数字] 开头，但有参考文献特征）。"""
+    stripped = line.strip()
+    if not stripped or _REF_NUMBER_PATTERN.match(stripped):
+        return False
+    has_journal_type = bool(_REF_JOURNAL_TYPE_ZH.search(stripped))
+    has_year = bool(_REF_YEAR_PATTERN.search(stripped))
+    has_doi = bool(_REF_DOI_PATTERN.search(stripped))
+    has_journal_name = bool(_REF_JOURNAL_NAME_EN.search(stripped))
+    starts_lowercase = bool(re.match(r'^[a-z]', stripped))
+    if starts_lowercase and has_journal_type and has_year and (has_doi or has_journal_name):
+        return True
+    return False
+
+
+def _collect_reference_entry(lines: list[str], start_idx: int) -> tuple[list[str], int]:
+    """收集从 start_idx 开始的完整参考文献条目（处理跨行情况）。"""
+    entry_lines = [lines[start_idx]]
+    j = start_idx + 1
+    while j < len(lines):
+        next_stripped = lines[j].strip()
+        if not next_stripped or _REF_NUMBER_PATTERN.match(next_stripped):
+            break
+        entry_lines.append(lines[j])
+        j += 1
+    return entry_lines, j
+
+
+def remove_references_from_text(text: str) -> tuple[str, int]:
+    """
+    从文本中删除参考文献条目（支持跨行条目、单条删除和孤立续行）。
+    返回：(清理后的文本, 删除的参考文献行数)
+    """
+    lines = text.splitlines()
+    new_lines = []
+    removed_count = 0
+    i = 0
+
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+        if not stripped:
+            new_lines.append(line)
+            i += 1
+            continue
+
+        if _REF_NUMBER_PATTERN.match(stripped):
+            entry_lines, next_idx = _collect_reference_entry(lines, i)
+            entry_text = '\n'.join(entry_lines)
+            if _is_reference_entry(entry_text):
+                removed_count += len(entry_lines)
+                i = next_idx
+                continue
+            else:
+                new_lines.extend(entry_lines)
+                i = next_idx
+                continue
+
+        new_lines.append(line)
+        i += 1
+
+    # 清理孤立的参考文献续行（跨页断行）
+    cleaned_lines = []
+    for line in new_lines:
+        stripped = line.strip()
+        if stripped and _is_orphaned_reference_continuation(stripped):
+            removed_count += 1
+            continue
+        cleaned_lines.append(line)
+
+    # 清理连续的空行（最多保留2个空行）
+    final_lines = []
+    empty_count = 0
+    for line in cleaned_lines:
+        if not line.strip():
+            empty_count += 1
+            if empty_count <= 2:
+                final_lines.append(line)
+        else:
+            empty_count = 0
+            final_lines.append(line)
+
+    return '\n'.join(final_lines), removed_count
+
+
 def _remove_duplicate_revisions(text: str) -> str:
     """检测并去除'修正版'或'重新输出修正版'导致的重复内容。
 
@@ -1032,6 +1119,11 @@ def extract_final_content(filepath: Path) -> Optional[str]:
     # 在参考文献标题处截断
     text_to_clean = _truncate_at_references(text_to_clean)
 
+    # 清理混入正文的参考文献条目（VLM 可能未能完全跳过的参考文献）
+    text_to_clean, ref_removed = remove_references_from_text(text_to_clean)
+    if ref_removed > 0:
+        logger.info(f"[Clean] 删除 {ref_removed} 行混入正文的参考文献")
+
     return strip_all_process_content(text_to_clean) or None
 
 
@@ -1050,7 +1142,8 @@ def merge_page_results(pdf_name: str, output_dir: Path) -> dict:
     page_files = sorted(page_dir.glob(f"{pdf_name}_*.md"))
     page_files = [f for f in page_files
                   if not f.name.endswith("_merged_output.md")
-                  and not f.name.endswith("_error.txt")]
+                  and not f.name.endswith("_error.txt")
+                  and not f.name.endswith("_review.md")]
 
     if not page_files:
         logger.warning("[Merge] 未找到任何单页提取结果文件")
@@ -1059,7 +1152,12 @@ def merge_page_results(pdf_name: str, output_dir: Path) -> dict:
     for pf in page_files:
         try:
             stem = pf.stem
-            page_num_str = stem.rsplit("_", 1)[-1]
+            # 文件名可能是 xxx_10.md 或 xxx_10_review.md，需要正确提取页码
+            parts = stem.rsplit("_", 2)
+            if len(parts) >= 2 and parts[-1] == "review":
+                page_num_str = parts[-2]
+            else:
+                page_num_str = parts[-1]
             page_num = int(page_num_str)
 
             content = extract_final_content(pf)
@@ -1092,6 +1190,18 @@ def merge_page_results(pdf_name: str, output_dir: Path) -> dict:
             f.write(f"\n<!-- 备注：第 {skipped} 页为参考文献，已跳过 -->\n")
 
     total_chars = sum(len(c) for _, c in results)
+
+    # 合并完成后，对合并文件执行一次参考文献残余清理
+    #（处理跨页断行导致的孤立参考文献续行）
+    try:
+        merged_text = merged_file.read_text(encoding='utf-8')
+        cleaned_merged_text, ref_removed = remove_references_from_text(merged_text)
+        if ref_removed > 0:
+            merged_file.write_text(cleaned_merged_text, encoding='utf-8')
+            logger.info(f"[Merge] 合并后清理：删除 {ref_removed} 行参考文献残余")
+    except Exception as e:
+        logger.error(f"[Merge] 合并后参考文献清理出错: {e}")
+
     merge_meta = {
         "status": "ok",
         "merged_file": str(merged_file),

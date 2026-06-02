@@ -1,0 +1,34 @@
+---
+extraction_strategy: 标准提取
+scout_result: {"page_layout": "双栏", "content_blocks": [{"type": "段落", "position": "左上", "complexity": "中"}, {"type": "段落", "position": "右上", "complexity": "中"}, {"type": "段落", "position": "左下", "complexity": "中"}, {"type": "段落", "position": "右下", "complexity": "中"}, {"type": "表格", "position": "左中", "complexity": "低"}, {"type": "表格", "position": "右上框内", "complexity": "低"}], "tables": {"count": 2, "max_rows_estimate": 5, "has_merged_cells": false, "has_multiline_cells": true, "has_footnote_below": false}, "recommendation": "标准提取"}
+total_time_seconds: 118.10
+page_num: 4
+task_id: 622a4dde-06b3-4378-bdd5-54867cbfdd67
+re_extracted: True
+re_extract_focus: "右上框内编号推荐项（4-5条）应作为结构化列表提取而非段落；左中区域的推荐列表与右上框应统一处理为推荐模块；必须删除页脚网址'http://guide.medlive.cn/'"
+review_needed: True
+review_reason: "遗漏了右上框内的推荐条目表格结构及左中位置的Table 2/3对应表格内容，且未删除水印与页脚网址"
+---
+
+strategies have been developed to increase the proportion of patients from non–PCI-capable hospitals or in the prehospital setting who can receive appropriate PPCI.¹⁶⁻¹⁸ On-site or prehospital fibrinolysis can also be considered as a preferred reperfusion strategy for non–PCI-capable hospitals within a regional STEMI network if timely transfer for PPCI cannot be consistently achieved.¹⁹⁻²¹ Every non–PCI-capable hospital should have a formal agreement with a designated PCI centre within the network (“hub-and-spoke” model) that includes processes to allow for adjunctive PCI after initial fibrinolysis.
+
+Many regions and STEMI care networks in Canada have shown improvements in reperfusion times and clinical outcomes in STEMI patients who have been treated through the development of organized regional STEMI programs that emphasize prehospital electrocardiogram (ECG) diagnosis, EMS bypass of non–PCI-capable hospitals, and geographic and resource-based decision-making regarding the choice of an upfront reperfusion strategy.²²⁻²⁶ The Ottawa program showed that EMS diagnosis of STEMI in the field with direct transfer to a PPCI centre was associated with a reduction in in-hospital mortality compared with treatment at the nearest hospital.¹⁷ It has been suggested that prehospital STEMI diagnosis in conjunction with prehospital fibrinolysis could also be similarly driven by EMS.²⁷ Finally, the rapid regionalization across multiple STEMI networks as part of the American Heart Association STEMI Accelerator Programs in the United States was associated with significant reductions in in-hospital mortality.²⁸⁻³⁰ These findings support the development of an intensive and organized regional approach to emergency care for these patients.
+
+Successful STEMI networks regularly track time intervals and provide timely feedback to network stakeholders for continuous quality improvement. Important time components that affect overall program efficiency are defined in Table 2 and listed in Table 3. Routine audit practices can serve to identify treatment delays in EMS and hospital-based processes, which can be fed back to team members involved in STEMI care. Important reperfusion treatment goals that should be tracked by regional STEMI networks are listed in Table 3.
+
+#### RECOMMENDATION
+1. We recommend the development and implementation of regional STEMI networks using a hub-and-spoke model to define optimal reperfusion strategies, reduce reperfusion delay, improve reperfusion rates, and apply protocols for comprehensive ongoing STEMI care (Strong Recommendation, Moderate-Quality Evidence).
+2. We recommend a first medical contact (FMC) to STEMI diagnosis (ECG acquisition and interpretation) time of ≤ 10 minutes (Strong Recommendation, Low-Quality Evidence).
+3. We recommend development of a STEMI network of care that incorporates the use of prehospital catheterization laboratory activation, single-call patient transfer protocols, and in-field bypass of non-PCI centres to minimize FMC-to-device times for patients who are treated with PPCI (Strong Recommendation, Moderate-Quality Evidence).
+4. We recommend the use of protocols to minimize time to fibrinolysis, and the development of a formal relationship with a PCI centre to enable adjunctive PCI for patients who are treated with fibrinolysis within a STEMI network (as outlined in the section entitled “Reperfusion strategies for suspected STEMI patients managed in a non–PCI-capable hospital”) (Strong Recommendation, Moderate-Quality Evidence).
+5. We recommend that hospitals and EMS services within STEMI networks maintain written, updated STEMI management protocols, and audit treatment delays, reperfusion rates, and false activation rates to monitor quality metrics (Strong Recommendation, Low-Quality Evidence).
+
+**Practical tip.** All hospitals within a STEMI network should define their default STEMI reperfusion strategy on the basis of local geography and resource availability.
+
+### Prehospital and interfacility EMS transportation within regional networks
+
+There are 4 national designations for the health care providers in ambulances in Canada: Emergency Medical Responders, similar to Basic Emergency Medical Technicians, Primary Care Paramedics (PCPs), Advanced Care Paramedics (ACPs), similar to Emergency Medical Technician Paramedics, and Critical Care Paramedics. The transportation of suspected STEMI patients by EMS might be accomplished by any of these providers.
+
+In Canada, many regions rely on PCPs to transport STEMI patients.³¹⁻³³ PCPs have the capability to recognize STEMI on 12-lead ECGs, to administer aspirin and nitroglycerin, and to defibrillate if needed.²⁴,²⁵ ACPs can provide more advanced life support such as synchronized cardioversion, transcutaneous pacing, and advanced airway management, and they can administer advanced cardiac life support medications such as vasopressors, antiarrhythmics, and fibrinolytic therapy. A number of observational studies have shown that complications requiring ACP intervention during prehospital transport of selected STEMI patients are infrequent (< 5%).³¹,³²,³⁴⁻³⁶ The most commonly observed complications during STEMI patient transport included chest pain, hypotension, tachycardia, and bradycardia.³⁴,³⁷ Other serious complications requiring advanced or critical care interventions such as cardiac arrest, acute pulmonary edema, and cardiogenic shock (CS) were rare, especially among patients in whom complications were not anticipated before transport.¹⁸,³⁴,³⁶
+
+Transportation of uncomplicated STEMI patients with PCPs appears to be safe but some caveats remain. The studies outlined generally considered transport times of < 60 minutes and excluded patients who were hemodynamically unstable at the scene.¹⁸,³¹,³²,³⁴,³⁶ Evidence showing the safety of PCP transportation of STEMI patients with transport times > 60 minutes or for patients who are unstable at the scene is presently lacking. Therefore, on the basis of resources,

@@ -1,0 +1,139 @@
+2026-05-31 21:30:45,431 [INFO] extraction_service - ============================================================
+2026-05-31 21:30:45,431 [INFO] extraction_service - VLM 文本提取服务 — 新任务
+2026-05-31 21:30:45,431 [INFO] extraction_service -   PDF 文件名: The CRUSADE Bleeding Score.pdf
+2026-05-31 21:30:45,431 [INFO] extraction_service -   输出目录前缀: The CRUSADE Bleeding Score
+2026-05-31 21:30:45,431 [INFO] extraction_service -   图片数量: 21
+2026-05-31 21:30:45,431 [INFO] extraction_service -   模型: qwen3-vl-plus
+2026-05-31 21:30:45,431 [INFO] extraction_service -   校验模式: 开启
+2026-05-31 21:30:45,431 [INFO] extraction_service - ============================================================
+2026-05-31 21:30:45,431 [INFO] extraction_service -   任务创建: 220f7540-3ba0-4aa6-ab93-bfbfc2ce50d1 → The CRUSADE Bleeding Score_1.png (第1页)
+2026-05-31 21:30:45,431 [INFO] extraction_service -   任务创建: 99320015-4798-4cfe-9d1d-afe96e83fe41 → The CRUSADE Bleeding Score_2.png (第2页)
+2026-05-31 21:30:45,431 [INFO] extraction_service -   任务创建: af73cf57-067d-4086-946b-96c66e00ded3 → The CRUSADE Bleeding Score_3.png (第3页)
+2026-05-31 21:30:45,431 [INFO] extraction_service -   任务创建: 3c56b7a2-09d0-4c17-b214-604c6bfc3959 → The CRUSADE Bleeding Score_4.png (第4页)
+2026-05-31 21:30:45,431 [INFO] extraction_service -   任务创建: d5f00aad-2aad-4112-84c6-bc784ffc4b49 → The CRUSADE Bleeding Score_5.png (第5页)
+2026-05-31 21:30:45,431 [INFO] extraction_service -   任务创建: 3a4e2faa-da92-4de0-9829-36ee67cf59ba → The CRUSADE Bleeding Score_6.png (第6页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: c577ab25-7e86-4e69-88e5-2a3428a41fbd → The CRUSADE Bleeding Score_7.png (第7页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 0b922c83-9de2-4897-845f-08885a3140a7 → The CRUSADE Bleeding Score_8.png (第8页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: f13881bd-77de-475a-801b-7152a05b3387 → The CRUSADE Bleeding Score_9.png (第9页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 8d0458a5-cd3f-4f95-af96-1bd38e48d489 → The CRUSADE Bleeding Score_10.png (第10页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 7c704036-eae2-49a1-bc2a-c6a2efaae155 → The CRUSADE Bleeding Score_11.png (第11页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 12fef579-3083-418e-90fe-4d3fce863f91 → The CRUSADE Bleeding Score_12.png (第12页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 9a5146cb-e90d-4700-86c3-a9179ea44e26 → The CRUSADE Bleeding Score_13.png (第13页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 32dcab17-79a9-41c8-b7d2-76c74a42becf → The CRUSADE Bleeding Score_14.png (第14页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 2003c26a-45a5-46f7-be2d-209d1329e22c → The CRUSADE Bleeding Score_15.png (第15页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 4a0c7dcd-9569-460c-a284-d0206bd4b6d8 → The CRUSADE Bleeding Score_16.png (第16页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 96d27c2d-ffd3-4466-b765-ea99dbab46f2 → The CRUSADE Bleeding Score_17.png (第17页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 56b7f0d0-7925-48df-9991-a1910ec03282 → The CRUSADE Bleeding Score_18.png (第18页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 915fc52a-d8e9-47ac-b3c3-0fb6ace9d083 → The CRUSADE Bleeding Score_19.png (第19页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: 0c3c4e6f-a838-4675-a141-ecf70fb57f6a → The CRUSADE Bleeding Score_20.png (第20页)
+2026-05-31 21:30:45,432 [INFO] extraction_service -   任务创建: ed949a92-0d79-45aa-83ab-9a97bfacd3f5 → The CRUSADE Bleeding Score_21.png (第21页)
+2026-05-31 21:30:45,433 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,433 [INFO] extraction_service - [220f7540-3ba0-4aa6-ab93-bfbfc2ce50d1] 开始处理第 1 页: The CRUSADE Bleeding Score_1.png
+2026-05-31 21:30:45,878 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,880 [INFO] extraction_service - [99320015-4798-4cfe-9d1d-afe96e83fe41] 开始处理第 2 页: The CRUSADE Bleeding Score_2.png
+2026-05-31 21:30:45,898 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,899 [INFO] extraction_service - [af73cf57-067d-4086-946b-96c66e00ded3] 开始处理第 3 页: The CRUSADE Bleeding Score_3.png
+2026-05-31 21:30:45,922 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,922 [INFO] extraction_service - [3c56b7a2-09d0-4c17-b214-604c6bfc3959] 开始处理第 4 页: The CRUSADE Bleeding Score_4.png
+2026-05-31 21:30:45,935 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,935 [INFO] extraction_service - [d5f00aad-2aad-4112-84c6-bc784ffc4b49] 开始处理第 5 页: The CRUSADE Bleeding Score_5.png
+2026-05-31 21:30:45,948 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,948 [INFO] extraction_service - [3a4e2faa-da92-4de0-9829-36ee67cf59ba] 开始处理第 6 页: The CRUSADE Bleeding Score_6.png
+2026-05-31 21:30:45,960 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,960 [INFO] extraction_service - [c577ab25-7e86-4e69-88e5-2a3428a41fbd] 开始处理第 7 页: The CRUSADE Bleeding Score_7.png
+2026-05-31 21:30:45,972 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:30:45,972 [INFO] extraction_service - [0b922c83-9de2-4897-845f-08885a3140a7] 开始处理第 8 页: The CRUSADE Bleeding Score_8.png
+2026-05-31 21:31:17,764 [WARNING] extraction_service - [220f7540-3ba0-4aa6-ab93-bfbfc2ce50d1] 校验发现问题，启动定向重提: 遗漏了页面左下角的'Correspondence to:'和'Conflict of Interest Disclosures'全部段落内容，需完整提取。
+2026-05-31 21:31:26,048 [INFO] extraction_service - [d5f00aad-2aad-4112-84c6-bc784ffc4b49] 完成! 耗时 40.11s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_5.md
+2026-05-31 21:31:26,048 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:26,048 [INFO] extraction_service - [f13881bd-77de-475a-801b-7152a05b3387] 开始处理第 9 页: The CRUSADE Bleeding Score_9.png
+2026-05-31 21:31:26,414 [INFO] extraction_service - [c577ab25-7e86-4e69-88e5-2a3428a41fbd] 完成! 耗时 40.45s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_7.md
+2026-05-31 21:31:26,414 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:26,414 [INFO] extraction_service - [8d0458a5-cd3f-4f95-af96-1bd38e48d489] 开始处理第 10 页: The CRUSADE Bleeding Score_10.png
+2026-05-31 21:31:30,118 [WARNING] extraction_service - [99320015-4798-4cfe-9d1d-afe96e83fe41] 校验发现问题，启动定向重提: 需删除左侧水印及页脚出版信息，并检查是否存在被遗漏的表格下方注释
+2026-05-31 21:31:31,436 [INFO] extraction_service - [af73cf57-067d-4086-946b-96c66e00ded3] 完成! 耗时 45.54s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_3.md
+2026-05-31 21:31:31,436 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:31,436 [INFO] extraction_service - [7c704036-eae2-49a1-bc2a-c6a2efaae155] 开始处理第 11 页: The CRUSADE Bleeding Score_11.png
+2026-05-31 21:31:32,173 [WARNING] extraction_service - [3a4e2faa-da92-4de0-9829-36ee67cf59ba] 校验发现问题，启动定向重提: 需删除页面底部的出版元信息（'Circulation. Author manuscript; available in PMC 2013 September 09.'）
+2026-05-31 21:31:33,240 [WARNING] extraction_service - [0b922c83-9de2-4897-845f-08885a3140a7] 校验发现问题，启动定向重提: 本页为纯参考文献页，应跳过全部参考文献条目及出版元信息，仅保留'（本页为参考文献，已跳过）'
+2026-05-31 21:31:35,919 [INFO] extraction_service - [0b922c83-9de2-4897-845f-08885a3140a7] 定向重提完成
+2026-05-31 21:31:36,366 [INFO] extraction_service - [f13881bd-77de-475a-801b-7152a05b3387] 完成! 耗时 10.32s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_9.md
+2026-05-31 21:31:36,366 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:36,366 [INFO] extraction_service - [12fef579-3083-418e-90fe-4d3fce863f91] 开始处理第 12 页: The CRUSADE Bleeding Score_12.png
+2026-05-31 21:31:37,779 [INFO] extraction_service - [8d0458a5-cd3f-4f95-af96-1bd38e48d489] 完成! 耗时 11.36s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_10.md
+2026-05-31 21:31:37,779 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:37,779 [INFO] extraction_service - [9a5146cb-e90d-4700-86c3-a9179ea44e26] 开始处理第 13 页: The CRUSADE Bleeding Score_13.png
+2026-05-31 21:31:42,466 [WARNING] extraction_service - [0b922c83-9de2-4897-845f-08885a3140a7] 重提后仍有问题: 需保留页面上半部分的Conclusion、Acknowledgments和Funding Sources正文段落，仅跳过References标题及之后的参考文献条目
+2026-05-31 21:31:42,466 [WARNING] extraction_service - [0b922c83-9de2-4897-845f-08885a3140a7] 已生成复核指引: output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_8_review.md
+2026-05-31 21:31:42,466 [INFO] extraction_service - [0b922c83-9de2-4897-845f-08885a3140a7] 完成! 耗时 56.49s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_8.md
+2026-05-31 21:31:42,466 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:42,466 [INFO] extraction_service - [32dcab17-79a9-41c8-b7d2-76c74a42becf] 开始处理第 14 页: The CRUSADE Bleeding Score_14.png
+2026-05-31 21:31:43,469 [INFO] extraction_service - [3c56b7a2-09d0-4c17-b214-604c6bfc3959] 完成! 耗时 57.55s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_4.md
+2026-05-31 21:31:43,469 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:43,469 [INFO] extraction_service - [2003c26a-45a5-46f7-be2d-209d1329e22c] 开始处理第 15 页: The CRUSADE Bleeding Score_15.png
+2026-05-31 21:31:44,576 [INFO] extraction_service - [7c704036-eae2-49a1-bc2a-c6a2efaae155] 完成! 耗时 13.14s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_11.md
+2026-05-31 21:31:44,577 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:31:44,577 [INFO] extraction_service - [4a0c7dcd-9569-460c-a284-d0206bd4b6d8] 开始处理第 16 页: The CRUSADE Bleeding Score_16.png
+2026-05-31 21:31:49,751 [INFO] extraction_service - [220f7540-3ba0-4aa6-ab93-bfbfc2ce50d1] 定向重提完成
+2026-05-31 21:31:54,556 [WARNING] extraction_service - [12fef579-3083-418e-90fe-4d3fce863f91] 校验发现问题，启动定向重提: 修正图注格式（保留'Figure 1.'原样，不加##标题），并删除页脚出版元信息
+2026-05-31 21:31:56,905 [INFO] extraction_service - [12fef579-3083-418e-90fe-4d3fce863f91] 定向重提完成
+2026-05-31 21:31:58,114 [INFO] extraction_service - [99320015-4798-4cfe-9d1d-afe96e83fe41] 定向重提完成
+2026-05-31 21:32:00,552 [INFO] extraction_service - [3a4e2faa-da92-4de0-9829-36ee67cf59ba] 定向重提完成
+2026-05-31 21:32:03,819 [INFO] extraction_service - [9a5146cb-e90d-4700-86c3-a9179ea44e26] 完成! 耗时 26.04s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_13.md
+2026-05-31 21:32:03,819 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:32:03,819 [INFO] extraction_service - [96d27c2d-ffd3-4466-b765-ea99dbab46f2] 开始处理第 17 页: The CRUSADE Bleeding Score_17.png
+2026-05-31 21:32:04,959 [INFO] extraction_service - [220f7540-3ba0-4aa6-ab93-bfbfc2ce50d1] 完成! 耗时 79.53s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_1.md
+2026-05-31 21:32:04,959 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:32:04,959 [INFO] extraction_service - [56b7f0d0-7925-48df-9991-a1910ec03282] 开始处理第 18 页: The CRUSADE Bleeding Score_18.png
+2026-05-31 21:32:05,215 [INFO] extraction_service - [12fef579-3083-418e-90fe-4d3fce863f91] 完成! 耗时 28.85s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_12.md
+2026-05-31 21:32:05,215 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:32:05,216 [INFO] extraction_service - [915fc52a-d8e9-47ac-b3c3-0fb6ace9d083] 开始处理第 19 页: The CRUSADE Bleeding Score_19.png
+2026-05-31 21:32:06,071 [WARNING] extraction_service - [32dcab17-79a9-41c8-b7d2-76c74a42becf] 校验发现问题，启动定向重提: 禁止将柱状图数据重构为表格；删除页脚出版信息；仅保留图题及图注原文
+2026-05-31 21:32:06,102 [WARNING] extraction_service - [4a0c7dcd-9569-460c-a284-d0206bd4b6d8] 校验发现问题，启动定向重提: 禁止将柱状图数据转为表格；需严格按原图仅提取图题文字，删除页脚出版信息
+2026-05-31 21:32:08,345 [WARNING] extraction_service - [99320015-4798-4cfe-9d1d-afe96e83fe41] 重提后仍有问题: 修复页面末尾内容截断问题，并清除左侧水印及页脚出版信息
+2026-05-31 21:32:08,345 [WARNING] extraction_service - [99320015-4798-4cfe-9d1d-afe96e83fe41] 已生成复核指引: output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_2_review.md
+2026-05-31 21:32:08,345 [INFO] extraction_service - [99320015-4798-4cfe-9d1d-afe96e83fe41] 完成! 耗时 82.46s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_2.md
+2026-05-31 21:32:08,345 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:32:08,345 [INFO] extraction_service - [0c3c4e6f-a838-4675-a141-ecf70fb57f6a] 开始处理第 20 页: The CRUSADE Bleeding Score_20.png
+2026-05-31 21:32:09,494 [INFO] extraction_service - [3a4e2faa-da92-4de0-9829-36ee67cf59ba] 完成! 耗时 83.55s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_6.md
+2026-05-31 21:32:09,494 [INFO] extraction_service - 
+==================================================
+2026-05-31 21:32:09,494 [INFO] extraction_service - [ed949a92-0d79-45aa-83ab-9a97bfacd3f5] 开始处理第 21 页: The CRUSADE Bleeding Score_21.png
+2026-05-31 21:32:10,025 [INFO] extraction_service - [4a0c7dcd-9569-460c-a284-d0206bd4b6d8] 定向重提完成
+2026-05-31 21:32:11,639 [INFO] extraction_service - [32dcab17-79a9-41c8-b7d2-76c74a42becf] 定向重提完成
+2026-05-31 21:32:11,660 [WARNING] extraction_service - [2003c26a-45a5-46f7-be2d-209d1329e22c] 校验发现问题，启动定向重提: 删除自行添加的图例、坐标轴说明与条形数值列表，并移除页脚出版信息，仅保留原始图题文字
+2026-05-31 21:32:15,890 [INFO] extraction_service - [4a0c7dcd-9569-460c-a284-d0206bd4b6d8] 完成! 耗时 31.31s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_16.md
+2026-05-31 21:32:16,072 [INFO] extraction_service - [915fc52a-d8e9-47ac-b3c3-0fb6ace9d083] 完成! 耗时 10.86s, 策略=轻量提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_19.md
+2026-05-31 21:32:18,468 [INFO] extraction_service - [2003c26a-45a5-46f7-be2d-209d1329e22c] 定向重提完成
+2026-05-31 21:32:21,146 [WARNING] extraction_service - [32dcab17-79a9-41c8-b7d2-76c74a42becf] 重提后仍有问题: 修正图注中'≤20'误写为'<20'的关键符号错误，确保CRUSADE评分五分位定义准确
+2026-05-31 21:32:21,148 [WARNING] extraction_service - [32dcab17-79a9-41c8-b7d2-76c74a42becf] 已生成复核指引: output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_14_review.md
+2026-05-31 21:32:21,148 [INFO] extraction_service - [32dcab17-79a9-41c8-b7d2-76c74a42becf] 完成! 耗时 38.68s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_14.md
+2026-05-31 21:32:35,086 [INFO] extraction_service - [2003c26a-45a5-46f7-be2d-209d1329e22c] 完成! 耗时 51.62s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_15.md
+2026-05-31 21:32:39,422 [WARNING] extraction_service - [0c3c4e6f-a838-4675-a141-ecf70fb57f6a] 校验发现问题，启动定向重提: 需删除末尾出版元信息，并将缩写说明（CHF, CrCl等）正确置于两个脚注之后、页面底部之前，确保注释层级清晰且无残留元数据。
+2026-05-31 21:32:40,361 [INFO] extraction_service - [ed949a92-0d79-45aa-83ab-9a97bfacd3f5] 完成! 耗时 30.87s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_21.md
+2026-05-31 21:32:41,503 [INFO] extraction_service - [96d27c2d-ffd3-4466-b765-ea99dbab46f2] 完成! 耗时 37.68s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_17.md
+2026-05-31 21:32:49,095 [INFO] extraction_service - [56b7f0d0-7925-48df-9991-a1910ec03282] 完成! 耗时 44.14s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_18.md
+2026-05-31 21:32:55,058 [INFO] extraction_service - [0c3c4e6f-a838-4675-a141-ecf70fb57f6a] 定向重提完成
+2026-05-31 21:33:12,419 [WARNING] extraction_service - [0c3c4e6f-a838-4675-a141-ecf70fb57f6a] 重提后仍有问题: 表格最后一行 'c Statistic' 的两列数值（0.72 和 0.71）被错误拆分，0.71 被移至表格外，导致表格结构错位，需修正为同一行内完整呈现。
+2026-05-31 21:33:12,421 [WARNING] extraction_service - [0c3c4e6f-a838-4675-a141-ecf70fb57f6a] 已生成复核指引: output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_20_review.md
+2026-05-31 21:33:12,421 [INFO] extraction_service - [0c3c4e6f-a838-4675-a141-ecf70fb57f6a] 完成! 耗时 64.07s, 策略=标准提取, 结果=output/The CRUSADE Bleeding Score/The CRUSADE Bleeding Score_20.md

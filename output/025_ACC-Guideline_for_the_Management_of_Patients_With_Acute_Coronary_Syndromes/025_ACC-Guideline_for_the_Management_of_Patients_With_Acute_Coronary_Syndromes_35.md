@@ -1,0 +1,33 @@
+---
+extraction_strategy: 标准提取
+scout_result: {"page_layout": "双栏", "content_blocks": [{"type": "表格", "position": "左上", "complexity": "中"}, {"type": "段落", "position": "左中", "complexity": "低"}, {"type": "段落", "position": "左下", "complexity": "中"}, {"type": "段落", "position": "右上", "complexity": "中"}, {"type": "段落", "position": "右中", "complexity": "中"}, {"type": "段落", "position": "右下", "complexity": "中"}], "tables": {"count": 1, "max_rows_estimate": 3, "has_merged_cells": true, "has_multiline_cells": true, "has_footnote_below": false}, "recommendation": "标准提取"}
+total_time_seconds: 115.87
+page_num: 35
+task_id: 8b4e1c03-a90b-459e-9ef1-074a12bb4278
+re_extracted: True
+re_extract_focus: "右栏内容被错误线性拼接，遗漏了右栏顶部独立段落与小标题之间的结构分隔，需按原图双栏布局严格分离左/右栏内容并还原右栏内部段落顺序"
+review_needed: True
+review_reason: "需严格按双栏顺序输出：左栏含表格+Synopsis+Recommendation-Specific Supportive Text（1-2条），右栏含剩余段落（3-4条）及5.3.1节；修复右下段落截断问题并删除页脚页码"
+---
+
+Recommendations for Reperfusion at Non-PCI-Capable Hospitals  
+(Continued)  
+
+| COR | LOE | Recommendations |
+|-----|-----|----------------|
+| **2a** | **B-NR** | 3. In patients with STEMI and symptom onset of 12 to 24 hours, transfer to a PCI-capable hospital for PCI is reasonable to reduce infarct size and MACE.<sup>1,12</sup> |
+| **3: Harm** | **B-R** | 4. In patients with only ST-segment depression, except when true posterior STEMI is suspected, fibrinolytic therapy should not be administered due to risk of hemorrhagic stroke and major noncerebral bleeding.<sup>13</sup> |
+
+## Synopsis  
+A large proportion of patients globally live >1 hour driving time to a PCI-capable hospital.<sup>14–17</sup> At non-PCI-capable hospitals, transfer for PPCI is recommended if device activation can be reasonably predicted to occur in <2 hours from FMC. If this cannot be achieved and symptoms have been present <12 hours, fibrinolytic therapy is recommended to reduce the risk of recurrent MACE. Patients with STEMI who present to a non-PCI-capable facility ≥12 hours after onset of symptoms should be transferred to a PCI-capable facility when possible. However, if the patient has associated hemodynamic instability or a large infarct territory at risk, they are at very high risk for morbidity and death, and in this situation where timely PPCI is not possible, the benefits of fibrinolytic administration likely outweigh the benefit of prolonged transfer for PPCI.
+
+## Recommendation-Specific Supportive Text  
+1. PPCI is recommended to reduce the risk of MACE when FMC to PPCI can be achieved within 120 minutes. A patient who presents to a non-PCI-capable hospital with STEMI should be transferred to a PCI-capable hospital when this intervention can be accomplished within 120 minutes.<sup>1,2,18</sup> System delays related to transfer are frequently underestimated, and a case-by-case approach should be calculated for each patient with STEMI prior to transfer for PPCI.<sup>19–21</sup>  
+2. The use of fibrinolytic therapy in STEMI in the United States is driven by patients who are unable to receive timely PPCI (<120 minutes FMC to device activation). Numerous RCTs and meta-analyses have demonstrated superiority to PPCI over fibrinolytic therapy. However, the benefits of PPCI versus fibrinolytic therapy diminish with increasing PCI-related time delay such that after 120 minutes, the benefits are no longer as clear when compared with more timely fibrinolytic therapy administration.<sup>19</sup> In these patients, when timely PPCI cannot be performed, meta-analyses of RCTs and observational studies show statistically similar morbidity and mortality rates for a pharmaco-invasive approach (eg, fibrinolytic therapy followed by PCI within 2 to 24 hours) when a patient does not have timely access to PPCI.<sup>4,5</sup> The STREAM (Strategic Reperfusion Early After Myocardial Infarction) trial, which randomized 1892 early presenters (symptoms <3 hours) with STEMI unable to receive PCI within 1 hour of FMC, found that both a 30-day composite (eg, death, shock, CHF, or reinfarction) and 1-year mortality rates were similar for prehospital fibrinolysis versus transfer for PPCI.<sup>10,22</sup>  
+3. Small studies suggest that PPCI continues to offer clinical benefit in patients 12 to 24 hours after symptoms onset; therefore, transfer to a PCI-capable hospital is reasonable.<sup>1,12</sup> Late presenters with STEMI who have associated hemodynamic instability or large infarct size are at very high risk for acute deterioration and long-term morbidity. In this situation, fibrinolytic administration may outweigh potential risks when timely PPCI is not possible. Fibrinolysis in this setting should be followed by transfer to a PCI-capable center as soon as feasible.  
+4. There is no benefit of fibrinolysis and there is potential harm (eg, hemorrhagic stroke and major noncerebral bleeding) in administering fibrinolytic therapy to patients who present with symptoms concerning for ACS without ST-segment elevation and suspected true posterior STEMI.<sup>13</sup>
+
+### 5.3.1. Timing and Choice of Agent for Fibrinolytic Therapy  
+
+#### Synopsis  
+PPCI remains the reperfusion modality of choice when it can be rapidly achieved in a patient with STEMI. In instances where this is not possible or cannot be achieved in a timely manner, the benefits of coronary reperfusion with fibrinolytic therapy in patients with STEMI are well established, with a time-dependent reduction in both mortality and morbidity rates during the initial 12 hours after symptom onset, especially in those who present early after symptom onset with low bleeding risk and large anterior infarctions.<sup>1–7</sup> The benefit of fibrinolytic therapy in patients who present >12 hours after symptom onset has not been established,<sup>8–10</sup> although consideration should be given to administering a fibrinolytic agent in symptomatic patients presenting >12 hours after symptom onset of STEMI with a large area of myocardium at risk or hemodynamic instability, if PCI is unavailable. Fibrin-specific fibrinolytic therapies are preferred over non-fibrin-specific agents due to superior patency rates and less immunogenicity (Table 13).<sup>11–16</sup> Tenecteplase is a genetically engineered version of alteplase with higher specificity for fibrin. In a large randomized trial of patients with AMI, tenecteplase and alteplase were equivalent for 30-day mortality rates, but tenecteplase was associated with reduced noncerebral bleeding.<sup>17</sup> Reteplase (recom-

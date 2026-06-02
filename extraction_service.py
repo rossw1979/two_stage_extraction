@@ -14,6 +14,7 @@ API:
     GET  /health         健康检查
 """
 
+import ast
 import asyncio
 import json
 import logging
@@ -21,7 +22,7 @@ import os
 import time
 import uuid
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -64,7 +65,7 @@ _tasks: dict[str, ExtractionTaskInfo] = {}
 # ──────────────────── 请求 / 响应模型 ────────────────────
 
 class ExtractRequest(BaseModel):
-    images: list[str] = Field(..., description="图片文件路径列表（服务器本地绝对路径或相对路径）")
+    images: Union[str, list[str]] = Field(..., description="图片文件路径列表或列表字符串（兼容 Dify 数组/字符串两种形式）")
     pdf_name: str = Field(..., description="原始PDF文件名（含扩展名），输出目录自动取无后缀名")
     output_dir: str = Field(default="./output", description="输出根目录")
     prompt_dir: str = Field(default=".", description="提示词文件所在目录")
@@ -84,6 +85,7 @@ class ExtractResponse(BaseModel):
     pdf_name: str
     total_tasks: int
     task_ids: list[str]
+    task_ids_str: str = Field(default="", description="逗号分隔的任务ID字符串，用于绕过Dify等平台的数组30元素上限限制")
 
 
 class TaskListResponse(BaseModel):
@@ -212,10 +214,10 @@ async def run_single_extraction(
 - 重点修正上述校验发现的问题，其他已正确的文字、表格、格式保持原有准确输出不变
 - 严格遵循排版顺序规则：先处理跨页延续段落（如有），再按单栏/双栏/三栏顺序输出
 - 直接输出修正后的完整正文内容，直接以正文段落、标题或表格开始
-- 严禁输出以下任何内容：修正说明、对比分析、"修正如下"等前缀、过程性描述、校验备注、内容块清单、数字化副本声明
-- **严禁补全页面底部被截断的不完整句子**。若页面末尾句子在原文中已被截断，必须保留截断状态，不得使用医学知识添加原文未出现的文字
-- **严禁提取水印、版权信息、页脚元数据**："医脉通""指南""中华医学会杂志社"等半透明水印，以及DOI、收稿日期、编辑姓名、版权声明、出版商信息等页脚/页眉元数据，必须删除，不得保留
-- **参考文献处理**：若页面为纯参考文献页，仅输出 `（本页为参考文献，已跳过）`；若页面为正文与参考文献混合页，保留正文内容（表格、流程图、段落等），严禁输出 `# 参考文献` 或任何级别的参考文献标题
+- 不输出以下内容：修正说明、对比分析、"修正如下"等前缀、过程性描述、校验备注、内容块清单、数字化副本声明
+- 页面底部若原文截断，**保留截断状态，不添加原文未出现的文字**
+- **不提取水印、版权信息、页脚元数据**："医脉通""指南""中华医学会杂志社"等半透明水印，以及DOI、收稿日期、编辑姓名、版权声明、出版商信息等页脚/页眉元数据，删除后不保留
+- **参考文献处理**：若页面为纯参考文献页，仅输出 `（本页为参考文献，已跳过）`；若页面为正文与参考文献混合页，保留正文内容；**遇到"参考文献"等标题后立即停止输出**，不输出该标题及其后的任何内容
 - 输出必须是可以直接用于合并的干净正文，不含任何元信息或解释"""
 
                 messages = [
@@ -321,13 +323,24 @@ async def extract(req: ExtractRequest):
     立即返回每个图片对应的任务ID和初始状态，
     实际提取在后台异步执行。
     """
+    # images 字段兼容字符串和列表两种形式
+    if isinstance(req.images, str):
+        try:
+            images = ast.literal_eval(req.images)
+        except (ValueError, SyntaxError) as e:
+            raise HTTPException(status_code=400, detail=f"images 解析失败，需为合法 Python 列表字符串: {e}")
+        if not isinstance(images, list):
+            raise HTTPException(status_code=400, detail="images 解析后应为列表")
+    else:
+        images = req.images
+
     api_key = req.api_key or os.getenv("QWEN_API_KEY")
     if not api_key:
         raise HTTPException(status_code=400, detail="未提供 API Key")
 
     base_url = req.base_url or os.environ.get("QWEN_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1")
 
-    if not req.images or len(req.images) == 0:
+    if not images or len(images) == 0:
         raise HTTPException(status_code=400, detail="images 不能为空")
 
     valid_strategies = ["轻量提取", "标准提取", "完整提取"]
@@ -348,7 +361,7 @@ async def extract(req: ExtractRequest):
     _app_logger.info(f"VLM 文本提取服务 — 新任务")
     _app_logger.info(f"  PDF 文件名: {req.pdf_name}")
     _app_logger.info(f"  输出目录前缀: {pdf_stem}")
-    _app_logger.info(f"  图片数量: {len(req.images)}")
+    _app_logger.info(f"  图片数量: {len(images)}")
     _app_logger.info(f"  模型: {req.model}")
     _app_logger.info(f"  校验模式: {'开启' if req.verify else '关闭'}")
     _app_logger.info(f"{'='*60}")
@@ -357,7 +370,7 @@ async def extract(req: ExtractRequest):
     task_infos: list[ExtractionTaskInfo] = []
     task_ids: list[str] = []
 
-    for idx, image_path in enumerate(req.images, start=1):
+    for idx, image_path in enumerate(images, start=1):
         task_id = str(uuid.uuid4())
         image_filename = Path(image_path).name
 
@@ -407,10 +420,11 @@ async def extract(req: ExtractRequest):
 
     return ExtractResponse(
         success=True,
-        message=f"已提交 {len(req.images)} 个提取任务，正在后台执行",
+        message=f"已提交 {len(images)} 个提取任务，正在后台执行",
         pdf_name=req.pdf_name,
-        total_tasks=len(req.images),
+        total_tasks=len(images),
         task_ids=task_ids,
+        task_ids_str=",".join(task_ids),
     )
 
 

@@ -1,0 +1,714 @@
+2026-05-31 16:27:05,581 [INFO] extraction_service - ============================================================
+2026-05-31 16:27:05,581 [INFO] extraction_service - VLM 文本提取服务 — 新任务
+2026-05-31 16:27:05,581 [INFO] extraction_service -   PDF 文件名: 025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes.pdf
+2026-05-31 16:27:05,581 [INFO] extraction_service -   输出目录前缀: 025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes
+2026-05-31 16:27:05,581 [INFO] extraction_service -   图片数量: 92
+2026-05-31 16:27:05,581 [INFO] extraction_service -   模型: qwen3-vl-plus
+2026-05-31 16:27:05,581 [INFO] extraction_service -   校验模式: 开启
+2026-05-31 16:27:05,581 [INFO] extraction_service - ============================================================
+2026-05-31 16:27:05,581 [INFO] extraction_service -   任务创建: 4f310239-4ef5-4c2b-a135-c465d1d80201 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_1.png (第1页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 8a2a5e27-64a1-4692-b9e2-90a6f74eeb97 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_2.png (第2页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 3ad1986d-969a-445f-aa69-850455685db2 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_3.png (第3页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 064bd846-a854-4d65-9f4a-3f13bd7d7cf1 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_4.png (第4页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 862451e5-f592-4100-8cea-b15b8b5079ff → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_5.png (第5页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 2269df7f-6db8-4b0c-a27e-02b32a7180f8 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_6.png (第6页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 2d7118a7-22e8-41ab-8b41-46a87bbd8fdd → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_7.png (第7页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 72bb5220-3e56-4fbd-96d2-8f60cc7717a3 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_8.png (第8页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 7ce3a1ae-1ff5-467a-8073-9760f2407ec0 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_9.png (第9页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: a3cc8d08-28b5-4e46-81aa-6c21594429e0 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_10.png (第10页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: aba8c8b7-064f-40f7-be08-bda9f5b86cf1 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_11.png (第11页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 40945b1b-3d1e-484a-8a54-448459f98dcf → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_12.png (第12页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: d021e132-546b-4c23-9cfd-7c15583b053e → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_13.png (第13页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 676ef9c3-8ccf-4d30-b4a1-ae01dce0d169 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_14.png (第14页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 14c2d56e-f460-441b-beaa-46c642e5c446 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_15.png (第15页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: f2be4a6a-0bfd-43f0-8b8a-93fdde5e1580 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_16.png (第16页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 5cc97c7d-7e08-44bb-8287-ac7010c38d98 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_17.png (第17页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: b21f5b36-7f68-4ecb-8489-0ab98b1ddf99 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_18.png (第18页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 22f5aa98-211b-4214-a9e1-e2434ee642b7 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_19.png (第19页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: fcf64ee5-fb48-456e-86f5-3c9611d17599 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_20.png (第20页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: aaa00f96-c577-4938-9fc6-7a48189480f8 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_21.png (第21页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: 0172e611-ac9a-4b20-8a26-c66c2690d53b → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_22.png (第22页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: dcad26fd-2a46-42c7-ab87-486b106edf6e → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_23.png (第23页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: d6d920b0-0f5d-4964-8ae0-a2cf0f8e47c1 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_24.png (第24页)
+2026-05-31 16:27:05,582 [INFO] extraction_service -   任务创建: ecdf9eda-dd4b-4aba-961d-b8f7551c26d8 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_25.png (第25页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 5d34dd41-d142-4b08-a781-ec6eb919ad8e → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_26.png (第26页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: b22403a5-e411-4ad4-ae8c-c137bec53431 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_27.png (第27页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 72e57149-404f-40f0-b77d-43fe977e13ea → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_28.png (第28页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: bdc7505b-9264-4010-95d6-6442e8cd16ea → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_29.png (第29页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 1ccff02a-ede9-4986-a534-925ddec5d318 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_30.png (第30页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: ec535d2e-6f9b-4df1-ba63-63cc59d934ec → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_31.png (第31页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 6bd3ac5b-c598-47b0-ad8a-caafc3189b3a → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_32.png (第32页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 964fc81e-7922-4bd1-8a0c-0f6232bef7df → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_33.png (第33页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: ec178f8b-8927-4e8b-8fbe-8ffc7f86febd → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_34.png (第34页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: a0bc1528-443c-485e-b63b-5d83acdcbd4c → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_35.png (第35页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 83121451-713f-46a7-ad21-65c401154c63 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_36.png (第36页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 3cffaf28-da7d-44d1-b089-506c2223bc7d → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_37.png (第37页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 6c4107bb-63b2-4531-8c73-e413f2a0fa63 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_38.png (第38页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 50d37251-dbca-4c07-8514-d184348c1395 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_39.png (第39页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 145a1ee5-772e-42ad-be58-71560d5daa14 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_40.png (第40页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: c874cf8d-e785-4fa6-925e-34c2a026fca0 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_41.png (第41页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 84363289-b398-46a0-9fe3-ccd6fe3dcead → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_42.png (第42页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 45936e59-497f-455a-a623-103e51dd6287 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_43.png (第43页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: e85c96cf-f273-4504-8cba-7d3102a882bb → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_44.png (第44页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 6446abae-f898-4a2d-97fd-0e8d7216cf1f → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_45.png (第45页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 9ef8db72-bcd5-4bad-9b3d-26c80b2c78d9 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_46.png (第46页)
+2026-05-31 16:27:05,583 [INFO] extraction_service -   任务创建: 460b976f-0bdd-4fb9-97f6-085c36bce0ad → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_47.png (第47页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 5ad6eb59-f87c-4252-893a-168412803552 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_48.png (第48页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: baa4b090-da8d-4ace-9bf6-94ba32159575 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_49.png (第49页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 881bc403-d87d-4c95-a51b-a7d228fefffd → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_50.png (第50页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 33436c4f-67da-442b-8437-ba739e42fdc7 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_51.png (第51页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 0bba1a98-5423-4dad-bef7-f59bd9c01a67 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_52.png (第52页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: ddffddf9-de26-4d03-b11c-37206f52d5ae → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_53.png (第53页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 347fdb1f-f44d-47a4-8032-9f5dab59e3cb → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_54.png (第54页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 8981b71c-57fd-458e-8f46-2d69b68bdb63 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_55.png (第55页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: f290a763-ce90-4ce4-b92b-d4652eddce0b → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_56.png (第56页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 02c671f4-7c24-48c5-a65e-067c90a37e86 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_57.png (第57页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 84c736f6-11ff-4d7e-ae8a-d01f49d2757c → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_58.png (第58页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: d3c6c53e-a460-46f9-b801-f11d37bb69b4 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_59.png (第59页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 31a6d2a5-1254-4811-aaf3-0ddf1a41b52e → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_60.png (第60页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 1579f345-6369-46c7-932a-d4be011e5f0a → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_61.png (第61页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: c24cf503-eb09-4eb1-be83-4269307984d2 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_62.png (第62页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 1e2f71f7-cf03-41b8-b7f7-a8ab287d6470 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_63.png (第63页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 3cedb510-2bbd-4520-adc0-3dd696400cce → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_64.png (第64页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 1987d248-bc16-484c-9f7e-ac9172caddff → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_65.png (第65页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 22cf4ea5-4704-47de-9776-4e8105607cf3 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_66.png (第66页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: cefc0708-4646-49b3-8de5-1133bea23249 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_67.png (第67页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 55a5d6fd-3b31-47e0-a81a-bef11357ebec → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_68.png (第68页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: a6d38366-b31e-42c3-9032-3a850a1bb703 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_69.png (第69页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: e2b07b9e-1d8f-4e4e-b927-f6bd87a6f2d5 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_70.png (第70页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 0e7285c9-6bdd-4828-8002-24e70e6d75e1 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_71.png (第71页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 7cab98f8-1c52-418d-86a7-90343ee6c6d1 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_72.png (第72页)
+2026-05-31 16:27:05,584 [INFO] extraction_service -   任务创建: 826746e1-5e5a-4339-9db6-50ffde8c3b22 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_73.png (第73页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: c2224574-5abb-40ea-b089-d8a108dac424 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_74.png (第74页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: f6a7ee9c-790f-4afe-9bc4-dbdaf7f9137f → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_75.png (第75页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 920ef2de-3bfd-4fc9-97b4-ca1d5d7812bc → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_76.png (第76页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: afc0355a-a3c5-4712-87f1-f254b25fe573 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_77.png (第77页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: ad353374-cbe1-4e77-bc4e-3598d263994a → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_78.png (第78页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 284f9854-ee63-4f3b-91ac-298284af5ee3 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_79.png (第79页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 50df6936-2963-4b85-981b-e8a92dc7b841 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_80.png (第80页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: dc146a55-29b2-4f0d-a1f8-e52057bdb732 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_81.png (第81页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 1adae204-a01f-4a20-8ee0-77624fbc2b84 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_82.png (第82页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: f9792f32-70f8-4cda-bc5f-a2c63f828fc9 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_83.png (第83页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: c72ae497-845b-497f-98ef-7f2e43e5296c → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_84.png (第84页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 0c029db8-a807-4af2-b650-f8457f8bddb1 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_85.png (第85页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 021295fd-5d18-456c-961f-e5f7e8ee6219 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_86.png (第86页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: e608d4df-abad-48b0-be51-967fe323a742 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_87.png (第87页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: bb0da187-c3ff-470b-87b3-27bb37cc3879 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_88.png (第88页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: f1623add-e1ac-4aab-9c44-9948e1414eca → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_89.png (第89页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 528923ed-3abf-4ab3-ad7f-1382c8aecc9e → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_90.png (第90页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 47da67cf-c94a-4d4a-a166-35666df899dd → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_91.png (第91页)
+2026-05-31 16:27:05,585 [INFO] extraction_service -   任务创建: 63a8f7bd-d33d-4cf2-82e1-7a9c6f12f831 → 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_92.png (第92页)
+2026-05-31 16:27:05,588 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,588 [INFO] extraction_service - [4f310239-4ef5-4c2b-a135-c465d1d80201] 开始处理第 1 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_1.png
+2026-05-31 16:27:05,627 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,628 [INFO] extraction_service - [8a2a5e27-64a1-4692-b9e2-90a6f74eeb97] 开始处理第 2 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_2.png
+2026-05-31 16:27:05,658 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,658 [INFO] extraction_service - [3ad1986d-969a-445f-aa69-850455685db2] 开始处理第 3 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_3.png
+2026-05-31 16:27:05,688 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,688 [INFO] extraction_service - [064bd846-a854-4d65-9f4a-3f13bd7d7cf1] 开始处理第 4 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_4.png
+2026-05-31 16:27:05,702 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,702 [INFO] extraction_service - [862451e5-f592-4100-8cea-b15b8b5079ff] 开始处理第 5 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_5.png
+2026-05-31 16:27:05,720 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,720 [INFO] extraction_service - [2269df7f-6db8-4b0c-a27e-02b32a7180f8] 开始处理第 6 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_6.png
+2026-05-31 16:27:05,735 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,735 [INFO] extraction_service - [2d7118a7-22e8-41ab-8b41-46a87bbd8fdd] 开始处理第 7 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_7.png
+2026-05-31 16:27:05,748 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:05,748 [INFO] extraction_service - [72bb5220-3e56-4fbd-96d2-8f60cc7717a3] 开始处理第 8 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_8.png
+2026-05-31 16:27:34,692 [INFO] extraction_service - [3ad1986d-969a-445f-aa69-850455685db2] 完成! 耗时 29.03s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_3.md
+2026-05-31 16:27:34,692 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:34,692 [INFO] extraction_service - [7ce3a1ae-1ff5-467a-8073-9760f2407ec0] 开始处理第 9 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_9.png
+2026-05-31 16:27:48,276 [INFO] extraction_service - [8a2a5e27-64a1-4692-b9e2-90a6f74eeb97] 完成! 耗时 42.65s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_2.md
+2026-05-31 16:27:48,276 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:27:48,276 [INFO] extraction_service - [a3cc8d08-28b5-4e46-81aa-6c21594429e0] 开始处理第 10 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_10.png
+2026-05-31 16:27:52,333 [WARNING] extraction_service - [064bd846-a854-4d65-9f4a-3f13bd7d7cf1] 校验发现问题，启动定向重提: 需删除页脚DOI等出版元信息，明确标识原文截断位置（不补全），并核实scout误报的表格注释项是否影响结构判断
+2026-05-31 16:27:56,506 [WARNING] extraction_service - [862451e5-f592-4100-8cea-b15b8b5079ff] 校验发现问题，启动定向重提: 右栏顶部的跨页延续段落被错误并入左栏内容，导致章节结构错乱；同时需清除底部出版元信息残留
+2026-05-31 16:28:01,080 [WARNING] extraction_service - [4f310239-4ef5-4c2b-a135-c465d1d80201] 校验发现问题，启动定向重提: 需删除页脚DOI/页码/网址/版权行，将左下角脚注内容独立提取为规范段落，修正作者列表中的冗余‘MD,’字段，并确保无任何出版元信息残留。
+2026-05-31 16:28:01,445 [INFO] extraction_service - [2d7118a7-22e8-41ab-8b41-46a87bbd8fdd] 完成! 耗时 55.71s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_7.md
+2026-05-31 16:28:01,445 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:01,445 [INFO] extraction_service - [aba8c8b7-064f-40f7-be08-bda9f5b86cf1] 开始处理第 11 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_11.png
+2026-05-31 16:28:04,256 [WARNING] extraction_service - [2269df7f-6db8-4b0c-a27e-02b32a7180f8] 校验发现问题，启动定向重提: 需修复右下段落截断导致的内容遗漏，严格按Scout划分的6个内容块分段输出，并删除页脚元信息
+2026-05-31 16:28:14,009 [WARNING] extraction_service - [72bb5220-3e56-4fbd-96d2-8f60cc7717a3] 校验发现问题，启动定向重提: 需严格按双栏顺序分离左右内容：左栏为主表格（CLASS列）及中央说明段落，右栏为LEVEL表格及Abbreviations两表; 主表格必须拆分为两个独立表格而非合并；补全表格下方三段带*†‡的脚注说明。
+2026-05-31 16:28:21,812 [INFO] extraction_service - [064bd846-a854-4d65-9f4a-3f13bd7d7cf1] 定向重提完成
+2026-05-31 16:28:24,274 [INFO] extraction_service - [862451e5-f592-4100-8cea-b15b8b5079ff] 定向重提完成
+2026-05-31 16:28:24,542 [INFO] extraction_service - [7ce3a1ae-1ff5-467a-8073-9760f2407ec0] 完成! 耗时 49.85s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_9.md
+2026-05-31 16:28:24,542 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:24,542 [INFO] extraction_service - [40945b1b-3d1e-484a-8a54-448459f98dcf] 开始处理第 12 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_12.png
+2026-05-31 16:28:26,315 [INFO] extraction_service - [4f310239-4ef5-4c2b-a135-c465d1d80201] 定向重提完成
+2026-05-31 16:28:33,436 [WARNING] extraction_service - [064bd846-a854-4d65-9f4a-3f13bd7d7cf1] 重提后仍有问题: 需严格按双栏顺序重组内容（先左栏PREAMBLE，再右栏Intended Use/Clinical Implementation/Methodology and Modernization），并补充遗漏的表格下方注释，同时明确标注页面末尾截断状态
+2026-05-31 16:28:33,436 [WARNING] extraction_service - [064bd846-a854-4d65-9f4a-3f13bd7d7cf1] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_4_review.md
+2026-05-31 16:28:33,436 [INFO] extraction_service - [064bd846-a854-4d65-9f4a-3f13bd7d7cf1] 完成! 耗时 87.75s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_4.md
+2026-05-31 16:28:33,436 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:33,436 [INFO] extraction_service - [d021e132-546b-4c23-9cfd-7c15583b053e] 开始处理第 13 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_13.png
+2026-05-31 16:28:34,524 [INFO] extraction_service - [2269df7f-6db8-4b0c-a27e-02b32a7180f8] 定向重提完成
+2026-05-31 16:28:41,101 [INFO] extraction_service - [4f310239-4ef5-4c2b-a135-c465d1d80201] 完成! 耗时 95.51s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_1.md
+2026-05-31 16:28:41,102 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:41,102 [INFO] extraction_service - [676ef9c3-8ccf-4d30-b4a1-ae01dce0d169] 开始处理第 14 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_14.png
+2026-05-31 16:28:42,515 [INFO] extraction_service - [862451e5-f592-4100-8cea-b15b8b5079ff] 完成! 耗时 96.81s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_5.md
+2026-05-31 16:28:42,515 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:42,516 [INFO] extraction_service - [14c2d56e-f460-441b-beaa-46c642e5c446] 开始处理第 15 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_15.png
+2026-05-31 16:28:47,609 [INFO] extraction_service - [72bb5220-3e56-4fbd-96d2-8f60cc7717a3] 定向重提完成
+2026-05-31 16:28:49,359 [WARNING] extraction_service - [2269df7f-6db8-4b0c-a27e-02b32a7180f8] 重提后仍有问题: 严格按双栏顺序处理：先完整输出左栏3个段落（含1.2–1.4节），再完整输出右栏3个段落（从'primarily focuses on...'开始），禁止跨栏拼接
+2026-05-31 16:28:49,359 [WARNING] extraction_service - [2269df7f-6db8-4b0c-a27e-02b32a7180f8] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_6_review.md
+2026-05-31 16:28:49,359 [INFO] extraction_service - [2269df7f-6db8-4b0c-a27e-02b32a7180f8] 完成! 耗时 103.64s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_6.md
+2026-05-31 16:28:49,359 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:49,359 [INFO] extraction_service - [f2be4a6a-0bfd-43f0-8b8a-93fdde5e1580] 开始处理第 16 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_16.png
+2026-05-31 16:28:57,825 [INFO] extraction_service - [a3cc8d08-28b5-4e46-81aa-6c21594429e0] 完成! 耗时 69.55s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_10.md
+2026-05-31 16:28:57,825 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:57,825 [INFO] extraction_service - [5cc97c7d-7e08-44bb-8287-ac7010c38d98] 开始处理第 17 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_17.png
+2026-05-31 16:28:59,973 [INFO] extraction_service - [aba8c8b7-064f-40f7-be08-bda9f5b86cf1] 完成! 耗时 58.53s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_11.md
+2026-05-31 16:28:59,973 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:28:59,973 [INFO] extraction_service - [b21f5b36-7f68-4ecb-8489-0ab98b1ddf99] 开始处理第 18 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_18.png
+2026-05-31 16:29:06,867 [WARNING] extraction_service - [72bb5220-3e56-4fbd-96d2-8f60cc7717a3] 重提后仍有问题: 需严格按双栏顺序输出：左栏含左上表→左下缩写表；右栏含右上表→中央说明段落→右下缩写表；并确保右上表下方的脚注紧随其后、归属于右栏内容
+2026-05-31 16:29:06,868 [WARNING] extraction_service - [72bb5220-3e56-4fbd-96d2-8f60cc7717a3] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_8_review.md
+2026-05-31 16:29:06,868 [INFO] extraction_service - [72bb5220-3e56-4fbd-96d2-8f60cc7717a3] 完成! 耗时 121.12s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_8.md
+2026-05-31 16:29:06,868 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:29:06,868 [INFO] extraction_service - [22f5aa98-211b-4214-a9e1-e2434ee642b7] 开始处理第 19 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_19.png
+2026-05-31 16:29:29,952 [WARNING] extraction_service - [40945b1b-3d1e-484a-8a54-448459f98dcf] 校验发现问题，启动定向重提: 双栏排版顺序错误：编号段落3和4属于右栏内容，却被合并至左栏段落后输出，需严格按‘先左栏全部内容（段落1-2），再右栏全部内容（段落3-4 + 标题 + 表格）’重构顺序
+2026-05-31 16:29:31,152 [WARNING] extraction_service - [d021e132-546b-4c23-9cfd-7c15583b053e] 校验发现问题，启动定向重提: 遗漏右栏末尾完整句子（AMI定义部分），且表格下方独立注释段落未完整提取
+2026-05-31 16:29:35,068 [WARNING] extraction_service - [22f5aa98-211b-4214-a9e1-e2434ee642b7] 校验发现问题，启动定向重提: 遗漏全部3个表格（Table 7、右上推荐表、左下4.3.2推荐表）、左中RCT段落及右下Synopsis段落，需完整还原混排页面中所有内容块
+2026-05-31 16:29:37,435 [INFO] extraction_service - [676ef9c3-8ccf-4d30-b4a1-ae01dce0d169] 完成! 耗时 56.33s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_14.md
+2026-05-31 16:29:37,436 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:29:37,436 [INFO] extraction_service - [fcf64ee5-fb48-456e-86f5-3c9611d17599] 开始处理第 20 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_20.png
+2026-05-31 16:29:48,442 [WARNING] extraction_service - [f2be4a6a-0bfd-43f0-8b8a-93fdde5e1580] 校验发现问题，启动定向重提: 遗漏表格下方注释段落；右栏顶部跨页延续段落被错误插入左栏Synopsis前，破坏双栏顺序；页面末尾截断处需严格保留原文不完整状态
+2026-05-31 16:29:49,454 [WARNING] extraction_service - [14c2d56e-f460-441b-beaa-46c642e5c446] 校验发现问题，启动定向重提: 严格按双栏顺序：先完整输出左栏全部内容（含3.1.3标题与Synopsis段落），再输出右栏全部内容（含截断段落），确保表格位于左右栏内容之后；同时补全表格下方缩略语列表并明确脚注星号关联。
+2026-05-31 16:29:55,963 [WARNING] extraction_service - [5cc97c7d-7e08-44bb-8287-ac7010c38d98] 校验发现问题，启动定向重提: 修正双栏排版顺序：将'Recommendation-Specific Supportive Text'段落移回左栏末尾；确保页面末尾截断处严格保留原文不完整状态（不提前终止）；表格单元格内多行内容改用<br>换行。
+2026-05-31 16:30:00,390 [INFO] extraction_service - [40945b1b-3d1e-484a-8a54-448459f98dcf] 定向重提完成
+2026-05-31 16:30:13,007 [INFO] extraction_service - [d021e132-546b-4c23-9cfd-7c15583b053e] 定向重提完成
+2026-05-31 16:30:14,182 [INFO] extraction_service - [b21f5b36-7f68-4ecb-8489-0ab98b1ddf99] 完成! 耗时 74.21s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_18.md
+2026-05-31 16:30:14,183 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:14,183 [INFO] extraction_service - [aaa00f96-c577-4938-9fc6-7a48189480f8] 开始处理第 21 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_21.png
+2026-05-31 16:30:14,810 [INFO] extraction_service - [22f5aa98-211b-4214-a9e1-e2434ee642b7] 定向重提完成
+2026-05-31 16:30:16,256 [WARNING] extraction_service - [40945b1b-3d1e-484a-8a54-448459f98dcf] 重提后仍有问题: 遗漏Table 4下方全部注释段落（含版权信息、指南范围说明及缩略语定义），且左下栏跨页延续段落未作为首内容块处理，右下推荐表格位置与层级关系错乱
+2026-05-31 16:30:16,256 [WARNING] extraction_service - [40945b1b-3d1e-484a-8a54-448459f98dcf] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_12_review.md
+2026-05-31 16:30:16,256 [INFO] extraction_service - [40945b1b-3d1e-484a-8a54-448459f98dcf] 完成! 耗时 111.71s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_12.md
+2026-05-31 16:30:16,256 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:16,256 [INFO] extraction_service - [0172e611-ac9a-4b20-8a26-c66c2690d53b] 开始处理第 22 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_22.png
+2026-05-31 16:30:23,150 [INFO] extraction_service - [f2be4a6a-0bfd-43f0-8b8a-93fdde5e1580] 定向重提完成
+2026-05-31 16:30:25,133 [INFO] extraction_service - [14c2d56e-f460-441b-beaa-46c642e5c446] 定向重提完成
+2026-05-31 16:30:25,600 [INFO] extraction_service - [5cc97c7d-7e08-44bb-8287-ac7010c38d98] 定向重提完成
+2026-05-31 16:30:32,819 [WARNING] extraction_service - [d021e132-546b-4c23-9cfd-7c15583b053e] 重提后仍有问题: 遗漏了右栏Recommendation-specific Supportive Text第4条的后半句（'percentile upper reference limit.'），需补全该句并确保全文截断处与原图一致
+2026-05-31 16:30:32,819 [WARNING] extraction_service - [d021e132-546b-4c23-9cfd-7c15583b053e] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_13_review.md
+2026-05-31 16:30:32,819 [INFO] extraction_service - [d021e132-546b-4c23-9cfd-7c15583b053e] 完成! 耗时 119.38s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_13.md
+2026-05-31 16:30:32,819 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:32,819 [INFO] extraction_service - [dcad26fd-2a46-42c7-ab87-486b106edf6e] 开始处理第 23 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_23.png
+2026-05-31 16:30:39,040 [WARNING] extraction_service - [22f5aa98-211b-4214-a9e1-e2434ee642b7] 重提后仍有问题: 修正右上表格中嵌入的章节标题行导致的表格结构错乱，确保COR/LOE列对齐；重新定位脚注至其对应表格下方，并统一星号/ dagger 符号引用关系；严格按双栏布局输出：左栏含左上表+左中段落+左下表, 右栏含右上表+右下Synopsis段落
+2026-05-31 16:30:39,041 [WARNING] extraction_service - [22f5aa98-211b-4214-a9e1-e2434ee642b7] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_19_review.md
+2026-05-31 16:30:39,041 [INFO] extraction_service - [22f5aa98-211b-4214-a9e1-e2434ee642b7] 完成! 耗时 92.17s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_19.md
+2026-05-31 16:30:39,041 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:39,041 [INFO] extraction_service - [d6d920b0-0f5d-4964-8ae0-a2cf0f8e47c1] 开始处理第 24 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_24.png
+2026-05-31 16:30:40,815 [INFO] extraction_service - [fcf64ee5-fb48-456e-86f5-3c9611d17599] 完成! 耗时 63.38s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_20.md
+2026-05-31 16:30:40,815 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:40,815 [INFO] extraction_service - [ecdf9eda-dd4b-4aba-961d-b8f7551c26d8] 开始处理第 25 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_25.png
+2026-05-31 16:30:43,054 [WARNING] extraction_service - [5cc97c7d-7e08-44bb-8287-ac7010c38d98] 重提后仍有问题: 需重点修正右下角截断句的原始截断状态（保持未补全）、明确左上编号段落作为本页首个内容块的独立性，并按原图视觉分隔恢复右栏中段两个试验描述为独立段落。
+2026-05-31 16:30:43,054 [WARNING] extraction_service - [5cc97c7d-7e08-44bb-8287-ac7010c38d98] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_17_review.md
+2026-05-31 16:30:43,054 [INFO] extraction_service - [5cc97c7d-7e08-44bb-8287-ac7010c38d98] 完成! 耗时 105.23s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_17.md
+2026-05-31 16:30:43,054 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:43,054 [INFO] extraction_service - [5d34dd41-d142-4b08-a781-ec6eb919ad8e] 开始处理第 26 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_26.png
+2026-05-31 16:30:43,301 [WARNING] extraction_service - [f2be4a6a-0bfd-43f0-8b8a-93fdde5e1580] 重提后仍有问题: 遗漏表格下方注释；右栏顶部跨页延续段落被错误插入左栏内容中，破坏双栏顺序；页面末尾截断处未保留原文截断状态
+2026-05-31 16:30:43,302 [WARNING] extraction_service - [f2be4a6a-0bfd-43f0-8b8a-93fdde5e1580] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_16_review.md
+2026-05-31 16:30:43,302 [INFO] extraction_service - [f2be4a6a-0bfd-43f0-8b8a-93fdde5e1580] 完成! 耗时 113.94s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_16.md
+2026-05-31 16:30:43,302 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:43,302 [INFO] extraction_service - [b22403a5-e411-4ad4-ae8c-c137bec53431] 开始处理第 27 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_27.png
+2026-05-31 16:30:49,336 [WARNING] extraction_service - [14c2d56e-f460-441b-beaa-46c642e5c446] 重提后仍有问题: 左栏底部截断段落（以'N-terminal pro-'结尾）被错误截断并缺失，且双栏顺序混乱：应严格按左上→右上→左下（含完整截断句）→表格顺序输出，不得将表格提前插入截断段落中间。
+2026-05-31 16:30:49,337 [WARNING] extraction_service - [14c2d56e-f460-441b-beaa-46c642e5c446] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_15_review.md
+2026-05-31 16:30:49,337 [INFO] extraction_service - [14c2d56e-f460-441b-beaa-46c642e5c446] 完成! 耗时 126.82s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_15.md
+2026-05-31 16:30:49,337 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:30:49,337 [INFO] extraction_service - [72e57149-404f-40f0-b77d-43fe977e13ea] 开始处理第 28 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_28.png
+2026-05-31 16:31:14,734 [WARNING] extraction_service - [aaa00f96-c577-4938-9fc6-7a48189480f8] 校验发现问题，启动定向重提: 修正双栏顺序：左栏应包含表格、左下独立段落（需补全起始句）、编号4；右栏应依次为编号5和编号6；防止跨栏内容错位与段落拼接错误
+2026-05-31 16:31:26,004 [WARNING] extraction_service - [0172e611-ac9a-4b20-8a26-c66c2690d53b] 校验发现问题，启动定向重提: 右栏顶部的独立段落被错误并入左栏第9点末尾，需按双栏顺序严格分离：先输出左栏全部3个段落（编号7–9），再输出右栏内容（右上段落→表格→右下Synopsis段落）
+2026-05-31 16:31:38,758 [WARNING] extraction_service - [d6d920b0-0f5d-4964-8ae0-a2cf0f8e47c1] 校验发现问题，启动定向重提: 遗漏左上栏的背景段落（关于EARLY-ACS试验及eptifibatide等内容），需确保双栏页面严格按左栏全部内容（含段落+表格）→右栏全部内容顺序输出
+2026-05-31 16:31:42,697 [WARNING] extraction_service - [ecdf9eda-dd4b-4aba-961d-b8f7551c26d8] 校验发现问题，启动定向重提: 遗漏表格下方的缩写注释段落，且页面右下角正文末尾截断处可能遗漏后续内容；需同步清理所有参考文献上标
+2026-05-31 16:31:42,992 [INFO] extraction_service - [5d34dd41-d142-4b08-a781-ec6eb919ad8e] 完成! 耗时 59.94s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_26.md
+2026-05-31 16:31:42,992 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:31:42,992 [INFO] extraction_service - [bdc7505b-9264-4010-95d6-6442e8cd16ea] 开始处理第 29 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_29.png
+2026-05-31 16:31:47,311 [WARNING] extraction_service - [dcad26fd-2a46-42c7-ab87-486b106edf6e] 校验发现问题，启动定向重提: 严格按双栏顺序输出：先完整左栏（左上表→左中段→左下表），再完整右栏（右上表及其脚注→右中Synopsis段→右下Recommendation-Specific Supporting Text段），确保右栏内容不被左栏内容打断，且页脚信息彻底删除。
+2026-05-31 16:31:50,206 [WARNING] extraction_service - [b22403a5-e411-4ad4-ae8c-c137bec53431] 校验发现问题，启动定向重提: 需严格按双栏顺序输出：左栏（表格+Synopsis），右栏（右上正文段落+右下Supportive Text）；补全表格下方脚注位置并确认Figure 5图题是否遗漏
+2026-05-31 16:31:51,698 [INFO] extraction_service - [aaa00f96-c577-4938-9fc6-7a48189480f8] 定向重提完成
+2026-05-31 16:32:07,899 [INFO] extraction_service - [0172e611-ac9a-4b20-8a26-c66c2690d53b] 定向重提完成
+2026-05-31 16:32:17,692 [WARNING] extraction_service - [aaa00f96-c577-4938-9fc6-7a48189480f8] 重提后仍有问题: 需修正跨栏内容顺序：右栏末尾延续句（'≥24 hours from administration of the loading dose.'）应作为左栏首个内容块输出；同时确保编号段落（如5.）不被跨栏拆分，完整保留在起始栏；表格下方脚注需独立成块并正确归属至左栏。
+2026-05-31 16:32:17,693 [WARNING] extraction_service - [aaa00f96-c577-4938-9fc6-7a48189480f8] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_21_review.md
+2026-05-31 16:32:17,693 [INFO] extraction_service - [aaa00f96-c577-4938-9fc6-7a48189480f8] 完成! 耗时 123.51s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_21.md
+2026-05-31 16:32:17,694 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:32:17,694 [INFO] extraction_service - [1ccff02a-ede9-4986-a534-925ddec5d318] 开始处理第 30 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_30.png
+2026-05-31 16:32:22,487 [INFO] extraction_service - [dcad26fd-2a46-42c7-ab87-486b106edf6e] 定向重提完成
+2026-05-31 16:32:23,332 [INFO] extraction_service - [d6d920b0-0f5d-4964-8ae0-a2cf0f8e47c1] 定向重提完成
+2026-05-31 16:32:23,756 [INFO] extraction_service - [ecdf9eda-dd4b-4aba-961d-b8f7551c26d8] 定向重提完成
+2026-05-31 16:32:27,201 [WARNING] extraction_service - [0172e611-ac9a-4b20-8a26-c66c2690d53b] 重提后仍有问题: 修正末句擅自添加的'(Table 9)'补全文本，并删除表格Recommendation单元格中的编号'1.'及脚注中的错误上标<sup>5</sup>
+2026-05-31 16:32:27,202 [WARNING] extraction_service - [0172e611-ac9a-4b20-8a26-c66c2690d53b] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_22_review.md
+2026-05-31 16:32:27,202 [INFO] extraction_service - [0172e611-ac9a-4b20-8a26-c66c2690d53b] 完成! 耗时 130.95s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_22.md
+2026-05-31 16:32:27,202 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:32:27,202 [INFO] extraction_service - [ec535d2e-6f9b-4df1-ba63-63cc59d934ec] 开始处理第 31 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_31.png
+2026-05-31 16:32:28,669 [INFO] extraction_service - [b22403a5-e411-4ad4-ae8c-c137bec53431] 定向重提完成
+2026-05-31 16:32:38,426 [WARNING] extraction_service - [72e57149-404f-40f0-b77d-43fe977e13ea] 校验发现问题，启动定向重提: 流程图中多个节点（g1_combo, g3_add, g2_add_nonstatin_reasonable）的 content 字段遗漏了括号内的推荐等级（如 '(Class 2b)'、'(Class 1)'），需补全以确保内容完整性
+2026-05-31 16:32:39,049 [WARNING] extraction_service - [ecdf9eda-dd4b-4aba-961d-b8f7551c26d8] 重提后仍有问题: 遗漏了表格下方的缩写注释段落，且跨页延续段落（以'a predictable dose response...'开头）未作为首个内容块正确放置，导致结构错位
+2026-05-31 16:32:39,049 [WARNING] extraction_service - [ecdf9eda-dd4b-4aba-961d-b8f7551c26d8] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_25_review.md
+2026-05-31 16:32:39,049 [INFO] extraction_service - [ecdf9eda-dd4b-4aba-961d-b8f7551c26d8] 完成! 耗时 118.23s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_25.md
+2026-05-31 16:32:39,049 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:32:39,049 [INFO] extraction_service - [6bd3ac5b-c598-47b0-ad8a-caafc3189b3a] 开始处理第 32 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_32.png
+2026-05-31 16:32:41,436 [WARNING] extraction_service - [dcad26fd-2a46-42c7-ab87-486b106edf6e] 重提后仍有问题: 需严格按双栏顺序：先完整输出左栏三块内容（Table 9→左中段落→4.3.4左下表），再输出右栏三块内容（右上Continued表及注→Synopsis→右下段落）；特别注意右下段落末尾截断处不得补全，且左下表下方说明文字应作为独立表注而非标题一部分
+2026-05-31 16:32:41,437 [WARNING] extraction_service - [dcad26fd-2a46-42c7-ab87-486b106edf6e] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_23_review.md
+2026-05-31 16:32:41,437 [INFO] extraction_service - [dcad26fd-2a46-42c7-ab87-486b106edf6e] 完成! 耗时 128.62s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_23.md
+2026-05-31 16:32:41,438 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:32:41,438 [INFO] extraction_service - [964fc81e-7922-4bd1-8a0c-0f6232bef7df] 开始处理第 33 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_33.png
+2026-05-31 16:32:46,625 [INFO] extraction_service - [d6d920b0-0f5d-4964-8ae0-a2cf0f8e47c1] 完成! 耗时 127.58s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_24.md
+2026-05-31 16:32:46,625 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:32:46,625 [INFO] extraction_service - [ec178f8b-8927-4e8b-8fbe-8ffc7f86febd] 开始处理第 34 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_34.png
+2026-05-31 16:32:52,059 [WARNING] extraction_service - [bdc7505b-9264-4010-95d6-6442e8cd16ea] 校验发现问题，启动定向重提: 遗漏表格下方脚注且未正确绑定表头符号；跨页延续句'by 13%...'未作为首内容块处理；双栏顺序错乱导致段落编号错位；表格合并单元格结构未还原。
+2026-05-31 16:32:53,528 [WARNING] extraction_service - [b22403a5-e411-4ad4-ae8c-c137bec53431] 重提后仍有问题: 严格按双栏顺序输出：左栏（表格+Synopsis）→右栏（右上段落+Recommendation-Specific Supportive Text），修复右栏内容被错误拼接到左栏Synopsis后的问题，并确保表格下方脚注完整提取、末尾截断句保留原始不完整形态。
+2026-05-31 16:32:53,529 [WARNING] extraction_service - [b22403a5-e411-4ad4-ae8c-c137bec53431] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_27_review.md
+2026-05-31 16:32:53,529 [INFO] extraction_service - [b22403a5-e411-4ad4-ae8c-c137bec53431] 完成! 耗时 130.23s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_27.md
+2026-05-31 16:32:53,529 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:32:53,529 [INFO] extraction_service - [a0bc1528-443c-485e-b63b-5d83acdcbd4c] 开始处理第 35 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_35.png
+2026-05-31 16:33:28,748 [WARNING] extraction_service - [1ccff02a-ede9-4986-a534-925ddec5d318] 校验发现问题，启动定向重提: 右栏顶部的跨栏延续段落被错误合并至左栏末尾段落，导致双栏顺序错乱，需严格按左栏全内容→右栏全内容重新组织，确保跨栏章节不被拆分
+2026-05-31 16:33:29,025 [INFO] extraction_service - [bdc7505b-9264-4010-95d6-6442e8cd16ea] 定向重提完成
+2026-05-31 16:33:37,022 [INFO] extraction_service - [964fc81e-7922-4bd1-8a0c-0f6232bef7df] 完成! 耗时 55.58s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_33.md
+2026-05-31 16:33:37,023 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:33:37,023 [INFO] extraction_service - [83121451-713f-46a7-ad21-65c401154c63] 开始处理第 36 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_36.png
+2026-05-31 16:33:38,386 [WARNING] extraction_service - [ec535d2e-6f9b-4df1-ba63-63cc59d934ec] 校验发现问题，启动定向重提: 右栏的'Recommendation-Specific Supportive Text'标题及其后续段落被错误合并至左栏标题下，需严格按双栏顺序分离：左栏完整输出其Recommendation-Specific Supportive Text（1-2点）后, 再输出右栏的Synopsis及右栏独立的Recommendation-Specific Supportive Text标题与内容
+2026-05-31 16:33:39,548 [INFO] extraction_service - [72e57149-404f-40f0-b77d-43fe977e13ea] 定向重提完成
+2026-05-31 16:33:42,484 [WARNING] extraction_service - [bdc7505b-9264-4010-95d6-6442e8cd16ea] 重提后仍有问题: 遗漏表格下方版权注释，且左下角跨页延续段落被错误前置并缺失延续标识
+2026-05-31 16:33:42,484 [WARNING] extraction_service - [bdc7505b-9264-4010-95d6-6442e8cd16ea] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_29_review.md
+2026-05-31 16:33:42,484 [INFO] extraction_service - [bdc7505b-9264-4010-95d6-6442e8cd16ea] 完成! 耗时 119.49s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_29.md
+2026-05-31 16:33:42,484 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:33:42,484 [INFO] extraction_service - [3cffaf28-da7d-44d1-b089-506c2223bc7d] 开始处理第 37 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_37.png
+2026-05-31 16:33:44,162 [WARNING] extraction_service - [ec178f8b-8927-4e8b-8fbe-8ffc7f86febd] 校验发现问题，启动定向重提: 需修正右栏内容顺序（5.3节标题位置错误）、补全表格下方注释、修复表格第二行推荐项的分行错误及COR/LOE列对齐问题
+2026-05-31 16:33:58,763 [WARNING] extraction_service - [72e57149-404f-40f0-b77d-43fe977e13ea] 重提后仍有问题: 修正双栏正文段落的顺序错位（左下与右下段落应分开展示）、修复流程图Group 1路径的edges逻辑（g1_combo应为可选分支而非必经节点）
+2026-05-31 16:33:58,764 [WARNING] extraction_service - [72e57149-404f-40f0-b77d-43fe977e13ea] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_28_review.md
+2026-05-31 16:33:58,764 [INFO] extraction_service - [72e57149-404f-40f0-b77d-43fe977e13ea] 完成! 耗时 189.43s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_28.md
+2026-05-31 16:33:58,764 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:33:58,764 [INFO] extraction_service - [6c4107bb-63b2-4531-8c73-e413f2a0fa63] 开始处理第 38 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_38.png
+2026-05-31 16:33:59,641 [WARNING] extraction_service - [a0bc1528-443c-485e-b63b-5d83acdcbd4c] 校验发现问题，启动定向重提: 严格按双栏顺序输出：先完整左栏（表格→左中Synopsis→左下Recommendation-Specific Supportive Text），再完整右栏（右上编号段落1–4→右中5.3.1节→右下截断段落），确保栏间不交叉拼接，并规范表格多行单元格格式。
+2026-05-31 16:34:04,587 [INFO] extraction_service - [1ccff02a-ede9-4986-a534-925ddec5d318] 定向重提完成
+2026-05-31 16:34:04,779 [WARNING] extraction_service - [6bd3ac5b-c598-47b0-ad8a-caafc3189b3a] 校验发现问题，启动定向重提: 流程图节点定义缺失（如'arrive_pci_center'未声明）、Cath lab节点被错误拆分、PPCI策略与转诊安排内容归属错位，需严格对照原图重构YAML节点与边关系
+2026-05-31 16:34:13,346 [INFO] extraction_service - [ec535d2e-6f9b-4df1-ba63-63cc59d934ec] 定向重提完成
+2026-05-31 16:34:21,466 [INFO] extraction_service - [ec178f8b-8927-4e8b-8fbe-8ffc7f86febd] 定向重提完成
+2026-05-31 16:34:22,418 [WARNING] extraction_service - [1ccff02a-ede9-4986-a534-925ddec5d318] 重提后仍有问题: 右栏顶部的独立段落（4.6节右侧正文）被错误合并至左栏Recommendation-Specific Supportive Text中，需严格按双栏顺序：先输出左栏全部内容（含4.6节表格、Synopsis、Recommendation-Specific Supportive Text前半），再输出右栏全部内容（含右上段落、4.7节表格、右下Synopsis截断段）
+2026-05-31 16:34:22,419 [WARNING] extraction_service - [1ccff02a-ede9-4986-a534-925ddec5d318] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_30_review.md
+2026-05-31 16:34:22,419 [INFO] extraction_service - [1ccff02a-ede9-4986-a534-925ddec5d318] 完成! 耗时 124.72s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_30.md
+2026-05-31 16:34:22,419 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:34:22,419 [INFO] extraction_service - [50d37251-dbca-4c07-8514-d184348c1395] 开始处理第 39 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_39.png
+2026-05-31 16:34:34,287 [INFO] extraction_service - [a0bc1528-443c-485e-b63b-5d83acdcbd4c] 定向重提完成
+2026-05-31 16:34:36,103 [INFO] extraction_service - [ec535d2e-6f9b-4df1-ba63-63cc59d934ec] 完成! 耗时 128.90s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_31.md
+2026-05-31 16:34:36,103 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:34:36,103 [INFO] extraction_service - [145a1ee5-772e-42ad-be58-71560d5daa14] 开始处理第 40 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_40.png
+2026-05-31 16:34:39,230 [WARNING] extraction_service - [ec178f8b-8927-4e8b-8fbe-8ffc7f86febd] 重提后仍有问题: 右栏内容（Synopsis、Recommendation-Specific Supportive Text、5.3节及对应表格）被错误插入左栏末尾，且右下表格归属栏位错误；同时遗漏表格下方注释
+2026-05-31 16:34:39,231 [WARNING] extraction_service - [ec178f8b-8927-4e8b-8fbe-8ffc7f86febd] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_34_review.md
+2026-05-31 16:34:39,231 [INFO] extraction_service - [ec178f8b-8927-4e8b-8fbe-8ffc7f86febd] 完成! 耗时 112.60s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_34.md
+2026-05-31 16:34:39,231 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:34:39,231 [INFO] extraction_service - [c874cf8d-e785-4fa6-925e-34c2a026fca0] 开始处理第 41 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_41.png
+2026-05-31 16:34:44,486 [WARNING] extraction_service - [3cffaf28-da7d-44d1-b089-506c2223bc7d] 校验发现问题，启动定向重提: 遗漏了右下角Synopsis段落的剩余内容（'proceed with revascularization if indicated.'），需补全该完整句子；同时确保表格下方脚注与正文风险标记（‡）的对应关系清晰呈现。
+2026-05-31 16:34:48,097 [WARNING] extraction_service - [83121451-713f-46a7-ad21-65c401154c63] 校验发现问题，启动定向重提: 遗漏左中段落起始词'Recombinant'、右栏Table 14下方注释错位至左栏流程中、右下段落关键后半句内容缺失，需严格按双栏顺序（左栏全完→右栏全完）重提并确保跨栏内容归属正确
+2026-05-31 16:34:55,331 [WARNING] extraction_service - [a0bc1528-443c-485e-b63b-5d83acdcbd4c] 重提后仍有问题: 右栏内容被错误插入左栏段落中，需严格按‘先左栏全部内容，再右栏全部内容’重新组织，确保编号段落3-4及5.3.1节均完整归属于右栏且顺序正确。
+2026-05-31 16:34:55,332 [WARNING] extraction_service - [a0bc1528-443c-485e-b63b-5d83acdcbd4c] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_35_review.md
+2026-05-31 16:34:55,332 [INFO] extraction_service - [a0bc1528-443c-485e-b63b-5d83acdcbd4c] 完成! 耗时 121.80s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_35.md
+2026-05-31 16:34:55,332 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:34:55,332 [INFO] extraction_service - [84363289-b398-46a0-9fe3-ccd6fe3dcead] 开始处理第 42 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_42.png
+2026-05-31 16:34:55,374 [INFO] extraction_service - [6bd3ac5b-c598-47b0-ad8a-caafc3189b3a] 定向重提完成
+2026-05-31 16:35:05,298 [INFO] extraction_service - [6c4107bb-63b2-4531-8c73-e413f2a0fa63] 完成! 耗时 66.53s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_38.md
+2026-05-31 16:35:05,298 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:35:05,298 [INFO] extraction_service - [45936e59-497f-455a-a623-103e51dd6287] 开始处理第 43 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_43.png
+2026-05-31 16:35:15,256 [INFO] extraction_service - [50d37251-dbca-4c07-8514-d184348c1395] 完成! 耗时 52.84s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_39.md
+2026-05-31 16:35:15,256 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:35:15,256 [INFO] extraction_service - [e85c96cf-f273-4504-8cba-7d3102a882bb] 开始处理第 44 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_44.png
+2026-05-31 16:35:20,753 [INFO] extraction_service - [3cffaf28-da7d-44d1-b089-506c2223bc7d] 定向重提完成
+2026-05-31 16:35:22,049 [WARNING] extraction_service - [6bd3ac5b-c598-47b0-ad8a-caafc3189b3a] 重提后仍有问题: 修正YAML中流程图节点层级错误（特别是'door_to_ecg_pci'不应包含子项，而应与'Diagnose STEMI''Activate cath lab'并列），并明确区分'Bypass ED'的虚线条件路径与ED实线路径的逻辑关系；同时确保截断段落末尾不产生完整性误解。
+2026-05-31 16:35:22,049 [WARNING] extraction_service - [6bd3ac5b-c598-47b0-ad8a-caafc3189b3a] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_32_review.md
+2026-05-31 16:35:22,049 [INFO] extraction_service - [6bd3ac5b-c598-47b0-ad8a-caafc3189b3a] 完成! 耗时 163.00s, 策略=完整提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_32.md
+2026-05-31 16:35:22,049 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:35:22,049 [INFO] extraction_service - [6446abae-f898-4a2d-97fd-0e8d7216cf1f] 开始处理第 45 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_45.png
+2026-05-31 16:35:26,666 [INFO] extraction_service - [83121451-713f-46a7-ad21-65c401154c63] 定向重提完成
+2026-05-31 16:35:38,851 [WARNING] extraction_service - [3cffaf28-da7d-44d1-b089-506c2223bc7d] 重提后仍有问题: 需严格按双栏顺序（左栏3段落→右栏段落+表格+Synopsis）重组内容；修复表格结构（分离标题行与数据行，正确处理合并单元格）；补全Synopsis完整句子；规范脚注格式避免合并断裂。
+2026-05-31 16:35:38,853 [WARNING] extraction_service - [3cffaf28-da7d-44d1-b089-506c2223bc7d] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_37_review.md
+2026-05-31 16:35:38,853 [INFO] extraction_service - [3cffaf28-da7d-44d1-b089-506c2223bc7d] 完成! 耗时 116.37s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_37.md
+2026-05-31 16:35:38,853 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:35:38,853 [INFO] extraction_service - [9ef8db72-bcd5-4bad-9b3d-26c80b2c78d9] 开始处理第 46 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_46.png
+2026-05-31 16:35:44,885 [WARNING] extraction_service - [c874cf8d-e785-4fa6-925e-34c2a026fca0] 校验发现问题，启动定向重提: 右栏内容（Recommendation-Specific Supportive Text及其后续7.3节）未与左栏严格分隔，违反双栏‘先左后右’顺序规则，需重新组织排版结构
+2026-05-31 16:35:47,543 [WARNING] extraction_service - [83121451-713f-46a7-ad21-65c401154c63] 重提后仍有问题: 双栏排版顺序错误：右上表格（Table 14）被错误置于左下表格之前，应严格按左栏全部内容（左上表、左中段、左下表、左下段）完成后，再输出右栏全部内容（右上表、右中段、右下段）
+2026-05-31 16:35:47,543 [WARNING] extraction_service - [83121451-713f-46a7-ad21-65c401154c63] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_36_review.md
+2026-05-31 16:35:47,543 [INFO] extraction_service - [83121451-713f-46a7-ad21-65c401154c63] 完成! 耗时 130.52s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_36.md
+2026-05-31 16:35:47,544 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:35:47,544 [INFO] extraction_service - [460b976f-0bdd-4fb9-97f6-085c36bce0ad] 开始处理第 47 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_47.png
+2026-05-31 16:35:47,662 [INFO] extraction_service - [145a1ee5-772e-42ad-be58-71560d5daa14] 完成! 耗时 71.56s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_40.md
+2026-05-31 16:35:47,662 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:35:47,662 [INFO] extraction_service - [5ad6eb59-f87c-4252-893a-168412803552] 开始处理第 48 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_48.png
+2026-05-31 16:35:58,475 [WARNING] extraction_service - [45936e59-497f-455a-a623-103e51dd6287] 校验发现问题，启动定向重提: 需严格按双栏顺序输出（先左栏全部内容再右栏），并确保跨页截断处不补全原文；同时删除页脚DOI等出版元信息
+2026-05-31 16:36:05,912 [WARNING] extraction_service - [84363289-b398-46a0-9fe3-ccd6fe3dcead] 校验发现问题，启动定向重提: 严格按双栏顺序：先输出左栏全部内容（左上延续段落 + 左下Recommendation-Specific Supportive Text），再输出右栏内容（标题 + 表格 + 表格下方注释 + Synopsis）；确保跨页延续段落作为首个内容块。
+2026-05-31 16:36:11,297 [INFO] extraction_service - [c874cf8d-e785-4fa6-925e-34c2a026fca0] 定向重提完成
+2026-05-31 16:36:20,746 [WARNING] extraction_service - [e85c96cf-f273-4504-8cba-7d3102a882bb] 校验发现问题，启动定向重提: 严格按双栏顺序：左栏=左上段落→左下表格+其脚注→Synopsis；右栏=右上段落→右下表格（Table 16）→右下段落（Recommendation-Specific Supportive Text），禁止跨栏拼接或内容挪移
+2026-05-31 16:36:20,883 [WARNING] extraction_service - [6446abae-f898-4a2d-97fd-0e8d7216cf1f] 校验发现问题，启动定向重提: 遗漏了页面右下角最后一句完整句子（原文未截断），且表格下方脚注中保留了参考文献上标<sup>8</sup>需删除
+2026-05-31 16:36:28,877 [WARNING] extraction_service - [c874cf8d-e785-4fa6-925e-34c2a026fca0] 重提后仍有问题: 右上栏的Recommendation-Specific Supportive Text段落被错误遗漏并拼接到左下Synopsis末尾，需严格按左栏全内容→右栏全内容顺序重新提取，确保右上段落独立置于7.2节表格后、7.3节前
+2026-05-31 16:36:28,878 [WARNING] extraction_service - [c874cf8d-e785-4fa6-925e-34c2a026fca0] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_41_review.md
+2026-05-31 16:36:28,878 [INFO] extraction_service - [c874cf8d-e785-4fa6-925e-34c2a026fca0] 完成! 耗时 109.65s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_41.md
+2026-05-31 16:36:28,878 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:36:28,878 [INFO] extraction_service - [baa4b090-da8d-4ace-9bf6-94ba32159575] 开始处理第 49 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_49.png
+2026-05-31 16:36:31,893 [INFO] extraction_service - [45936e59-497f-455a-a623-103e51dd6287] 定向重提完成
+2026-05-31 16:36:33,402 [WARNING] extraction_service - [9ef8db72-bcd5-4bad-9b3d-26c80b2c78d9] 校验发现问题，启动定向重提: 修正双栏排版顺序：确保右栏顶部的跨页延续句（'the decision to proceed...'）置于右栏内容起始处，而非插入左栏末尾；同时将表格下方注释‘*See supportive text.’作为独立段落提取于表格之后。
+2026-05-31 16:36:44,658 [WARNING] extraction_service - [460b976f-0bdd-4fb9-97f6-085c36bce0ad] 校验发现问题，启动定向重提: 严格按双栏顺序输出：先完整左栏（含左上+左下段落），再完整右栏（含右上+右下段落）；保留原文截断状态（末尾不完整短语不加句号或补全）；删除所有参考文献上标数字。
+2026-05-31 16:36:44,713 [INFO] extraction_service - [84363289-b398-46a0-9fe3-ccd6fe3dcead] 定向重提完成
+2026-05-31 16:36:45,046 [WARNING] extraction_service - [5ad6eb59-f87c-4252-893a-168412803552] 校验发现问题，启动定向重提: 右下角段落末尾存在原文截断但提取结果未保留截断状态，需严格按图像截断处终止文本；同时需修正双栏顺序与表注位置
+2026-05-31 16:36:52,843 [WARNING] extraction_service - [45936e59-497f-455a-a623-103e51dd6287] 重提后仍有问题: 需严格按双栏顺序（左栏全部内容→右栏全部内容）重建结构，修正将左下段落误标为标题的问题，并确认右下段落是否为原图真实截断；同时清除所有参考文献上标标记。
+2026-05-31 16:36:52,845 [WARNING] extraction_service - [45936e59-497f-455a-a623-103e51dd6287] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_43_review.md
+2026-05-31 16:36:52,845 [INFO] extraction_service - [45936e59-497f-455a-a623-103e51dd6287] 完成! 耗时 107.54s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_43.md
+2026-05-31 16:36:52,845 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:36:52,845 [INFO] extraction_service - [881bc403-d87d-4c95-a51b-a7d228fefffd] 开始处理第 50 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_50.png
+2026-05-31 16:36:53,524 [INFO] extraction_service - [6446abae-f898-4a2d-97fd-0e8d7216cf1f] 定向重提完成
+2026-05-31 16:36:57,407 [INFO] extraction_service - [e85c96cf-f273-4504-8cba-7d3102a882bb] 定向重提完成
+2026-05-31 16:37:03,956 [WARNING] extraction_service - [84363289-b398-46a0-9fe3-ccd6fe3dcead] 重提后仍有问题: 需严格按双栏顺序：先完整输出左栏（左上段落 + 左下段落），再输出右栏（右上段落 + 表格 + 右下段落）；同时修复左上段落开头缺失字母及右栏内容错位问题
+2026-05-31 16:37:03,957 [WARNING] extraction_service - [84363289-b398-46a0-9fe3-ccd6fe3dcead] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_42_review.md
+2026-05-31 16:37:03,957 [INFO] extraction_service - [84363289-b398-46a0-9fe3-ccd6fe3dcead] 完成! 耗时 128.62s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_42.md
+2026-05-31 16:37:03,957 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:37:03,957 [INFO] extraction_service - [33436c4f-67da-442b-8437-ba739e42fdc7] 开始处理第 51 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_51.png
+2026-05-31 16:37:04,700 [INFO] extraction_service - [6446abae-f898-4a2d-97fd-0e8d7216cf1f] 完成! 耗时 102.65s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_45.md
+2026-05-31 16:37:04,700 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:37:04,700 [INFO] extraction_service - [0bba1a98-5423-4dad-bef7-f59bd9c01a67] 开始处理第 52 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_52.png
+2026-05-31 16:37:10,821 [INFO] extraction_service - [e85c96cf-f273-4504-8cba-7d3102a882bb] 完成! 耗时 115.56s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_44.md
+2026-05-31 16:37:10,821 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:37:10,821 [INFO] extraction_service - [ddffddf9-de26-4d03-b11c-37206f52d5ae] 开始处理第 53 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_53.png
+2026-05-31 16:37:12,683 [INFO] extraction_service - [5ad6eb59-f87c-4252-893a-168412803552] 定向重提完成
+2026-05-31 16:37:14,183 [INFO] extraction_service - [9ef8db72-bcd5-4bad-9b3d-26c80b2c78d9] 定向重提完成
+2026-05-31 16:37:17,564 [INFO] extraction_service - [baa4b090-da8d-4ace-9bf6-94ba32159575] 完成! 耗时 48.69s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_49.md
+2026-05-31 16:37:17,564 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:37:17,564 [INFO] extraction_service - [347fdb1f-f44d-47a4-8032-9f5dab59e3cb] 开始处理第 54 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_54.png
+2026-05-31 16:37:17,868 [INFO] extraction_service - [460b976f-0bdd-4fb9-97f6-085c36bce0ad] 定向重提完成
+2026-05-31 16:37:27,409 [INFO] extraction_service - [5ad6eb59-f87c-4252-893a-168412803552] 完成! 耗时 99.75s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_48.md
+2026-05-31 16:37:27,410 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:37:27,410 [INFO] extraction_service - [8981b71c-57fd-458e-8f46-2d69b68bdb63] 开始处理第 55 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_55.png
+2026-05-31 16:37:32,903 [WARNING] extraction_service - [9ef8db72-bcd5-4bad-9b3d-26c80b2c78d9] 重提后仍有问题: 左栏底部段落结尾句被错误移至右栏内容之后，需严格按‘先左栏全部内容，再右栏全部内容’顺序重排，确保左下段落完整闭合后再开始右栏表格与Synopsis
+2026-05-31 16:37:32,903 [WARNING] extraction_service - [9ef8db72-bcd5-4bad-9b3d-26c80b2c78d9] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_46_review.md
+2026-05-31 16:37:32,903 [INFO] extraction_service - [9ef8db72-bcd5-4bad-9b3d-26c80b2c78d9] 完成! 耗时 114.05s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_46.md
+2026-05-31 16:37:32,903 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:37:32,903 [INFO] extraction_service - [f290a763-ce90-4ce4-b92b-d4652eddce0b] 开始处理第 56 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_56.png
+2026-05-31 16:37:36,653 [WARNING] extraction_service - [460b976f-0bdd-4fb9-97f6-085c36bce0ad] 重提后仍有问题: 需严格按双栏顺序输出：先完整左栏（含编号1及编号2前半部分），再完整右栏（含右上编号2后半部分及右下编号3），避免跨栏段落合并导致顺序错乱
+2026-05-31 16:37:36,654 [WARNING] extraction_service - [460b976f-0bdd-4fb9-97f6-085c36bce0ad] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_47_review.md
+2026-05-31 16:37:36,654 [INFO] extraction_service - [460b976f-0bdd-4fb9-97f6-085c36bce0ad] 完成! 耗时 109.11s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_47.md
+2026-05-31 16:37:36,654 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:37:36,654 [INFO] extraction_service - [02c671f4-7c24-48c5-a65e-067c90a37e86] 开始处理第 57 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_57.png
+2026-05-31 16:37:45,699 [WARNING] extraction_service - [8981b71c-57fd-458e-8f46-2d69b68bdb63] 校验发现问题，启动定向重提: 需完整提取Table 21全部5行内容及其下方注释，并补全左下、右下及中央的三个正文段落
+2026-05-31 16:37:54,721 [WARNING] extraction_service - [33436c4f-67da-442b-8437-ba739e42fdc7] 校验发现问题，启动定向重提: 遗漏了Table 19下方的脚注内容，需补全；同时修正表格单元格内多行文本的换行格式（应使用<br>）
+2026-05-31 16:37:57,606 [WARNING] extraction_service - [881bc403-d87d-4c95-a51b-a7d228fefffd] 校验发现问题，启动定向重提: 需严格按双栏顺序输出：左栏含表格+其下方注释+完整段落1；右栏从'3. In the VEST...'开始，确保右下角'9.3. Pericarditis Management...'段落完整提取且不被截断，同时分离跨页延续句至右栏起始位置
+2026-05-31 16:38:08,228 [INFO] extraction_service - [0bba1a98-5423-4dad-bef7-f59bd9c01a67] 完成! 耗时 63.53s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_52.md
+2026-05-31 16:38:08,228 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:38:08,228 [INFO] extraction_service - [84c736f6-11ff-4d7e-ae8a-d01f49d2757c] 开始处理第 58 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_58.png
+2026-05-31 16:38:10,067 [WARNING] extraction_service - [ddffddf9-de26-4d03-b11c-37206f52d5ae] 校验发现问题，启动定向重提: 遗漏并错序处理了右栏底部的'10.5. Discharge Planning'及其子节内容，且左栏表格与标题层级关系错位，需严格按'先左栏全部（含表格及上方标题）、再右栏全部'顺序重提，并确保右下段落完整提取至自然句末。
+2026-05-31 16:38:16,777 [INFO] extraction_service - [8981b71c-57fd-458e-8f46-2d69b68bdb63] 定向重提完成
+2026-05-31 16:38:19,363 [WARNING] extraction_service - [347fdb1f-f44d-47a4-8032-9f5dab59e3cb] 校验发现问题，启动定向重提: 需严格分离双栏内容：左栏Synopsis段落应止于'and'并换行，右栏从'ethnic groups...'开始新段落；同时确保右下Synopsis段落以'women-'截断形式保留，不补全。
+2026-05-31 16:38:30,202 [INFO] extraction_service - [33436c4f-67da-442b-8437-ba739e42fdc7] 定向重提完成
+2026-05-31 16:38:33,203 [WARNING] extraction_service - [02c671f4-7c24-48c5-a65e-067c90a37e86] 校验发现问题，启动定向重提: 修正右下段落截断处理（保留原文不完整结尾）、核实并补全Figure 11图注（若原图存在）、修正参考文献上标编号错误（如²⁸,²→²⁸,²⁹）
+2026-05-31 16:38:34,658 [INFO] extraction_service - [881bc403-d87d-4c95-a51b-a7d228fefffd] 定向重提完成
+2026-05-31 16:38:35,913 [INFO] extraction_service - [ddffddf9-de26-4d03-b11c-37206f52d5ae] 定向重提完成
+2026-05-31 16:38:39,590 [INFO] extraction_service - [33436c4f-67da-442b-8437-ba739e42fdc7] 完成! 耗时 95.63s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_51.md
+2026-05-31 16:38:39,590 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:38:39,590 [INFO] extraction_service - [d3c6c53e-a460-46f9-b801-f11d37bb69b4] 开始处理第 59 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_59.png
+2026-05-31 16:38:39,938 [WARNING] extraction_service - [8981b71c-57fd-458e-8f46-2d69b68bdb63] 重提后仍有问题: 需严格按双栏物理顺序重组内容：左栏=表格+左下段落；右栏=跨页延续段落（小写开头部分）+编号'2.'段落+Recommendation-Specific Supportive Text；并确保表格下方注释作为表格附属内容正确标注
+2026-05-31 16:38:39,939 [WARNING] extraction_service - [8981b71c-57fd-458e-8f46-2d69b68bdb63] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_55_review.md
+2026-05-31 16:38:39,939 [INFO] extraction_service - [8981b71c-57fd-458e-8f46-2d69b68bdb63] 完成! 耗时 72.53s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_55.md
+2026-05-31 16:38:39,939 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:38:39,939 [INFO] extraction_service - [31a6d2a5-1254-4811-aaf3-0ddf1a41b52e] 开始处理第 60 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_60.png
+2026-05-31 16:38:43,841 [INFO] extraction_service - [f290a763-ce90-4ce4-b92b-d4652eddce0b] 完成! 耗时 70.94s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_56.md
+2026-05-31 16:38:43,841 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:38:43,841 [INFO] extraction_service - [1579f345-6369-46c7-932a-d4be011e5f0a] 开始处理第 61 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_61.png
+2026-05-31 16:38:49,922 [WARNING] extraction_service - [ddffddf9-de26-4d03-b11c-37206f52d5ae] 重提后仍有问题: 遗漏右栏底部的'Recommendation-Specific Supportive Text'段落，且双栏排版顺序错误：应严格先输出左栏全部内容（含左下段落与表格），再输出右栏全部内容（含右上Synopsis与右下Recommendation-Specific Supportive Text）
+2026-05-31 16:38:49,924 [WARNING] extraction_service - [ddffddf9-de26-4d03-b11c-37206f52d5ae] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_53_review.md
+2026-05-31 16:38:49,924 [INFO] extraction_service - [ddffddf9-de26-4d03-b11c-37206f52d5ae] 完成! 耗时 99.10s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_53.md
+2026-05-31 16:38:49,925 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:38:49,925 [INFO] extraction_service - [c24cf503-eb09-4eb1-be83-4269307984d2] 开始处理第 62 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_62.png
+2026-05-31 16:38:53,466 [WARNING] extraction_service - [881bc403-d87d-4c95-a51b-a7d228fefffd] 重提后仍有问题: 遗漏表格下方的脚注注释段落，且右下角'9.3. Pericarditis Management After MI Synopsis'段落被截断但未按原文截断形式保留（需确认原图是否真截断并严格保持无补全）
+2026-05-31 16:38:53,466 [WARNING] extraction_service - [881bc403-d87d-4c95-a51b-a7d228fefffd] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_50_review.md
+2026-05-31 16:38:53,466 [INFO] extraction_service - [881bc403-d87d-4c95-a51b-a7d228fefffd] 完成! 耗时 120.62s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_50.md
+2026-05-31 16:38:53,466 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:38:53,466 [INFO] extraction_service - [1e2f71f7-cf03-41b8-b7f7-a8ab287d6470] 开始处理第 63 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_63.png
+2026-05-31 16:38:55,507 [INFO] extraction_service - [347fdb1f-f44d-47a4-8032-9f5dab59e3cb] 定向重提完成
+2026-05-31 16:39:04,377 [INFO] extraction_service - [02c671f4-7c24-48c5-a65e-067c90a37e86] 定向重提完成
+2026-05-31 16:39:20,061 [WARNING] extraction_service - [02c671f4-7c24-48c5-a65e-067c90a37e86] 重提后仍有问题: 需修复三处高危问题：1) 补全截断句导致的语义失真；2) 遗漏图11及其图注；3) 跨页延续段落被错误拆分至右栏而非合并到左栏末尾
+2026-05-31 16:39:20,063 [WARNING] extraction_service - [02c671f4-7c24-48c5-a65e-067c90a37e86] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_57_review.md
+2026-05-31 16:39:20,063 [INFO] extraction_service - [02c671f4-7c24-48c5-a65e-067c90a37e86] 完成! 耗时 103.41s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_57.md
+2026-05-31 16:39:20,063 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:39:20,064 [INFO] extraction_service - [3cedb510-2bbd-4520-adc0-3dd696400cce] 开始处理第 64 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_64.png
+2026-05-31 16:39:20,222 [INFO] extraction_service - [347fdb1f-f44d-47a4-8032-9f5dab59e3cb] 完成! 耗时 122.66s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_54.md
+2026-05-31 16:39:20,222 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:39:20,222 [INFO] extraction_service - [1987d248-bc16-484c-9f7e-ac9172caddff] 开始处理第 65 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_65.png
+2026-05-31 16:39:35,291 [INFO] extraction_service - [31a6d2a5-1254-4811-aaf3-0ddf1a41b52e] 完成! 耗时 55.35s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_60.md
+2026-05-31 16:39:35,292 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:39:35,292 [INFO] extraction_service - [22cf4ea5-4704-47de-9776-4e8105607cf3] 开始处理第 66 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_66.png
+2026-05-31 16:39:36,108 [WARNING] extraction_service - [1987d248-bc16-484c-9f7e-ac9172caddff] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留中央标题‘1.5. Class of Recommendation and Level of Evidence’及其下第1条正文内容，仅跳过其后参考文献条目；左右栏的4个段落（编号8–30及31–45部分）属正文引用前的说明性文字，应提取而非跳过。
+2026-05-31 16:39:36,448 [INFO] extraction_service - [c24cf503-eb09-4eb1-be83-4269307984d2] 完成! 耗时 46.52s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_62.md
+2026-05-31 16:39:36,448 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:39:36,448 [INFO] extraction_service - [cefc0708-4646-49b3-8de5-1133bea23249] 开始处理第 67 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_67.png
+2026-05-31 16:39:40,267 [WARNING] extraction_service - [1579f345-6369-46c7-932a-d4be011e5f0a] 校验发现问题，启动定向重提: 需严格按双栏顺序输出（左栏全部→右栏全部），补全表格下方注释，保留页面末尾原文截断状态（不补全句子），并确认表格是否遗漏多条推荐项。
+2026-05-31 16:39:44,456 [WARNING] extraction_service - [84c736f6-11ff-4d7e-ae8a-d01f49d2757c] 校验发现问题，启动定向重提: 需严格按双栏顺序输出：先完整提取左栏全部段落（含编号4段落全文），再提取右栏段落（含编号5段落，保持截断状态）；修正YAML流程图中默认策略各时间点节点缺失与内容错位问题，并删除所有参考文献上标。
+2026-05-31 16:39:44,995 [WARNING] extraction_service - [d3c6c53e-a460-46f9-b801-f11d37bb69b4] 校验发现问题，启动定向重提: 需修正跨页延续段落位置（应置于页面最前），并确保右上推荐表格的脚注紧随其后、不被Synopsis隔断；同时在Recommendation单元格内添加<br>以还原原图换行
+2026-05-31 16:39:48,247 [WARNING] extraction_service - [1e2f71f7-cf03-41b8-b7f7-a8ab287d6470] 校验发现问题，启动定向重提: 需严格按双栏块顺序分离内容：左栏3段+标题+段落；右栏4个独立块（含右上段落、右中段落、右下委员会名单1、右下委员会名单2），并将右下底部脚注作为独立段落置于最后，避免与成员列表混排。
+2026-05-31 16:40:00,256 [WARNING] extraction_service - [22cf4ea5-4704-47de-9776-4e8105607cf3] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留2.1节、3.1.1节、3.1.2节等正文内容，仅跳过末尾参考文献条目（若存在明确‘参考文献’标题后部分）；当前提取结果错误跳过全部内容。
+2026-05-31 16:40:12,899 [INFO] extraction_service - [1579f345-6369-46c7-932a-d4be011e5f0a] 定向重提完成
+2026-05-31 16:40:15,892 [INFO] extraction_service - [d3c6c53e-a460-46f9-b801-f11d37bb69b4] 定向重提完成
+2026-05-31 16:40:24,556 [WARNING] extraction_service - [cefc0708-4646-49b3-8de5-1133bea23249] 校验发现问题，启动定向重提: 本页为正文与参考文献混合页，需保留标题‘3.1.3. Risk Stratification Tools...’及其下列出的14条文献条目（属正文内容），不可整体跳过；Scout识别的4个段落块实为左栏延续段落（编号1–25）与右栏正文+文献（编号1–14），应按双栏顺序完整提取
+2026-05-31 16:40:26,850 [INFO] extraction_service - [1e2f71f7-cf03-41b8-b7f7-a8ab287d6470] 定向重提完成
+2026-05-31 16:40:33,561 [WARNING] extraction_service - [1579f345-6369-46c7-932a-d4be011e5f0a] 重提后仍有问题: 右栏顶部段落被错误后置至左栏Synopsis之后, 破坏双栏顺序; 表格下方注释未作独立内容块处理; 需严格按左栏→右栏顺序输出并剥离参考文献上标
+2026-05-31 16:40:33,562 [WARNING] extraction_service - [1579f345-6369-46c7-932a-d4be011e5f0a] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_61_review.md
+2026-05-31 16:40:33,562 [INFO] extraction_service - [1579f345-6369-46c7-932a-d4be011e5f0a] 完成! 耗时 109.72s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_61.md
+2026-05-31 16:40:33,562 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:40:33,562 [INFO] extraction_service - [55a5d6fd-3b31-47e0-a81a-bef11357ebec] 开始处理第 68 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_68.png
+2026-05-31 16:40:39,494 [WARNING] extraction_service - [3cedb510-2bbd-4520-adc0-3dd696400cce] 校验发现问题，启动定向重提: 需严格按双栏顺序处理：左栏仅保留PRESIDENTS AND STAFF与ARTICLE INFORMATION；右栏应仅提取指南主标题（2025 Acute Coronary Syndromes Guideline）及右上角独立段落（Permissions说明），并彻底跳过REFERENCES标题及其全部文献条目
+2026-05-31 16:40:40,950 [WARNING] extraction_service - [d3c6c53e-a460-46f9-b801-f11d37bb69b4] 重提后仍有问题: 需严格按双栏顺序输出：先完整左栏（Table 22及其下方说明段落），再完整右栏（推荐表格、其脚注、Synopsis段落）；当前左下段落被错误前置，破坏了栏内内容连续性。
+2026-05-31 16:40:40,951 [WARNING] extraction_service - [d3c6c53e-a460-46f9-b801-f11d37bb69b4] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_59_review.md
+2026-05-31 16:40:40,951 [INFO] extraction_service - [d3c6c53e-a460-46f9-b801-f11d37bb69b4] 完成! 耗时 121.36s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_59.md
+2026-05-31 16:40:40,951 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:40:40,951 [INFO] extraction_service - [a6d38366-b31e-42c3-9032-3a850a1bb703] 开始处理第 69 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_69.png
+2026-05-31 16:40:47,827 [INFO] extraction_service - [1987d248-bc16-484c-9f7e-ac9172caddff] 定向重提完成
+2026-05-31 16:40:47,949 [INFO] extraction_service - [1e2f71f7-cf03-41b8-b7f7-a8ab287d6470] 完成! 耗时 114.48s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_63.md
+2026-05-31 16:40:47,949 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:40:47,949 [INFO] extraction_service - [e2b07b9e-1d8f-4e4e-b927-f6bd87a6f2d5] 开始处理第 70 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_70.png
+2026-05-31 16:40:50,065 [INFO] extraction_service - [22cf4ea5-4704-47de-9776-4e8105607cf3] 定向重提完成
+2026-05-31 16:40:55,774 [INFO] extraction_service - [84c736f6-11ff-4d7e-ae8a-d01f49d2757c] 定向重提完成
+2026-05-31 16:41:00,305 [INFO] extraction_service - [3cedb510-2bbd-4520-adc0-3dd696400cce] 定向重提完成
+2026-05-31 16:41:06,889 [WARNING] extraction_service - [1987d248-bc16-484c-9f7e-ac9172caddff] 重提后仍有问题: 本页为纯参考文献页，应整体跳过并仅输出‘（本页为参考文献，已跳过）’；当前错误提取了全部参考文献条目（编号8–45）及末尾1.5节正文，需重新识别页面类型并严格过滤参考文献内容。
+2026-05-31 16:41:06,890 [WARNING] extraction_service - [1987d248-bc16-484c-9f7e-ac9172caddff] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_65_review.md
+2026-05-31 16:41:06,890 [INFO] extraction_service - [1987d248-bc16-484c-9f7e-ac9172caddff] 完成! 耗时 106.67s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_65.md
+2026-05-31 16:41:06,890 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:06,890 [INFO] extraction_service - [0e7285c9-6bdd-4828-8002-24e70e6d75e1] 开始处理第 71 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_71.png
+2026-05-31 16:41:14,752 [WARNING] extraction_service - [22cf4ea5-4704-47de-9776-4e8105607cf3] 重提后仍有问题: 删除页脚DOI信息，并确保右下角截断的参考文献条目保持原文不完整状态（不补全），同时确认是否遗漏右栏底部可能存在的独立段落
+2026-05-31 16:41:14,752 [WARNING] extraction_service - [22cf4ea5-4704-47de-9776-4e8105607cf3] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_66_review.md
+2026-05-31 16:41:14,753 [INFO] extraction_service - [22cf4ea5-4704-47de-9776-4e8105607cf3] 完成! 耗时 99.46s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_66.md
+2026-05-31 16:41:14,753 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:14,753 [INFO] extraction_service - [7cab98f8-1c52-418d-86a7-90343ee6c6d1] 开始处理第 72 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_72.png
+2026-05-31 16:41:14,888 [WARNING] extraction_service - [84c736f6-11ff-4d7e-ae8a-d01f49d2757c] 重提后仍有问题: 需严格按双栏顺序分离左下与右下段落，并完整保留两段正文内容（含编号4.和5.起始部分），确保页面末尾截断处不补全、仅忠实呈现原文不完整状态
+2026-05-31 16:41:14,888 [WARNING] extraction_service - [84c736f6-11ff-4d7e-ae8a-d01f49d2757c] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_58_review.md
+2026-05-31 16:41:14,888 [INFO] extraction_service - [84c736f6-11ff-4d7e-ae8a-d01f49d2757c] 完成! 耗时 186.66s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_58.md
+2026-05-31 16:41:14,889 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:14,889 [INFO] extraction_service - [826746e1-5e5a-4339-9db6-50ffde8c3b22] 开始处理第 73 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_73.png
+2026-05-31 16:41:16,052 [WARNING] extraction_service - [3cedb510-2bbd-4520-adc0-3dd696400cce] 重提后仍有问题: 需严格按双栏顺序输出：左栏（PRESIDENTS AND STAFF + ARTICLE INFORMATION）后接右栏（Permissions段落 + REFERENCES/PREAMBLE/1.4节内容），并彻底删除页脚元信息，禁止添加原文未出现的标题行。
+2026-05-31 16:41:16,053 [WARNING] extraction_service - [3cedb510-2bbd-4520-adc0-3dd696400cce] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_64_review.md
+2026-05-31 16:41:16,053 [INFO] extraction_service - [3cedb510-2bbd-4520-adc0-3dd696400cce] 完成! 耗时 115.99s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_64.md
+2026-05-31 16:41:16,053 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:16,053 [INFO] extraction_service - [c2224574-5abb-40ea-b089-d8a108dac424] 开始处理第 74 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_74.png
+2026-05-31 16:41:23,097 [INFO] extraction_service - [0e7285c9-6bdd-4828-8002-24e70e6d75e1] 完成! 耗时 16.21s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_71.md
+2026-05-31 16:41:23,098 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:23,098 [INFO] extraction_service - [f6a7ee9c-790f-4afe-9bc4-dbdaf7f9137f] 开始处理第 75 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_75.png
+2026-05-31 16:41:29,082 [WARNING] extraction_service - [7cab98f8-1c52-418d-86a7-90343ee6c6d1] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需提取‘4.5. Lipid Management’标题及编号参考文献条目（44–45及1–19），仅跳过无编号的纯参考文献部分；禁止整页跳过。
+2026-05-31 16:41:38,875 [WARNING] extraction_service - [826746e1-5e5a-4339-9db6-50ffde8c3b22] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留所有小节标题及顶部延续段落，仅跳过编号参考文献条目；严禁整体标记为‘本页为参考文献，已跳过’。
+2026-05-31 16:41:40,049 [INFO] extraction_service - [55a5d6fd-3b31-47e0-a81a-bef11357ebec] 完成! 耗时 66.49s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_68.md
+2026-05-31 16:41:40,049 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:40,049 [INFO] extraction_service - [920ef2de-3bfd-4fc9-97b4-ca1d5d7812bc] 开始处理第 76 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_76.png
+2026-05-31 16:41:41,759 [INFO] extraction_service - [cefc0708-4646-49b3-8de5-1133bea23249] 定向重提完成
+2026-05-31 16:41:44,607 [WARNING] extraction_service - [e2b07b9e-1d8f-4e4e-b927-f6bd87a6f2d5] 校验发现问题，启动定向重提: 该页为纯参考文献页，应跳过全部文献条目，仅输出‘（本页为参考文献，已跳过）’，不得提取任何参考文献条目或小节标题。
+2026-05-31 16:41:46,320 [INFO] extraction_service - [e2b07b9e-1d8f-4e4e-b927-f6bd87a6f2d5] 定向重提完成
+2026-05-31 16:41:54,721 [WARNING] extraction_service - [e2b07b9e-1d8f-4e4e-b927-f6bd87a6f2d5] 重提后仍有问题: 该页为正文混合页，需保留4.3.3和4.3.4两个小节标题及其下的编号文献条目，仅跳过页面底部可能存在的纯参考文献区域（但本页无明确参考文献标题，故应全部提取正文引文）
+2026-05-31 16:41:54,722 [WARNING] extraction_service - [e2b07b9e-1d8f-4e4e-b927-f6bd87a6f2d5] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_70_review.md
+2026-05-31 16:41:54,722 [INFO] extraction_service - [e2b07b9e-1d8f-4e4e-b927-f6bd87a6f2d5] 完成! 耗时 66.77s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_70.md
+2026-05-31 16:41:54,722 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:54,722 [INFO] extraction_service - [afc0355a-a3c5-4712-87f1-f254b25fe573] 开始处理第 77 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_77.png
+2026-05-31 16:41:57,433 [WARNING] extraction_service - [cefc0708-4646-49b3-8de5-1133bea23249] 重提后仍有问题: 严格按双栏顺序：先完整输出左栏全部内容（含左上延续段落、左下段落），再输出右栏全部内容（含右上段落、3.1.3节标题及后续参考文献），并删除页脚页码与DOI信息
+2026-05-31 16:41:57,433 [WARNING] extraction_service - [cefc0708-4646-49b3-8de5-1133bea23249] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_67_review.md
+2026-05-31 16:41:57,433 [INFO] extraction_service - [cefc0708-4646-49b3-8de5-1133bea23249] 完成! 耗时 140.99s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_67.md
+2026-05-31 16:41:57,434 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:41:57,434 [INFO] extraction_service - [ad353374-cbe1-4e77-bc4e-3598d263994a] 开始处理第 78 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_78.png
+2026-05-31 16:41:57,838 [WARNING] extraction_service - [920ef2de-3bfd-4fc9-97b4-ca1d5d7812bc] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留6.1节标题及下方17条编号参考文献前的正文段落（即‘6.1. Rationale and Timing...’及其下17项文献条目前的正文内容），仅跳过后续参考文献条目；当前错误地将整页标记为参考文献页而全部跳过。
+2026-05-31 16:41:59,906 [WARNING] extraction_service - [a6d38366-b31e-42c3-9032-3a850a1bb703] 校验发现问题，启动定向重提: 遗漏了页面顶部左上与右上的7–25号参考文献前置条目（非纯参考文献页，属正文前引文），且未按双栏顺序组织内容：应先输出左栏全部（含4.2及左栏部分4.3.1），再右栏全部（含右栏剩余4.3.1与4.3.2），当前为线性合并导致结构错位。
+2026-05-31 16:42:10,802 [INFO] extraction_service - [7cab98f8-1c52-418d-86a7-90343ee6c6d1] 定向重提完成
+2026-05-31 16:42:16,146 [WARNING] extraction_service - [c2224574-5abb-40ea-b089-d8a108dac424] 校验发现问题，启动定向重提: 严格按双栏顺序：先完整提取左栏（含顶部延续段落、5.2.2节标题及全部参考文献1–29），再提取右栏（5.3节标题及参考文献1–18）；特别注意左栏末尾参考文献29是否被遗漏
+2026-05-31 16:42:16,532 [WARNING] extraction_service - [ad353374-cbe1-4e77-bc4e-3598d263994a] 校验发现问题，启动定向重提: 需提取7.4.2节和8.1节标题及其下方编号文献列表中属于正文引述部分的内容（即编号1–14与1–8的条目本身是参考文献，但节标题及可能存在的引导性文字属于正文，应保留；实际本页无独立正文段落，但节标题必须保留），严禁跳过整个页面。
+2026-05-31 16:42:23,475 [WARNING] extraction_service - [7cab98f8-1c52-418d-86a7-90343ee6c6d1] 重提后仍有问题: 严格按双栏顺序提取：先完整输出左栏全部段落（含4.5节1-19号文献），再输出右栏全部段落（含44-45号及20-43号文献），确保左下与右下段落块无遗漏。
+2026-05-31 16:42:23,476 [WARNING] extraction_service - [7cab98f8-1c52-418d-86a7-90343ee6c6d1] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_72_review.md
+2026-05-31 16:42:23,476 [INFO] extraction_service - [7cab98f8-1c52-418d-86a7-90343ee6c6d1] 完成! 耗时 68.72s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_72.md
+2026-05-31 16:42:23,476 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:42:23,476 [INFO] extraction_service - [284f9854-ee63-4f3b-91ac-298284af5ee3] 开始处理第 79 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_79.png
+2026-05-31 16:42:38,147 [WARNING] extraction_service - [284f9854-ee63-4f3b-91ac-298284af5ee3] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留8.2节和9.1节的标题及编号参考文献条目前的正文内容，仅跳过从'参考文献'标题开始后的条目；当前提取结果错误跳过了全部内容
+2026-05-31 16:42:55,972 [INFO] extraction_service - [826746e1-5e5a-4339-9db6-50ffde8c3b22] 定向重提完成
+2026-05-31 16:42:59,026 [INFO] extraction_service - [ad353374-cbe1-4e77-bc4e-3598d263994a] 定向重提完成
+2026-05-31 16:43:00,662 [INFO] extraction_service - [920ef2de-3bfd-4fc9-97b4-ca1d5d7812bc] 定向重提完成
+2026-05-31 16:43:06,979 [WARNING] extraction_service - [afc0355a-a3c5-4712-87f1-f254b25fe573] 校验发现问题，启动定向重提: 本页为纯参考文献页，应完全跳过参考文献条目，仅输出‘（本页为参考文献，已跳过）’；禁止提取任何参考文献条目或编号列表。
+2026-05-31 16:43:08,507 [WARNING] extraction_service - [826746e1-5e5a-4339-9db6-50ffde8c3b22] 重提后仍有问题: 需补全右下角被截断的参考文献条目11，并恢复左上角跨页延续段落（关于血脂管理的指南引文）
+2026-05-31 16:43:08,508 [WARNING] extraction_service - [826746e1-5e5a-4339-9db6-50ffde8c3b22] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_73_review.md
+2026-05-31 16:43:08,508 [INFO] extraction_service - [826746e1-5e5a-4339-9db6-50ffde8c3b22] 完成! 耗时 113.62s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_73.md
+2026-05-31 16:43:08,509 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:43:08,509 [INFO] extraction_service - [50df6936-2963-4b85-981b-e8a92dc7b841] 开始处理第 80 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_80.png
+2026-05-31 16:43:09,128 [INFO] extraction_service - [afc0355a-a3c5-4712-87f1-f254b25fe573] 定向重提完成
+2026-05-31 16:43:09,574 [WARNING] extraction_service - [f6a7ee9c-790f-4afe-9bc4-dbdaf7f9137f] 校验发现问题，启动定向重提: 遗漏了左上栏的参考文献条目19–22（Pinto DS等4条），且错误保留了页脚DOI信息；需严格按双栏顺序（先左栏全部、再右栏全部）提取，并过滤页脚元数据。
+2026-05-31 16:43:17,499 [WARNING] extraction_service - [afc0355a-a3c5-4712-87f1-f254b25fe573] 重提后仍有问题: 该页为正文与参考文献混合页，需提取7.3和7.4.1节标题及各自编号列表中的正文引用条目（共28条），仅跳过页面底部无标题的纯参考文献延续部分（若存在）
+2026-05-31 16:43:17,500 [WARNING] extraction_service - [afc0355a-a3c5-4712-87f1-f254b25fe573] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_77_review.md
+2026-05-31 16:43:17,500 [INFO] extraction_service - [afc0355a-a3c5-4712-87f1-f254b25fe573] 完成! 耗时 82.78s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_77.md
+2026-05-31 16:43:17,500 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:43:17,500 [INFO] extraction_service - [dc146a55-29b2-4f0d-a1f8-e52057bdb732] 开始处理第 81 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_81.png
+2026-05-31 16:43:19,109 [WARNING] extraction_service - [920ef2de-3bfd-4fc9-97b4-ca1d5d7812bc] 重提后仍有问题: 需严格按双栏顺序处理：左栏仅含6.1节1–16条，右栏顶部为参考文献18（非7.1节内重复项），7.1节从右栏中部开始；同时删除所有页脚元信息，并补全7.2节第5条完整引用。
+2026-05-31 16:43:19,109 [WARNING] extraction_service - [920ef2de-3bfd-4fc9-97b4-ca1d5d7812bc] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_76_review.md
+2026-05-31 16:43:19,110 [INFO] extraction_service - [920ef2de-3bfd-4fc9-97b4-ca1d5d7812bc] 完成! 耗时 99.06s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_76.md
+2026-05-31 16:43:19,110 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:43:19,110 [INFO] extraction_service - [1adae204-a01f-4a20-8ee0-77624fbc2b84] 开始处理第 82 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_82.png
+2026-05-31 16:43:20,528 [WARNING] extraction_service - [ad353374-cbe1-4e77-bc4e-3598d263994a] 重提后仍有问题: 本页为纯参考文献页，应跳过全部参考文献条目并仅输出跳过提示；若含正文节标题（如7.4.2、8.1），需确认其真实位置并严格按双栏顺序（左栏全部→右栏全部）组织，当前提取错误地将参考文献当作正文输出且遗漏右栏多条文献。
+2026-05-31 16:43:20,529 [WARNING] extraction_service - [ad353374-cbe1-4e77-bc4e-3598d263994a] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_78_review.md
+2026-05-31 16:43:20,529 [INFO] extraction_service - [ad353374-cbe1-4e77-bc4e-3598d263994a] 完成! 耗时 83.09s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_78.md
+2026-05-31 16:43:20,530 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:43:20,530 [INFO] extraction_service - [f9792f32-70f8-4cda-bc5f-a2c63f828fc9] 开始处理第 83 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_83.png
+2026-05-31 16:43:25,473 [WARNING] extraction_service - [50df6936-2963-4b85-981b-e8a92dc7b841] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需提取9.2和9.3节标题及编号1-13、1-7的条目内容（非参考文献条目），不可整页跳过
+2026-05-31 16:43:27,037 [INFO] extraction_service - [a6d38366-b31e-42c3-9032-3a850a1bb703] 定向重提完成
+2026-05-31 16:43:32,341 [INFO] extraction_service - [c2224574-5abb-40ea-b089-d8a108dac424] 定向重提完成
+2026-05-31 16:43:34,700 [WARNING] extraction_service - [dc146a55-29b2-4f0d-a1f8-e52057bdb732] 校验发现问题，启动定向重提: 该页为正文与参考文献混合页，需保留9.4、10.1、10.2、10.3等章节标题及各标题下的编号段落（非参考文献条目），仅跳过从‘参考文献’标题开始后的纯文献列表；当前提取错误地跳过了全部内容。
+2026-05-31 16:43:38,013 [WARNING] extraction_service - [f9792f32-70f8-4cda-bc5f-a2c63f828fc9] 校验发现问题，启动定向重提: 本页非纯参考文献页，而是包含标题‘11.1. DAPT Strategies in the First 12 Months Postdischarge’及29项临床研究证据的正文混合页，需完整提取该章节内容，严禁跳过。
+2026-05-31 16:43:39,665 [INFO] extraction_service - [284f9854-ee63-4f3b-91ac-298284af5ee3] 定向重提完成
+2026-05-31 16:43:43,906 [WARNING] extraction_service - [a6d38366-b31e-42c3-9032-3a850a1bb703] 重提后仍有问题: 严格按双栏顺序输出：先左栏全部内容（左上参考文献7–10 + 左下4.2节），再右栏全部内容（右上参考文献18–25 + 右下4.3.1与4.3.2节），确保章节标题与内容块归属准确，避免跨栏混排。
+2026-05-31 16:43:43,908 [WARNING] extraction_service - [a6d38366-b31e-42c3-9032-3a850a1bb703] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_69_review.md
+2026-05-31 16:43:43,908 [INFO] extraction_service - [a6d38366-b31e-42c3-9032-3a850a1bb703] 完成! 耗时 182.96s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_69.md
+2026-05-31 16:43:43,908 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:43:43,909 [INFO] extraction_service - [c72ae497-845b-497f-98ef-7f2e43e5296c] 开始处理第 84 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_84.png
+2026-05-31 16:43:53,583 [WARNING] extraction_service - [284f9854-ee63-4f3b-91ac-298284af5ee3] 重提后仍有问题: 遗漏了左上和右上的两个前置参考文献段落（编号9-12与18-21），且错误保留了页脚信息，需按双栏顺序完整提取所有正文区域内容块并清除页脚。
+2026-05-31 16:43:53,584 [WARNING] extraction_service - [284f9854-ee63-4f3b-91ac-298284af5ee3] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_79_review.md
+2026-05-31 16:43:53,584 [INFO] extraction_service - [284f9854-ee63-4f3b-91ac-298284af5ee3] 完成! 耗时 90.11s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_79.md
+2026-05-31 16:43:53,584 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:43:53,584 [INFO] extraction_service - [0c029db8-a807-4af2-b650-f8457f8bddb1] 开始处理第 85 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_85.png
+2026-05-31 16:43:54,627 [WARNING] extraction_service - [c2224574-5abb-40ea-b089-d8a108dac424] 重提后仍有问题: 遗漏左上角跨页延续段落，且双栏顺序混乱导致5.2.2与5.3节混排、参考文献条目2被截断未完整提取
+2026-05-31 16:43:54,628 [WARNING] extraction_service - [c2224574-5abb-40ea-b089-d8a108dac424] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_74_review.md
+2026-05-31 16:43:54,628 [INFO] extraction_service - [c2224574-5abb-40ea-b089-d8a108dac424] 完成! 耗时 158.57s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_74.md
+2026-05-31 16:43:54,628 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:43:54,628 [INFO] extraction_service - [021295fd-5d18-456c-961f-e5f7e8ee6219] 开始处理第 86 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_86.png
+2026-05-31 16:44:02,253 [INFO] extraction_service - [50df6936-2963-4b85-981b-e8a92dc7b841] 定向重提完成
+2026-05-31 16:44:16,957 [WARNING] extraction_service - [50df6936-2963-4b85-981b-e8a92dc7b841] 重提后仍有问题: 遗漏页面顶部13条（19–26）及右侧16条（14–29）参考文献；双栏顺序混乱；末尾参考文献被错误截断；页脚元数据未清除
+2026-05-31 16:44:16,958 [WARNING] extraction_service - [50df6936-2963-4b85-981b-e8a92dc7b841] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_80_review.md
+2026-05-31 16:44:16,958 [INFO] extraction_service - [50df6936-2963-4b85-981b-e8a92dc7b841] 完成! 耗时 68.45s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_80.md
+2026-05-31 16:44:16,958 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:44:16,958 [INFO] extraction_service - [e608d4df-abad-48b0-be51-967fe323a742] 开始处理第 87 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_87.png
+2026-05-31 16:44:30,136 [INFO] extraction_service - [dc146a55-29b2-4f0d-a1f8-e52057bdb732] 定向重提完成
+2026-05-31 16:44:30,298 [WARNING] extraction_service - [021295fd-5d18-456c-961f-e5f7e8ee6219] 校验发现问题，启动定向重提: 需严格按双栏顺序提取：先左栏（左上延续段落9–12 + 左下11.5节），再右栏（右上4–8 + 右下9–10）；禁止使用‘（本页为参考文献，已跳过）’，因该页含正文小节11.5，属混合页
+2026-05-31 16:44:32,069 [INFO] extraction_service - [f6a7ee9c-790f-4afe-9bc4-dbdaf7f9137f] 定向重提完成
+2026-05-31 16:44:32,801 [INFO] extraction_service - [f9792f32-70f8-4cda-bc5f-a2c63f828fc9] 定向重提完成
+2026-05-31 16:44:34,036 [WARNING] extraction_service - [c72ae497-845b-497f-98ef-7f2e43e5296c] 校验发现问题，启动定向重提: 该页实为纯参考文献页，应跳过全部参考文献条目并仅输出‘（本页为参考文献，已跳过）’；严禁提取参考文献条目或添加虚构标题。
+2026-05-31 16:44:35,539 [INFO] extraction_service - [c72ae497-845b-497f-98ef-7f2e43e5296c] 定向重提完成
+2026-05-31 16:44:44,146 [WARNING] extraction_service - [c72ae497-845b-497f-98ef-7f2e43e5296c] 重提后仍有问题: 本页为正文与参考文献混合页，需保留11.1.1节标题及编号1–12的正文列表（非参考文献条目），仅跳过其后编号50–56等纯参考文献条目。
+2026-05-31 16:44:44,147 [WARNING] extraction_service - [c72ae497-845b-497f-98ef-7f2e43e5296c] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_84_review.md
+2026-05-31 16:44:44,147 [INFO] extraction_service - [c72ae497-845b-497f-98ef-7f2e43e5296c] 完成! 耗时 60.24s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_84.md
+2026-05-31 16:44:44,147 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:44:44,147 [INFO] extraction_service - [bb0da187-c3ff-470b-87b3-27bb37cc3879] 开始处理第 88 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_88.png
+2026-05-31 16:44:47,661 [WARNING] extraction_service - [dc146a55-29b2-4f0d-a1f8-e52057bdb732] 重提后仍有问题: 遗漏左上与右上两个前置参考文献段落，且右上段落被错误拼接到10.3节末尾；需严格按双栏顺序（左上→右上→左下→右下）输出，并删除页脚元信息。
+2026-05-31 16:44:47,662 [WARNING] extraction_service - [dc146a55-29b2-4f0d-a1f8-e52057bdb732] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_81_review.md
+2026-05-31 16:44:47,663 [INFO] extraction_service - [dc146a55-29b2-4f0d-a1f8-e52057bdb732] 完成! 耗时 90.16s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_81.md
+2026-05-31 16:44:47,663 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:44:47,663 [INFO] extraction_service - [f1623add-e1ac-4aab-9c44-9948e1414eca] 开始处理第 89 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_89.png
+2026-05-31 16:44:52,399 [WARNING] extraction_service - [f9792f32-70f8-4cda-bc5f-a2c63f828fc9] 重提后仍有问题: 本页实为纯参考文献延续页，应跳过全部内容并仅输出‘（本页为参考文献，已跳过）’；当前错误保留了章节标题及29条参考文献条目，属严重内容过滤失效。
+2026-05-31 16:44:52,400 [WARNING] extraction_service - [f9792f32-70f8-4cda-bc5f-a2c63f828fc9] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_83_review.md
+2026-05-31 16:44:52,400 [INFO] extraction_service - [f9792f32-70f8-4cda-bc5f-a2c63f828fc9] 完成! 耗时 91.87s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_83.md
+2026-05-31 16:44:52,400 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:44:52,400 [INFO] extraction_service - [528923ed-3abf-4ab3-ad7f-1382c8aecc9e] 开始处理第 90 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_90.png
+2026-05-31 16:44:53,944 [WARNING] extraction_service - [1adae204-a01f-4a20-8ee0-77624fbc2b84] 校验发现问题，启动定向重提: 需严格按双栏顺序输出：先完整输出左栏全部内容（10.4、10.5.1、10.5.2），再输出右栏内容（10.5.3），避免跨栏混排导致章节归属错误。
+2026-05-31 16:44:54,718 [INFO] extraction_service - [021295fd-5d18-456c-961f-e5f7e8ee6219] 定向重提完成
+2026-05-31 16:44:56,141 [WARNING] extraction_service - [0c029db8-a807-4af2-b650-f8457f8bddb1] 校验发现问题，启动定向重提: 遗漏了左上角参考文献13–18及右上栏全部参考文献2–17，且页脚元信息未删除；需严格按双栏顺序（左上→左下→右上→右下）提取所有非参考文献页正文内容块。
+2026-05-31 16:44:58,418 [WARNING] extraction_service - [f6a7ee9c-790f-4afe-9bc4-dbdaf7f9137f] 重提后仍有问题: 严格按双栏顺序输出：先完整输出左栏内容（含5.3.1节标题及条目1–16），再输出右栏内容（含5.3.2节标题及条目1–18），确保章节标题与所属条目在物理位置上对应。
+2026-05-31 16:44:58,419 [WARNING] extraction_service - [f6a7ee9c-790f-4afe-9bc4-dbdaf7f9137f] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_75_review.md
+2026-05-31 16:44:58,419 [INFO] extraction_service - [f6a7ee9c-790f-4afe-9bc4-dbdaf7f9137f] 完成! 耗时 215.32s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_75.md
+2026-05-31 16:44:58,419 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:44:58,419 [INFO] extraction_service - [47da67cf-c94a-4d4a-a166-35666df899dd] 开始处理第 91 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_91.png
+2026-05-31 16:45:05,400 [WARNING] extraction_service - [e608d4df-abad-48b0-be51-967fe323a742] 校验发现问题，启动定向重提: 遗漏表格下方脚注说明文字；需补全所有脚注符号（†、‡、*）并确保单元格内多行内容采用规范列表格式而非空行分隔
+2026-05-31 16:45:09,240 [WARNING] extraction_service - [021295fd-5d18-456c-961f-e5f7e8ee6219] 重提后仍有问题: 需严格按双栏顺序输出：先完整左栏（左上编号9–12 + 左下11.5节及编号1–3），再完整右栏（右上编号4–10），确保章节标题与其下属条目同属一栏且不交叉混排。
+2026-05-31 16:45:09,241 [WARNING] extraction_service - [021295fd-5d18-456c-961f-e5f7e8ee6219] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_86_review.md
+2026-05-31 16:45:09,241 [INFO] extraction_service - [021295fd-5d18-456c-961f-e5f7e8ee6219] 完成! 耗时 74.61s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_86.md
+2026-05-31 16:45:09,241 [INFO] extraction_service - 
+==================================================
+2026-05-31 16:45:09,241 [INFO] extraction_service - [63a8f7bd-d33d-4cf2-82e1-7a9c6f12f831] 开始处理第 92 页: 2025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_92.png
+2026-05-31 16:45:19,181 [INFO] extraction_service - [bb0da187-c3ff-470b-87b3-27bb37cc3879] 完成! 耗时 35.03s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_88.md
+2026-05-31 16:45:26,459 [WARNING] extraction_service - [f1623add-e1ac-4aab-9c44-9948e1414eca] 校验发现问题，启动定向重提: 遗漏表格下方的脚注说明（†/‡符号定义），并修正多行单元格内项目符号缺失与格式不一致问题
+2026-05-31 16:45:29,818 [INFO] extraction_service - [e608d4df-abad-48b0-be51-967fe323a742] 定向重提完成
+2026-05-31 16:45:36,478 [INFO] extraction_service - [47da67cf-c94a-4d4a-a166-35666df899dd] 完成! 耗时 38.06s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_91.md
+2026-05-31 16:45:37,129 [INFO] extraction_service - [e608d4df-abad-48b0-be51-967fe323a742] 完成! 耗时 80.17s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_87.md
+2026-05-31 16:45:39,299 [WARNING] extraction_service - [528923ed-3abf-4ab3-ad7f-1382c8aecc9e] 校验发现问题，启动定向重提: 遗漏了表格下方的脚注说明（†、‡、*、§等符号定义），需补充完整；同时修正 Jason P. Stopyra 的 'Genesisis' 拼写错误
+2026-05-31 16:45:46,654 [INFO] extraction_service - [f1623add-e1ac-4aab-9c44-9948e1414eca] 定向重提完成
+2026-05-31 16:45:58,089 [INFO] extraction_service - [f1623add-e1ac-4aab-9c44-9948e1414eca] 完成! 耗时 70.43s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_89.md
+2026-05-31 16:45:59,528 [INFO] extraction_service - [63a8f7bd-d33d-4cf2-82e1-7a9c6f12f831] 完成! 耗时 50.29s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_92.md
+2026-05-31 16:46:03,229 [INFO] extraction_service - [1adae204-a01f-4a20-8ee0-77624fbc2b84] 定向重提完成
+2026-05-31 16:46:07,572 [INFO] extraction_service - [528923ed-3abf-4ab3-ad7f-1382c8aecc9e] 定向重提完成
+2026-05-31 16:46:13,216 [INFO] extraction_service - [0c029db8-a807-4af2-b650-f8457f8bddb1] 定向重提完成
+2026-05-31 16:46:18,873 [INFO] extraction_service - [528923ed-3abf-4ab3-ad7f-1382c8aecc9e] 完成! 耗时 86.47s, 策略=标准提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_90.md
+2026-05-31 16:46:27,052 [WARNING] extraction_service - [1adae204-a01f-4a20-8ee0-77624fbc2b84] 重提后仍有问题: 需严格按双栏顺序处理：左栏全部内容（10.4 → 10.5.1 → 10.5.2）完成后，再处理右栏内容；右栏应分为三部分：(1) 右上：编号8–12参考文献（独立段落，非10.5.3子项）；(2) 右中：10.5.3标题及编号1–12文献；(3) 右下：编号13–17文献（独立段落，无标题）。当前将右上与右下内容错误合并至10.5.3节内，导致结构错位。
+2026-05-31 16:46:27,053 [WARNING] extraction_service - [1adae204-a01f-4a20-8ee0-77624fbc2b84] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_82_review.md
+2026-05-31 16:46:27,053 [INFO] extraction_service - [1adae204-a01f-4a20-8ee0-77624fbc2b84] 完成! 耗时 187.94s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_82.md
+2026-05-31 16:46:29,953 [WARNING] extraction_service - [0c029db8-a807-4af2-b650-f8457f8bddb1] 重提后仍有问题: 严格按双栏顺序输出：先左栏全部内容（13–18 → 11.2 → 11.3 → 11.4），再右栏全部内容（编号2–17），并删除页脚信息
+2026-05-31 16:46:29,953 [WARNING] extraction_service - [0c029db8-a807-4af2-b650-f8457f8bddb1] 已生成复核指引: output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_85_review.md
+2026-05-31 16:46:29,953 [INFO] extraction_service - [0c029db8-a807-4af2-b650-f8457f8bddb1] 完成! 耗时 156.37s, 策略=轻量提取, 结果=output/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes/025_Guideline_for_the_Management_of_Patients_With_Acute_Coronary_Syndromes_85.md
